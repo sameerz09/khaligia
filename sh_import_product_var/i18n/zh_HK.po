@@ -1,0 +1,167 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_import_product_var
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-07 04:34+0000\n"
+"PO-Revision-Date: 2020-12-07 04:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_import_product_var
+#: model_terms:ir.ui.view,arch_db:sh_import_product_var.sh_import_product_var_wizard
+msgid "<i class=\"fa fa-download\"/> CSV file"
+msgstr "<i class=\"fa fa-download\"/>CSV 文件"
+
+#. module: sh_import_product_var
+#: model_terms:ir.ui.view,arch_db:sh_import_product_var.sh_import_product_var_wizard
+msgid "<i class=\"fa fa-download\"/> Excel file"
+msgstr "<i class=\"fa fa-download\"/>Excel文件"
+
+#. module: sh_import_product_var
+#: model_terms:ir.ui.view,arch_db:sh_import_product_var.sh_import_product_var_wizard
+msgid "<strong>Download Sample:</strong>"
+msgstr "<strong>下载示例：</strong>"
+
+#. module: sh_import_product_var
+#: model_terms:ir.ui.view,arch_db:sh_import_product_var.sh_import_product_var_wizard
+msgid "Apply"
+msgstr "申请"
+
+#. module: sh_import_product_var
+#: model:ir.model.fields.selection,name:sh_import_product_var.selection__import_product_var_wizard__product_update_by__barcode
+msgid "Barcode"
+msgstr "条码"
+
+#. module: sh_import_product_var
+#: model:ir.model.fields.selection,name:sh_import_product_var.selection__import_product_var_wizard__import_type__csv
+msgid "CSV File"
+msgstr "CSV文件"
+
+#. module: sh_import_product_var
+#: model_terms:ir.ui.view,arch_db:sh_import_product_var.sh_import_product_var_wizard
+msgid "Cancel"
+msgstr "取消"
+
+#. module: sh_import_product_var
+#: model:ir.model.fields.selection,name:sh_import_product_var.selection__import_product_var_wizard__method__create
+msgid "Create Product Variants"
+msgstr "创建产品变体"
+
+#. module: sh_import_product_var
+#: model:ir.model.fields,field_description:sh_import_product_var.field_import_product_var_wizard__is_create_m2m_record
+msgid "Create a New Record for Dynamic M2M Field (if not exist)?"
+msgstr "为动态 M2M 字段创建新记录（如果不存在）？"
+
+#. module: sh_import_product_var
+#: model:ir.model.fields.selection,name:sh_import_product_var.selection__import_product_var_wizard__method__write
+msgid "Create or Update Product Variants"
+msgstr "创建或更新产品变体"
+
+#. module: sh_import_product_var
+#: model:ir.model.fields,field_description:sh_import_product_var.field_import_product_var_wizard__create_uid
+msgid "Created by"
+msgstr "由...制作"
+
+#. module: sh_import_product_var
+#: model:ir.model.fields,field_description:sh_import_product_var.field_import_product_var_wizard__create_date
+msgid "Created on"
+msgstr "创建于"
+
+#. module: sh_import_product_var
+#: model:ir.model.fields,field_description:sh_import_product_var.field_import_product_var_wizard__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: sh_import_product_var
+#: model:ir.model.fields.selection,name:sh_import_product_var.selection__import_product_var_wizard__import_type__excel
+msgid "Excel File"
+msgstr "Excel文件"
+
+#. module: sh_import_product_var
+#: model:ir.model.fields,field_description:sh_import_product_var.field_import_product_var_wizard__file
+msgid "File"
+msgstr "文件"
+
+#. module: sh_import_product_var
+#: model:ir.model.fields,field_description:sh_import_product_var.field_import_product_var_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sh_import_product_var
+#: model:ir.model.fields,field_description:sh_import_product_var.field_import_product_var_wizard__import_type
+msgid "Import File Type"
+msgstr "导入文件类型"
+
+#. module: sh_import_product_var
+#: model:ir.actions.act_window,name:sh_import_product_var.sh_import_product_var_action
+#: model:ir.ui.menu,name:sh_import_product_var.sh_import_product_var_menu
+#: model_terms:ir.ui.view,arch_db:sh_import_product_var.sh_import_product_var_wizard
+#: model:res.groups,name:sh_import_product_var.sh_import_product_var_group
+msgid "Import Product Variants"
+msgstr "导入产品变体"
+
+#. module: sh_import_product_var
+#: model:ir.model,name:sh_import_product_var.model_import_product_var_wizard
+msgid "Import Product Varient Wizard"
+msgstr "导入产品变体向导"
+
+#. module: sh_import_product_var
+#: model:ir.model.fields.selection,name:sh_import_product_var.selection__import_product_var_wizard__product_update_by__int_ref
+msgid "Internal Reference"
+msgstr "内部参考"
+
+#. module: sh_import_product_var
+#: code:addons/sh_import_product_var/wizard/import_product_var_wizard.py:0
+#, python-format
+msgid "Invalid cell value at row %(row)s, column %(col)s: %(cell_value)s"
+msgstr "行中的单元格值无效% (fila) s, columna% (col) s:% (cell_value) s"
+
+#. module: sh_import_product_var
+#: model:ir.model.fields,field_description:sh_import_product_var.field_import_product_var_wizard____last_update
+msgid "Last Modified on"
+msgstr "上次修改日期"
+
+#. module: sh_import_product_var
+#: model:ir.model.fields,field_description:sh_import_product_var.field_import_product_var_wizard__write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: sh_import_product_var
+#: model:ir.model.fields,field_description:sh_import_product_var.field_import_product_var_wizard__write_date
+msgid "Last Updated on"
+msgstr "最后更新于"
+
+#. module: sh_import_product_var
+#: model:ir.model.fields,field_description:sh_import_product_var.field_import_product_var_wizard__method
+msgid "Method"
+msgstr "方法"
+
+#. module: sh_import_product_var
+#: model:ir.model.fields.selection,name:sh_import_product_var.selection__import_product_var_wizard__product_update_by__name
+msgid "Name"
+msgstr "姓名"
+
+#. module: sh_import_product_var
+#: model:ir.model.fields,field_description:sh_import_product_var.field_import_product_var_wizard__product_update_by
+msgid "Product Variant Update By"
+msgstr "产品变体更新者"
+
+#. module: sh_import_product_var
+#: code:addons/sh_import_product_var/wizard/import_product_var_wizard.py:0
+#, python-format
+msgid "Sorry, Your csv or excel file does not match with our format"
+msgstr "抱歉，您的 csv 或 excel 文件与我们的格式不匹配"
+
+#. module: sh_import_product_var
+#: code:addons/sh_import_product_var/wizard/import_product_var_wizard.py:0
+#, python-format
+msgid "unknown error code %s"
+msgstr "未知错误代码% s"
