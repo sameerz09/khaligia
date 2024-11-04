@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Workorder -->
+
+    <record id="workorder_pending_qc_action" model="ir.actions.act_window">
+        <field name="name">Pending QC</field>
+        <field name="res_model">mrp.workorder</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('has_qc','=',True),('quality_status','=', 'pending')]</field>
+    </record>
+
+    <record id="workorder_failed_qc_action" model="ir.actions.act_window">
+        <field name="name">Failed QC</field>
+        <field name="res_model">mrp.workorder</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('has_qc','=',True),('quality_status','=','fail')]</field>
+    </record>
+
+    <record id="workorder_fully_passed_qc_action" model="ir.actions.act_window">
+        <field name="name">Passed QC</field>
+        <field name="res_model">mrp.workorder</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('has_qc','=',True),('quality_status','=', 'pass')]</field>
+    </record>
+
+
+    <!-- Inventory -->
+
+    <record id="pending_qc_action" model="ir.actions.act_window">
+        <field name="name">Pending QC</field>
+        <field name="res_model">stock.picking</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_picking_type':1}</field>
+        <field name="domain">[('has_qc','=',True),('quality_status','=', 'pending')]</field>
+    </record>
+
+    <record id="failed_qc_action" model="ir.actions.act_window">
+        <field name="name">Failed QC</field>
+        <field name="res_model">stock.picking</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_picking_type':1}</field>
+        <field name="domain">[('has_qc','=',True),('quality_status','=', 'fail')]</field>
+    </record>
+
+    <record id="passed_qc_action" model="ir.actions.act_window">
+        <field name="name">Partially Passed QC</field>
+        <field name="res_model">stock.picking</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_picking_type':1}</field>
+        <field name="domain">[('has_qc','=',True),('quality_status','=', 'partial')]</field>
+    </record>
+    <record id="fully_passed_qc_action" model="ir.actions.act_window">
+        <field name="name">Passed QC</field>
+        <field name="res_model">stock.picking</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_picking_type':1}</field>
+        <field name="domain">[('has_qc','=',True),('quality_status','=', 'pass')]</field>
+    </record>
+
+
+    <!-- Manufacturing -->
+
+    <record id="mrp_pending_qc_action" model="ir.actions.act_window">
+        <field name="name">Pending QC</field>
+        <field name="res_model">mrp.production</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('has_qc','=',True),('quality_status','=', 'pending')]</field>
+    </record>
+
+    <record id="mrp_failed_qc_action" model="ir.actions.act_window">
+        <field name="name">Failed QC</field>
+        <field name="res_model">mrp.production</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('has_qc','=',True),('quality_status','=', 'fail')]</field>
+    </record>
+
+    <record id="mrp_fully_passed_qc_action" model="ir.actions.act_window">
+        <field name="name">Passed QC</field>
+        <field name="res_model">mrp.production</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('has_qc','=',True),('quality_status','=', 'pass')]</field>
+    </record>
+
+
+    <menuitem id="main_menu_quality_picking" name="All Operations" parent="sh_inventory_mrp_qc_adv.sh_quality_control_main_menu" sequence="1" />
+
+    <menuitem id="child_menu_quality_picking_inventory" name="Inventory" parent="sh_inventory_mrp_qc_adv.main_menu_quality_picking" sequence="1" />
+
+    <menuitem id="menu_pending_qc" name="Pending QC" parent="sh_inventory_mrp_qc_adv.child_menu_quality_picking_inventory" action="pending_qc_action" sequence="1" />
+    <menuitem id="menu_failed_qc" parent="sh_inventory_mrp_qc_adv.child_menu_quality_picking_inventory" action="failed_qc_action" sequence="2" />
+    <menuitem id="menu_passed_qc" parent="sh_inventory_mrp_qc_adv.child_menu_quality_picking_inventory" action="passed_qc_action" sequence="3" />
+    <menuitem id="menu_full_passed_qc" parent="sh_inventory_mrp_qc_adv.child_menu_quality_picking_inventory" action="fully_passed_qc_action" sequence="4" />
+
+    <menuitem id="child_menu_quality_picking_mrp" name="MRP" parent="sh_inventory_mrp_qc_adv.main_menu_quality_picking" sequence="2" />
+
+    <menuitem id="mrp_menu_pending_qc" name="Pending QC" parent="sh_inventory_mrp_qc_adv.child_menu_quality_picking_mrp" action="mrp_pending_qc_action" sequence="1" />
+    <menuitem id="mrp_menu_failed_qc" parent="sh_inventory_mrp_qc_adv.child_menu_quality_picking_mrp" action="mrp_failed_qc_action" sequence="2" />
+    <menuitem id="mrp_menu_full_passed_qc" parent="sh_inventory_mrp_qc_adv.child_menu_quality_picking_mrp" action="mrp_fully_passed_qc_action" sequence="4" />
+
+    <menuitem id="child_menu_quality_picking_wo" name="Workorder" parent="sh_inventory_mrp_qc_adv.main_menu_quality_picking" sequence="3" />
+
+    <menuitem id="workorder_menu_pending_qc" name="Pending QC" parent="sh_inventory_mrp_qc_adv.child_menu_quality_picking_wo" action="workorder_pending_qc_action" sequence="1" />
+    <menuitem id="workorder_menu_failed_qc" parent="sh_inventory_mrp_qc_adv.child_menu_quality_picking_wo" action="workorder_failed_qc_action" sequence="2" />
+    <menuitem id="workorder_menu_full_passed_qc" parent="sh_inventory_mrp_qc_adv.child_menu_quality_picking_wo" action="workorder_fully_passed_qc_action" sequence="4" />
+
+
+    <!-- Reporting Menus -->
+
+    <menuitem id="quality_control_report_main_menu" name="Reporting" parent="sh_inventory_mrp_qc_adv.sh_quality_control_main_menu" sequence="3" />
+
+    <menuitem id="quality_control_report_sub_menu_inventory" name="Inventory" parent="sh_inventory_mrp_qc_adv.quality_control_report_main_menu" sequence="1" />
+
+    <record id="quality_check_report_action" model="ir.actions.act_window">
+        <field name="name">Quality Check</field>
+        <field name="res_model">sh.quality.check.line</field>
+        <field name="context">{'search_default_picking_filter':1}</field>
+        <field name="view_mode">pivot</field>
+    </record>
+    
+    <menuitem id="menu_quality_check_pivot" name="Quality Check" action="quality_check_report_action" parent="sh_inventory_mrp_qc_adv.quality_control_report_sub_menu_inventory" sequence="1" />
+
+    <record id="quality_alert_report_action" model="ir.actions.act_window">
+        <field name="name">Quality Alert</field>
+         <field name="res_model">sh.quality.alert</field>
+         <field name="context">{'search_default_picking':1}</field>
+         <field name="view_mode">pivot</field>
+     </record>
+    
+    <menuitem id="menu_quality_alert_pivot" name="Quality Alert" action="quality_alert_report_action" parent="sh_inventory_mrp_qc_adv.quality_control_report_sub_menu_inventory" sequence="2" />
+
+
+    <record id="quality_check_report_wizard_action" model="ir.actions.act_window">
+        <field name="name">Quality Check Report</field>
+        <field name="res_model">quality.check.report</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_quality_check_action"
+        name="Quality Check Report"
+        groups="sh_inventory_mrp_qc_adv.sh_quality_control_manager"
+        action="quality_check_report_wizard_action"
+        parent="sh_inventory_mrp_qc_adv.quality_control_report_sub_menu_inventory"
+        sequence="3"
+    />
+
+    <record id="quality_alert_report_wizard_action" model="ir.actions.act_window">
+        <field name="name">Quality Alert Report</field>
+        <field name="res_model">quality.alert.report</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    
+    <menuitem
+        id="menu_quality_alert_report"
+        name="Quality Alert Report"
+        action="quality_alert_report_wizard_action"
+        groups="sh_inventory_mrp_qc_adv.sh_quality_control_manager"
+        parent="sh_inventory_mrp_qc_adv.quality_control_report_sub_menu_inventory"
+        sequence="4"
+    />
+
+    <menuitem id="quality_control_report_sub_menu_mrp" name="MRP" parent="sh_inventory_mrp_qc_adv.quality_control_report_main_menu" sequence="2" />
+
+    <record id="mrp_quality_check_report_action" model="ir.actions.act_window">
+        <field name="name">Quality Check</field>
+        <field name="res_model">sh.quality.check.line</field>
+        <field name="context">{'search_default_production_filter':1}</field>
+        <field name="view_mode">pivot</field>
+    </record>
+    <menuitem id="menu_mrp_quality_check_pivot" name="Quality Check" action="mrp_quality_check_report_action" parent="sh_inventory_mrp_qc_adv.quality_control_report_sub_menu_mrp" sequence="1" />
+
+    <record id="mrp_quality_alert_report_action" model="ir.actions.act_window">
+        <field name="name">Quality Alert</field>
+         <field name="res_model">sh.quality.alert</field>
+         <field name="context">{'search_default_production':1}</field>
+         <field name="view_mode">pivot</field>
+     </record>
+    <menuitem id="menu_mrp_quality_alert_pivot" name="Quality Alert" action="mrp_quality_alert_report_action" parent="sh_inventory_mrp_qc_adv.quality_control_report_sub_menu_mrp" sequence="2" />
+
+
+    <record id="mrp_quality_check_report_wizard_action" model="ir.actions.act_window">
+        <field name="name">MRP Quality Check Report</field>
+        <field name="res_model">mrp.quality.check.report</field>
+        <field name="context">{'default_is_mrp':1}</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    <menuitem
+        id="menu_mrp_quality_check_action"
+        name="Quality Check Report"
+        groups="sh_inventory_mrp_qc_adv.sh_quality_control_manager"
+        action="mrp_quality_check_report_wizard_action"
+        parent="sh_inventory_mrp_qc_adv.quality_control_report_sub_menu_mrp"
+        sequence="3"
+    />
+
+    <record id="mrp_quality_alert_report_wizard_action" model="ir.actions.act_window">
+        <field name="name">MRP Quality Alert Report</field>
+        <field name="res_model">mrp.quality.alert.report</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'default_operation_type':'manufacturing'}</field>
+    </record>
+    <menuitem
+        id="menu_mrp_quality_alert_report"
+        name="Quality Alert Report"
+        action="mrp_quality_alert_report_wizard_action"
+        groups="sh_inventory_mrp_qc_adv.sh_quality_control_manager"
+        parent="sh_inventory_mrp_qc_adv.quality_control_report_sub_menu_mrp"
+        sequence="5"
+    />
+
+    <menuitem id="quality_control_report_sub_menu_wo" name="Workorder" parent="sh_inventory_mrp_qc_adv.quality_control_report_main_menu" sequence="2" />
+
+    <record id="wo_quality_check_report_action" model="ir.actions.act_window">
+        <field name="name">Quality Check</field>
+        <field name="res_model">sh.quality.check.line</field>
+        <field name="context">{'search_default_workorder_filter':1}</field>
+        <field name="view_mode">pivot</field>
+    </record>
+    <menuitem id="menu_wo_quality_check_pivot" name="Quality Check" action="wo_quality_check_report_action" parent="sh_inventory_mrp_qc_adv.quality_control_report_sub_menu_wo" sequence="1" />
+
+    <record id="wo_quality_alert_report_action" model="ir.actions.act_window">
+        <field name="name">Quality Alert</field>
+         <field name="res_model">sh.quality.alert</field>
+         <field name="context">{'search_default_workorder':1}</field>
+         <field name="view_mode">pivot</field>
+     </record>
+    <menuitem id="menu_wo_quality_alert_pivot" name="Quality Alert" action="wo_quality_alert_report_action" parent="sh_inventory_mrp_qc_adv.quality_control_report_sub_menu_wo" sequence="2" />
+
+    <record id="wo_quality_check_report_wizard_action" model="ir.actions.act_window">
+        <field name="name">Work Order Quality Check Report</field>
+        <field name="res_model">mrp.quality.check.report</field>
+        <field name="context">{'default_is_mrp':0}</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    <menuitem
+        id="menu_wo_quality_check_action"
+        name="Quality Check Report"
+        groups="sh_inventory_mrp_qc_adv.sh_quality_control_manager"
+        action="wo_quality_check_report_wizard_action"
+        parent="sh_inventory_mrp_qc_adv.quality_control_report_sub_menu_wo"
+        sequence="3"
+    />
+
+    <record id="mrp_workorder_quality_alert_report_wizard_action" model="ir.actions.act_window">
+        <field name="name">Work Order Quality Alert Report</field>
+        <field name="res_model">mrp.quality.alert.report</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'default_operation_type':'workorder'}</field>
+    </record>
+    <menuitem
+        id="menu_wo_quality_alert_report"
+        name="Quality Alert Report"
+        action="mrp_workorder_quality_alert_report_wizard_action"
+        groups="sh_inventory_mrp_qc_adv.sh_quality_control_manager"
+        parent="sh_inventory_mrp_qc_adv.quality_control_report_sub_menu_wo"
+        sequence="5"></menuitem>
+    
+</odoo>

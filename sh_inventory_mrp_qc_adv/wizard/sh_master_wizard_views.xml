@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_master_wizard_form_view" model="ir.ui.view">
+        <field name="name">sh.master.wizard.form.view</field>
+        <field name="model">sh.master.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Quality Alert">
+                <sheet>
+                    <div class="oe_title" style="display:flex;justify-content:space-between">
+                        <h1>
+                            <field name="product_id" />:<field name="qc_point_id"/>                    
+                        </h1>
+                        <h1>
+                            <span style="display:flex;float:right"><field name="counter" readonly="1"/>/<field name="total_checks" readonly="1"/></span>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="sh_instruction" readonly="1"/>
+                    </group>
+                    <group>
+                        <field name="quality_Check_id" invisible="1" />
+                        <field name="picking_id" invisible="1" />
+                        <field name="individual_line" invisible="1" />
+                        <field name="qc_point_type" invisible="1" />
+                        <field name="production_id" invisible="1" />
+                        <field name="workorder_id" invisible="1" />
+                    </group>
+                    <group>
+                        <field name="qc_point_type" readonly="1"/>
+                        <field name="measure" attrs="{'invisible' : [('qc_point_type', '!=', 'type2')]}"/>
+                        <field name="attachment_ids" widget="many2many_binary" attrs="{'invisible' : [('qc_point_type', '!=','type3')]}" />
+                        <field name="pass_fail_type" widget="radio" attrs="{'invisible' : [('qc_point_type', '!=','type1')]}" />
+                    </group>
+                    <group>
+                        <field name="sh_message" />
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_validate" type="object" string="Validate" class="btn btn-primary" />
+                    <button name="action_next" type="object" string="Next"/>
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>    
+</odoo>

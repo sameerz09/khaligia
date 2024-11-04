@@ -1,0 +1,1651 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_inventory_mrp_qc_adv
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-19 09:15+0000\n"
+"PO-Revision-Date: 2023-09-19 09:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.report,print_report_name:sh_inventory_mrp_qc_adv.mrp_report_quality_alert_action
+msgid "'MRP Quality Alert Report'"
+msgstr "'MRP 质量警报报告'"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.report,print_report_name:sh_inventory_mrp_qc_adv.report_quality_alert_action
+msgid "'Quality Alert Report'"
+msgstr "'质量警报报告'"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.report,print_report_name:sh_inventory_mrp_qc_adv.report_mrp_quality_check_action
+#: model:ir.actions.report,print_report_name:sh_inventory_mrp_qc_adv.report_quality_check_action
+msgid "'Quality Check Report'"
+msgstr "'质量检查报告'"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_check_doc
+msgid "<b>Date From :</b>"
+msgstr "<b>来自 :</b>"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_check_doc
+msgid "<b>To :</b>"
+msgstr "<b>到 :</b>"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_doc
+msgid "<span>Responsible Person:</span>"
+msgstr "<span>负责人:</span>"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.stock_picking_form_view_custom
+msgid ""
+"<strong>Product(s) Quality Control Completed With Some Products Partially "
+"Passed.</strong>"
+msgstr ""
+"<strong>产品质量控制通过某些产品部分完成 "
+"通过.</strong>"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_mrp_production_form_views_custom
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_mrp_work_order_inherit
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.stock_picking_form_view_custom
+msgid "<strong>Product(s) Quality Control Failed.</strong>"
+msgstr "<strong>产品质量控制失败。</strong>"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_mrp_production_form_views_custom
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_mrp_work_order_inherit
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.stock_picking_form_view_custom
+msgid "<strong>Product(s) Quality Control Still Pending.</strong>"
+msgstr "<strong>产品质量控制仍在待处理中。</strong>"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_mrp_production_form_views_custom
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_mrp_work_order_inherit
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.stock_picking_form_view_custom
+msgid "<strong>Product(s) Quality Control Successfully Passed</strong>"
+msgstr "<strong>产品质量控制成功通过</strong>"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__message_needaction
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__message_needaction
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__message_needaction
+msgid "Action Needed"
+msgstr "需要采取行动"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__activity_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__activity_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__activity_ids
+msgid "Activities"
+msgstr "活动"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__activity_exception_decoration
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__activity_exception_decoration
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "活动异常装饰"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__activity_state
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__activity_state
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__activity_state
+msgid "Activity State"
+msgstr "活动状态"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__activity_type_icon
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__activity_type_icon
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "活动类型图标"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_sh_qc_alert_stage
+msgid "Add All the Alerts For Quality Checks"
+msgstr "添加所有警报以进行质量检查"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_sh_qc_alert_tags
+msgid "Add All the Tags For Quality Checks"
+msgstr "添加所有标签以进行质量检查"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_dashboard__alert_count
+msgid "Alert Count"
+msgstr "警报计数"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert__alert_ids
+msgid "Alert Line"
+msgstr "警报线"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_doc
+msgid "Alert Ref No."
+msgstr "警报裁判。"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_line__alert_id
+msgid "Alert Wizard"
+msgstr "警报向导"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_production__sh_quality_alert_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_workorder__sh_quality_alert_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_stock_picking__sh_quality_alert_ids
+msgid "Alerts"
+msgstr "警报"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.main_menu_quality_picking
+msgid "All Operations"
+msgstr "所有操作"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:res.groups,name:sh_inventory_mrp_qc_adv.sh_quality_check_Changes
+msgid "Allow Quality Checks Changes"
+msgstr "允许质量检查更改"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_stage__responsible_user_id
+msgid "Approved By"
+msgstr "由...批准"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__message_attachment_count
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__message_attachment_count
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__message_attachment_count
+msgid "Attachment Count"
+msgstr "依恋数"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__individual_line
+msgid "Boolean if from Line"
+msgstr "布尔值"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__mrp_quality_check_report__state__both
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__quality_check_report__state__both
+msgid "Both"
+msgstr "两个都"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_alert_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_check_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_check_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_master_wizard_form_view
+msgid "Cancel"
+msgstr "取消"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_dashboard__check_count
+msgid "Check Count"
+msgstr "检查计数"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_production__check_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_stock_picking__check_qc
+msgid "Check Qc"
+msgstr "检查QC"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__color
+msgid "Color Index"
+msgstr "颜色索引"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_stage__company_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__company_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__company_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__company_id
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_team_search_view
+msgid "Company"
+msgstr "公司"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.sh_quality_control_config
+msgid "Configuration"
+msgstr "配置"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_sh_master_wizard
+msgid "Correct Measurement Wizard"
+msgstr "正确的测量向导"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__total_checks
+msgid "Counter"
+msgstr "柜台"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_doc
+msgid "Create Date"
+msgstr "创建日期"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.actions.act_window,help:sh_inventory_mrp_qc_adv.quality_alert_action
+#: model_terms:ir.actions.act_window,help:sh_inventory_mrp_qc_adv.quality_alert_manufacturing_action
+#: model_terms:ir.actions.act_window,help:sh_inventory_mrp_qc_adv.quality_alert_picking_action
+#: model_terms:ir.actions.act_window,help:sh_inventory_mrp_qc_adv.quality_alert_workorder_action
+msgid "Create a New Quality Alert"
+msgstr "创建新的质量警报"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_alert_report__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_check_report__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_alert_report__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_check_report__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_line__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_stage__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_tags__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_dashboard__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__create_uid
+msgid "Created by"
+msgstr "由...制作"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_alert_report__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_check_report__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_alert_report__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_check_report__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_line__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_stage__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_tags__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_dashboard__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__create_date
+msgid "Created on"
+msgstr "创建于"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.sh_qc_dashboard_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.sh_menu_qc_dashboard
+#: model_terms:ir.actions.act_window,help:sh_inventory_mrp_qc_adv.sh_qc_dashboard_action
+msgid "Dashboard"
+msgstr "仪表板"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_sh_qc_dashboard
+msgid "Dashboard To Check the Status"
+msgstr "仪表板检查状态"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check__check_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__check_date
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.workorder_report_qc_check
+msgid "Date"
+msgstr "日期"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__sh_description
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_form_view
+msgid "Description"
+msgstr "描述"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_alert_report__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_check_report__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_alert_report__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_check_report__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_line__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_stage__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_tags__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_dashboard__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_quality_check__status__done
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_mrp_production_workorder_tree_views
+msgid "Done"
+msgstr "完毕"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_quality_check__status__draft
+msgid "Draft"
+msgstr "草稿"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__email
+msgid "Email"
+msgstr "电子邮件"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_alert_report__date_to
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_check_report__date_to
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_alert_report__date_to
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_check_report__date_to
+msgid "End Date"
+msgstr "结束日期"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__mrp_production__quality_status__fail
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__mrp_quality_check_report__state__fail
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__mrp_workorder__quality_status__fail
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__quality_check_report__state__fail
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_master_wizard__pass_fail_type__fail
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_quality_check_line__pass_fail_type__fail
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_quality_check_line__status__fail
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__stock_picking__quality_status__fail
+msgid "Fail"
+msgstr "失败"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.failed_qc_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.mrp_failed_qc_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.workorder_failed_qc_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_failed_qc
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.mrp_menu_failed_qc
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.workorder_menu_failed_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_qc_dashboard_kanban
+msgid "Failed QC"
+msgstr "QC失败"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_dashboard__failed_qc_count
+msgid "Failed QC Count"
+msgstr "QC计数失败"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__message_follower_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__message_follower_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__message_follower_ids
+msgid "Followers"
+msgstr "追随者"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__message_partner_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__message_partner_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "追随者（合作伙伴）"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_point__activity_type_icon
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_team__activity_type_icon
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_quality_alert__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "字体很棒的图标，例如FA任务"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__sh_unit_to
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_qc_point_form_view
+msgid "From"
+msgstr "从"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_check_report__group_by
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_check_report__group_by
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_team_search_view
+msgid "Group By"
+msgstr "通过...分组"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__has_message
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__has_message
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__has_message
+msgid "Has Message"
+msgstr "有消息"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_production__has_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_workorder__has_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_stock_move__has_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_stock_picking__has_qc
+msgid "Has Qc"
+msgstr "有QC"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_qc_alert__sh_priority__3
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_quality_alert__sh_priority__3
+msgid "High"
+msgstr "高的"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_sh_quality_check_line
+msgid "Holds all the Record of Quality Check"
+msgstr "保留所有质量检查的记录"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_alert_report__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_check_report__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_alert_report__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_check_report__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_line__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_stage__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_tags__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_dashboard__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_production__is_manager
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_stock_picking__is_manager
+msgid "IS Manager"
+msgstr "是经理"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__activity_exception_icon
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__activity_exception_icon
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__activity_exception_icon
+msgid "Icon"
+msgstr "图标"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_point__activity_exception_icon
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_team__activity_exception_icon
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_quality_alert__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "表示异常活动的图标。"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__name_id
+msgid "Id#"
+msgstr "ID＃"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_point__message_needaction
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_team__message_needaction
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_quality_alert__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "如果已检查，新消息需要您的注意。"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_point__message_has_error
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_point__message_has_sms_error
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_team__message_has_error
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_team__message_has_sms_error
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_quality_alert__message_has_error
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_quality_alert__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果已检查，有些消息会出现交货错误。"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__sh_instruction
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_qc_point_form_view
+msgid "Instruction"
+msgstr "操作说明"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__sh_instruction
+msgid "Intruction"
+msgstr "结构"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.child_menu_quality_picking_inventory
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.quality_control_report_sub_menu_inventory
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_quality_check_search_view
+msgid "Inventory"
+msgstr "存货"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.quality_alert_picking_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_inventory_quality_alert
+msgid "Inventory Quality Alerts"
+msgstr "库存质量警报"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.sh_quality_check_picking_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.sh_quality_check_picking
+msgid "Inventory Quality Check"
+msgstr "库存质量检查"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.actions.act_window,help:sh_inventory_mrp_qc_adv.sh_quality_check_picking_action
+msgid "Inventory Quality Checks"
+msgstr "库存质量检查"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__message_is_follower
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__message_is_follower
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__message_is_follower
+msgid "Is Follower"
+msgstr "是追随者"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_check_report__is_mrp
+msgid "Is MRP"
+msgstr "是MRP"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_production__is_mandatorys
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_workorder__is_mandatorys
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_stock_picking__is_mandatorys
+msgid "Is Mandatory"
+msgstr "是强制性的"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_alert_report__operation_type
+msgid "Is Operation"
+msgstr "是操作"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_alert_report____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_check_report____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_alert_report____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_check_report____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_line____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_stage____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_tags____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_dashboard____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line____last_update
+msgid "Last Modified on"
+msgstr "最后修改"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_alert_report__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_check_report__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_alert_report__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_check_report__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_line__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_stage__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_tags__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_dashboard__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__write_uid
+msgid "Last Updated by"
+msgstr "最后更新"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_alert_report__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_check_report__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_alert_report__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_check_report__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_line__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_stage__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_tags__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_dashboard__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__write_date
+msgid "Last Updated on"
+msgstr "最后更新"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check__line_counter
+msgid "Line Counter"
+msgstr "线计数器"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__lot_id
+msgid "Lot Number"
+msgstr "批号"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_qc_alert__sh_priority__1
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_quality_alert__sh_priority__1
+msgid "Low"
+msgstr "低的"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.child_menu_quality_picking_mrp
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.quality_control_report_sub_menu_mrp
+msgid "MRP"
+msgstr "MRP"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.mrp_quality_alert_report_wizard_action
+msgid "MRP Quality Alert Report"
+msgstr "MRP质量警报报告"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.mrp_quality_check_report_wizard_action
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_mrp_quality_check_report
+msgid "MRP Quality Check Report"
+msgstr "MRP质量检查报告"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_report_sh_inventory_mrp_qc_adv_mrp_quality_alert_doc
+msgid "MRP quality alert report abstract model"
+msgstr "MRP质量警报报告摘要模型"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__message_main_attachment_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__message_main_attachment_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "主要附件"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:res.groups,name:sh_inventory_mrp_qc_adv.sh_quality_control_manager
+msgid "Manager"
+msgstr "经理"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__production_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check__production_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__production_id
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_quality_check_search_view
+msgid "Manufacturing"
+msgstr "制造业"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.quality_alert_manufacturing_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_manufacturing_quality_alert
+msgid "Manufacturing Quality Alerts"
+msgstr "制造质量警报"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.sh_quality_check_production_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.sh_quality_check_production
+msgid "Manufacturing Quality Check"
+msgstr "制造质量检查"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.actions.act_window,help:sh_inventory_mrp_qc_adv.sh_quality_check_production_action
+msgid "Manufacturing Quality Checks"
+msgstr "制造质量检查"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__production_id
+msgid "Manufacturing Ref"
+msgstr "制造业参考"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_mrp_production_form_views_custom
+msgid "Mark as Done"
+msgstr "标为已完成"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__number_of_test
+msgid "Maximum number of tests allowed."
+msgstr "允许的最大测试数量。"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__measure
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__sh_norm
+msgid "Measure"
+msgstr "措施"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_master_wizard__qc_point_type__type2
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_qc_point__type__type2
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_quality_check__qc_point_type__type2
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_quality_check_line__qc_point_type__type2
+msgid "Measurement"
+msgstr "测量"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__sh_message
+msgid "Message"
+msgstr "信息"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__message_has_error
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__message_has_error
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__message_has_error
+msgid "Message Delivery error"
+msgstr "消息传递错误"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__message_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__message_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__message_ids
+msgid "Messages"
+msgstr "消息"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_report_sh_inventory_mrp_qc_adv_mrp_quality_check_doc
+msgid "Mrp quality check report abstract model"
+msgstr "MRP质量检查报告摘要模型"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__my_activity_date_deadline
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__my_activity_date_deadline
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "我的活动截止日期"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_tags__name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_dashboard__name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__name
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_qc_point_tree_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_quality_checks_form_view
+msgid "Name"
+msgstr "姓名"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_master_wizard_form_view
+msgid "Next"
+msgstr "下一个"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__activity_date_deadline
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__activity_date_deadline
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一个活动截止日期"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__activity_summary
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__activity_summary
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一个活动摘要"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__activity_type_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__activity_type_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一个活动类型"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__sh_norm
+msgid "Norm"
+msgstr "规范"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_qc_alert__sh_priority__2
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_quality_alert__sh_priority__2
+msgid "Normal"
+msgstr "普通的"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__message_needaction_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__message_needaction_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__message_needaction_counter
+msgid "Number of Actions"
+msgstr "动作数量"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__message_has_error_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__message_has_error_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__message_has_error_counter
+msgid "Number of errors"
+msgstr "错误数"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_point__message_needaction_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_team__message_needaction_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_quality_alert__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "需要操作的消息数量"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_point__message_has_error_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_team__message_has_error_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_quality_alert__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "带交货错误的消息数"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__mrp_quality_check_report__group_by__sh_mrp
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_check_doc
+msgid "Operation"
+msgstr "手术"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_report_qc_check
+msgid "Operation Ref."
+msgstr "操作参考。"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_alert_doc
+msgid "Order Ref."
+msgstr "订购参考。"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__mrp_production__quality_status__partial
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__mrp_workorder__quality_status__partial
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__stock_picking__quality_status__partial
+msgid "Partial"
+msgstr "部分的"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_qc_dashboard_kanban
+msgid "Partially Pass"
+msgstr "部分通过"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.passed_qc_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_passed_qc
+msgid "Partially Passed QC"
+msgstr "部分通过了QC"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_line__partner_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__partner_id
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_search_view
+msgid "Partner"
+msgstr "伙伴"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__mrp_production__quality_status__pass
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__mrp_quality_check_report__state__pass
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__mrp_workorder__quality_status__pass
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__quality_check_report__state__pass
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_master_wizard__pass_fail_type__pass
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_quality_check_line__pass_fail_type__pass
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_quality_check_line__status__pass
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__stock_picking__quality_status__pass
+msgid "Pass"
+msgstr "经过"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_master_wizard__qc_point_type__type1
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_qc_point__type__type1
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_quality_check__qc_point_type__type1
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_quality_check_line__qc_point_type__type1
+msgid "Pass Fail"
+msgstr "过关失败"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_dashboard__partially_passed_qc_count
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_dashboard__passed_qc_count
+msgid "Pass QC Count"
+msgstr "通过QC计数"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__pass_fail_type
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__pass_fail_type
+msgid "Pass/Fail"
+msgstr "过关失败"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.fully_passed_qc_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.mrp_fully_passed_qc_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.workorder_fully_passed_qc_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_full_passed_qc
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.mrp_menu_full_passed_qc
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.workorder_menu_full_passed_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_qc_dashboard_kanban
+msgid "Passed QC"
+msgstr "通过了QC"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__mrp_production__quality_status__pending
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__mrp_workorder__quality_status__pending
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__stock_picking__quality_status__pending
+msgid "Pending"
+msgstr "待办的"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.mrp_pending_qc_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.pending_qc_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.workorder_pending_qc_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_pending_qc
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.mrp_menu_pending_qc
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.workorder_menu_pending_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_qc_dashboard_kanban
+msgid "Pending QC"
+msgstr "等待QC"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_dashboard__pending_qc_count
+msgid "Pending QC Count"
+msgstr "等待QC计数"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__picking_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check__picking_type_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__picking_type_id
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_check_doc
+msgid "Picking"
+msgstr "采摘"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__piking_id
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.report_qc_check
+msgid "Picking Ref."
+msgstr "选择参考。"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__picking_type_ids
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__quality_check_report__group_by__picking
+msgid "Picking Type"
+msgstr "选择类型"
+
+#. module: sh_inventory_mrp_qc_adv
+#. odoo-python
+#: code:addons/sh_inventory_mrp_qc_adv/wizard/sh_master_wizard.py:0
+#, python-format
+msgid "Please Add Attachments"
+msgstr "请添加附件"
+
+#. module: sh_inventory_mrp_qc_adv
+#. odoo-python
+#: code:addons/sh_inventory_mrp_qc_adv/wizard/sh_master_wizard.py:0
+#, python-format
+msgid "Please Enter Measure"
+msgstr "请输入措施"
+
+#. module: sh_inventory_mrp_qc_adv
+#. odoo-python
+#: code:addons/sh_inventory_mrp_qc_adv/wizard/sh_master_wizard.py:0
+#, python-format
+msgid "Please Tick The Boolean"
+msgstr "请勾选布尔值"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_sh_qc_point
+msgid "Points To be checked during Quality Check"
+msgstr "质量检查期间要检查的积分"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_alert_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_check_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_check_report_wizard_view
+msgid "Print"
+msgstr "打印"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert__sh_priority
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__sh_priority
+msgid "Priority"
+msgstr "优先事项"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_alert_report__product_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_check_report__product_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_alert_report__product_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_check_report__product_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_line__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__product_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__product_id
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__mrp_quality_check_report__group_by__product
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__quality_check_report__group_by__product
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.workorder_report_qc_check
+msgid "Product"
+msgstr "产品"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_mrp_production
+msgid "Production Order"
+msgstr "产品订单"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.sh_qc_alert_stages_action
+msgid "QC Alert Stage"
+msgstr "QC警报阶段"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.sh_qc_alert_stages_root
+#: model_terms:ir.actions.act_window,help:sh_inventory_mrp_qc_adv.sh_qc_alert_stages_action
+msgid "QC Alert Stages"
+msgstr "QC警报阶段"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.sh_qc_alert_tags_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.sh_qc_alert_tags_root
+#: model_terms:ir.actions.act_window,help:sh_inventory_mrp_qc_adv.sh_qc_alert_tags_action
+msgid "QC Alert Tags"
+msgstr "QC警报标签"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_qc_dashboard_kanban
+msgid "QC Alerts"
+msgstr "QC警报"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.report,name:sh_inventory_mrp_qc_adv.action_report_picking_qc
+msgid "QC Check Report"
+msgstr "QC检查报告"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.report,name:sh_inventory_mrp_qc_adv.action_report_mrp_qc
+msgid "QC MRP Check Report"
+msgstr "QC MRP检查报告"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__qc_mandatory
+msgid "QC Mandatory"
+msgstr "质量控制强制"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__qc_point_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check__sh_Qc_point_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__sh_Qc_point_id
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.workorder_report_qc_check
+msgid "QC Point"
+msgstr "质检点"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.sh_qc_points_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.sh_qc_point_root
+#: model_terms:ir.actions.act_window,help:sh_inventory_mrp_qc_adv.sh_qc_points_action
+msgid "QC Points"
+msgstr "质检点"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.sh_qc_team_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.sh_qc_team_root
+msgid "QC Team"
+msgstr "质检团队"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.actions.act_window,help:sh_inventory_mrp_qc_adv.sh_qc_team_action
+msgid "QC Teams"
+msgstr "质检团队"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__text_message
+msgid "QC Text"
+msgstr "QC文字"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__attachment_ids
+msgid "QC pictures"
+msgstr "QC图片"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_qc_dashboard_kanban
+msgid "QCCheck"
+msgstr "质检"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_production__qc_alert_count
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_workorder__qc_alert_count
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_stock_picking__qc_alert_count
+msgid "Qc Alerts"
+msgstr "QC警报"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_production__qc_count
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_workorder__qc_count
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_stock_picking__qc_count
+msgid "Qc Count"
+msgstr "QC计数"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.mrp_quality_alert_report_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.quality_alert_report_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.quality_alert_wizard_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.wo_quality_alert_report_action
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_sh_quality_alert
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_mrp_quality_alert_pivot
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_quality_alert_pivot
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_wo_quality_alert_pivot
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_pivot_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_master_wizard_form_view
+msgid "Quality Alert"
+msgstr "质量警报"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.quality_alert_report_wizard_action
+#: model:ir.actions.report,name:sh_inventory_mrp_qc_adv.mrp_report_quality_alert_action
+#: model:ir.actions.report,name:sh_inventory_mrp_qc_adv.report_quality_alert_action
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_mrp_quality_alert_report
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_quality_alert_report
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_mrp_quality_alert_report
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_quality_alert_report
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_wo_quality_alert_report
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_alert_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_report_wizard_view
+msgid "Quality Alert Report"
+msgstr "质量警报报告"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_quality_alert_stage_form_view
+msgid "Quality Alert Stages"
+msgstr "质量警报阶段"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_quality_alert_tags_form_view
+msgid "Quality Alert Tags"
+msgstr "质量警报标签"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_sh_qc_alert
+msgid "Quality Alert Wizard"
+msgstr "质量警报向导"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_sh_qc_alert_line
+msgid "Quality Alert Wizard Line"
+msgstr "质量警报向导线"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.quality_alert_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.main_menu_quality_alert
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_quality_alert
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_mrp_production_form_views_custom
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_mrp_work_order_inherit
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.stock_picking_form_view_custom
+msgid "Quality Alerts"
+msgstr "质量警报"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.mrp_quality_check_report_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.quality_check_report_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.sh_quality_check_all_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.wo_quality_check_report_action
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_production__quality_check_lines
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_workorder__quality_check_lines
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__quality_check_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_stock_picking__quality_check_lines
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_mrp_quality_check_pivot
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_quality_check_pivot
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_wo_quality_check_pivot
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.sh_quality_check_all
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_quality_checks_form_view
+msgid "Quality Check"
+msgstr "质量检查"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.quality_check_report_wizard_action
+#: model:ir.actions.report,name:sh_inventory_mrp_qc_adv.report_mrp_quality_check_action
+#: model:ir.actions.report,name:sh_inventory_mrp_qc_adv.report_quality_check_action
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_quality_check_report
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_mrp_quality_check_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_quality_check_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_wo_quality_check_action
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_check_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_check_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.report_qc_check
+msgid "Quality Check Report"
+msgstr "质量检查报告"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_sh_quality_check
+msgid "Quality Check Results To be Stored here"
+msgstr "质量检查结果将在此处存储"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_production__quality_check_line_lines
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_workorder__quality_check_line_lines
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_stock_picking__quality_check_line_lines
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.sh_quality_check_main
+#: model_terms:ir.actions.act_window,help:sh_inventory_mrp_qc_adv.sh_quality_check_all_action
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_mrp_production_form_views_custom
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_mrp_work_order_inherit
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_quality_check_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.stock_picking_form_view_custom
+msgid "Quality Checks"
+msgstr "质量检查"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.module.category,description:sh_inventory_mrp_qc_adv.sh_quality_control_category
+#: model:ir.module.category,name:sh_inventory_mrp_qc_adv.sh_quality_control_category
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.sh_quality_control_main_menu
+msgid "Quality Control"
+msgstr "质量控制"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_qc_point_form_view
+msgid "Quality Point"
+msgstr "质量点"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_sh_qc_team
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_team_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_team_search_view
+msgid "Quality Team"
+msgstr "高质量的团队"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__quality_Check_id
+msgid "Quality check"
+msgstr "质量检查"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_production__quality_status
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_workorder__quality_status
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_stock_picking__quality_status
+msgid "Quality status"
+msgstr "质量状态"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_check_doc
+msgid "Ref."
+msgstr "参考。"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.quality_control_report_main_menu
+msgid "Reporting"
+msgstr "报告"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert__user_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__user_id
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_search_view
+msgid "Responsible"
+msgstr "负责任的"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__activity_user_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__responsible_user_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__activity_user_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__activity_user_id
+msgid "Responsible User"
+msgstr "负责用户"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_alert_report__user_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_alert_report__user_ids
+msgid "Responsible Users"
+msgstr "负责任的用户"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__message_has_sms_error
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__message_has_sms_error
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "短信发送错误"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_wizard_form_view
+msgid "Save"
+msgstr "节省"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_stage__sequence
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_tags__sequence
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check__counter
+msgid "Sequence"
+msgstr "顺序"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_qc_dashboard_kanban
+msgid "Settings"
+msgstr "设置"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.workorder_report_qc_check
+msgid "Sr."
+msgstr "高级"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_doc
+msgid "Sr. No."
+msgstr "高级"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_alert_report__stage_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_alert_report__stage_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__stage_id
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_search_view
+msgid "Stage"
+msgstr "阶段"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_alert_report__date_from
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_check_report__date_from
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_alert_report__date_from
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_check_report__date_from
+msgid "Start Date"
+msgstr "开始日期"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_quality_check_report__state
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_quality_check_report__state
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check__status
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__status
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.workorder_report_qc_check
+msgid "Status"
+msgstr "地位"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_point__activity_state
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_team__activity_state
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_quality_alert__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"基于活动的状态\n"
+"逾期：到期日已经通过\n"
+"今天：活动日期是今天\n"
+"计划：未来活动。"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_stock_move
+msgid "Stock Move"
+msgstr "库存移动"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check__picking_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__picking_id
+msgid "Stock Picking"
+msgstr "采摘股票"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__tag_ids
+msgid "Tags"
+msgstr "标签"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_master_wizard__qc_point_type__type3
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_qc_point__type__type3
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_quality_check__qc_point_type__type3
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_quality_check_line__qc_point_type__type3
+msgid "Take a Picture"
+msgstr "拍照"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert__team_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_dashboard__team_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__sh_team_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__team_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__team_id
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_search_view
+msgid "Team"
+msgstr "团队"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_master_wizard__qc_point_type__type4
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_qc_point__type__type4
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_quality_check__qc_point_type__type4
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_quality_check_line__qc_point_type__type4
+msgid "Text"
+msgstr "文本"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_mrp_production_form_views_custom
+msgid ""
+"There are no components to consume. Are you still sure you want to continue?"
+msgstr ""
+"没有要消费的组件。您仍然确定要继续吗？"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_alert_stage__name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__title
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_doc
+msgid "Title"
+msgstr "标题"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__sh_unit_from
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_qc_point_form_view
+msgid "To"
+msgstr "到"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_qc_point_form_view
+msgid "Tolerance"
+msgstr "宽容"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_production__total_checks
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_workorder__total_checks
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_stock_picking__total_checks
+msgid "Total Checks"
+msgstr "总检查"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_stock_picking
+msgid "Transfer"
+msgstr "转移"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__qc_point_type
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__type
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check__qc_point_type
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__qc_point_type
+msgid "Type"
+msgstr "类型"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__type_id
+msgid "Type Id"
+msgstr "类型ID"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_point__activity_exception_decoration
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_team__activity_exception_decoration
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_quality_alert__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "记录的异常活动类型。"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__uom_type
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__uom_type
+msgid "UoM"
+msgstr "计量单位"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__attachment_ids
+msgid "Upload Pictures"
+msgstr "上传图片"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__sh_logged_user
+#: model:res.groups,name:sh_inventory_mrp_qc_adv.sh_quality_control_user
+msgid "User"
+msgstr "用户"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__user_ids
+msgid "Users"
+msgstr "用户"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_master_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_mrp_production_form_views_custom
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.stock_picking_form_view_custom
+msgid "Validate"
+msgstr "证实"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_qc_alert__sh_priority__0
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__sh_quality_alert__sh_priority__0
+msgid "Very Low"
+msgstr "非常低"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_point__website_message_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_qc_team__website_message_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__website_message_ids
+msgid "Website Messages"
+msgstr "网站消息"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_point__website_message_ids
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_qc_team__website_message_ids
+#: model:ir.model.fields,help:sh_inventory_mrp_qc_adv.field_sh_quality_alert__website_message_ids
+msgid "Website communication history"
+msgstr "网站通信历史"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_mrp_workorder
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_master_wizard__workorder_id
+msgid "Work Order"
+msgstr "工作指示"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_mrp_production__work_order_qc_done
+msgid "Work Order Done"
+msgstr "工作顺序"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.report,name:sh_inventory_mrp_qc_adv.action_report_workorder_qc
+msgid "Work Order QC Check Report"
+msgstr "工作订单QC检查报告"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.mrp_workorder_quality_alert_report_wizard_action
+msgid "Work Order Quality Alert Report"
+msgstr "工作订单质量警报报告"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.wo_quality_check_report_wizard_action
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.workorder_report_qc_check
+msgid "Work Order Quality Check Report"
+msgstr "工作订单质量检查报告"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.workorder_report_qc_check
+msgid "Work Order Ref."
+msgstr "工作订单参考。"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_alert__workorder_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check__workorder_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc_adv.field_sh_quality_check_line__workorder_id
+msgid "WorkOrder"
+msgstr "工作指示"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.child_menu_quality_picking_wo
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.quality_control_report_sub_menu_wo
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.sh_quality_check_search_view
+msgid "Workorder"
+msgstr "工作指示"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.quality_alert_workorder_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.menu_workorder_quality_alert
+msgid "Workorder Quality Alerts"
+msgstr "工作界质量警报"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc_adv.sh_quality_check_workorder_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc_adv.sh_quality_check_workorder
+msgid "Workorder Quality Check"
+msgstr "工作界质量检查"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.actions.act_window,help:sh_inventory_mrp_qc_adv.sh_quality_check_workorder_action
+msgid "Workorder Quality Checks"
+msgstr "工作界质量检查"
+
+#. module: sh_inventory_mrp_qc_adv
+#. odoo-python
+#: code:addons/sh_inventory_mrp_qc_adv/wizard/sh_master_wizard.py:0
+#, python-format
+msgid "You Measured %s and it should be between %s and %s %s"
+msgstr "您测量％s，应该在％s和％s％之间"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__mrp_quality_alert_report__operation_type__manufacturing
+msgid "manufacturing"
+msgstr "制造业"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_alert_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.mrp_quality_check_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_alert_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc_adv.quality_check_report_wizard_view
+msgid "or"
+msgstr "或者"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_report_sh_inventory_mrp_qc_adv_quality_alert_doc
+msgid "quality alert report abstract model"
+msgstr "质量警报报告摘要模型"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model,name:sh_inventory_mrp_qc_adv.model_report_sh_inventory_mrp_qc_adv_quality_check_doc
+msgid "quality check report abstract model"
+msgstr "质量检查报告摘要模型"
+
+#. module: sh_inventory_mrp_qc_adv
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc_adv.selection__mrp_quality_alert_report__operation_type__workorder
+msgid "workorder"
+msgstr "工作指示"

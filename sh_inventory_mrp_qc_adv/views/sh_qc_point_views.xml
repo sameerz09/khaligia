@@ -1,0 +1,81 @@
+<odoo>
+
+    <record id="sh_qc_point_form_view" model="ir.ui.view">
+        <field name="name">sh.qc_point.form.view</field>
+        <field name="model">sh.qc.point</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Quality Point">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="product_ids" required="1" widget="many2many_tags"/>
+                            <field name="picking_type_ids" required="1" widget="many2many_tags"/>
+                            <field name="company_id" groups="base.group_multi_company" />
+                            <field name="sh_team_id" />
+                            <field name="qc_mandatory" />
+                        </group>
+                        <group>
+                            <field name="type" required="1" />
+                            <field name="number_of_test" />
+                            <field name="sh_norm" attrs="{'invisible':[('type_id','=',False)]}" />
+                            <field name="uom_type" attrs="{'invisible':[('type_id','=',False)]}" />
+                            <label for="sh_unit_to" string="Tolerance" attrs="{'invisible':[('type_id','=',False)]}" />
+                            <div class="o_row" attrs="{'invisible':[('type_id','=',False)]}">
+                                <label for="sh_unit_from" string="From" attrs="{'invisible':[('type_id','=',False)]}" />
+                                <field name="sh_unit_from" />
+                                <label for="sh_unit_to" string="To" attrs="{'invisible':[('type_id','=',False)]}" />
+                                <field name="sh_unit_to" />
+                            </div>
+
+                            <field name="responsible_user_id" />
+                            <field name="type_id" invisible="1" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Instruction">
+                            <field name="sh_instruction" />
+                        </page>
+                    </notebook>
+                </sheet>
+
+                <!-- <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div> -->
+            </form>
+        </field>
+    </record>
+
+    <record id='sh_qc_point_tree_view' model='ir.ui.view'>
+        <field name="name">sh.qc.point.tree.view</field>
+        <field name="model">sh.qc.point</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Name" />
+                <field name="product_ids" widget="many2many_tags"/>
+                <field name="type" />
+                <field name="picking_type_ids" />
+                <field name="company_id" />
+            </tree>
+        </field>
+    </record>
+    <record id="sh_qc_points_action" model="ir.actions.act_window">
+        <field name="name">QC Points</field>
+        <field name="res_model">sh.qc.point</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                QC Points
+            </p>
+        </field>
+    </record>
+
+    <menuitem name="QC Points" action="sh_qc_points_action" id="sh_qc_point_root"  parent="sh_quality_control_config" sequence="2"/>
+</odoo>

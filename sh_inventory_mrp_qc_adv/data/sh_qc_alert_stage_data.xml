@@ -1,0 +1,6 @@
+<odoo>
+    <record id="alert_stage_0" model="sh.qc.alert.stage">
+        <field name="sequence">0</field>
+        <field name="name">NEW</field>
+    </record>
+</odoo>

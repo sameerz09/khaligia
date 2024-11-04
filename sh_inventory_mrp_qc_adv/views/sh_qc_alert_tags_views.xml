@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_quality_alert_tags_form_view" model="ir.ui.view">
+        <field name="name">sh.quality.tags.stage.form.view</field>
+        <field name="model">sh.qc.alert.tags</field>
+        <field name="arch" type="xml">
+            <form string="Quality Alert Tags">
+                <sheet>
+                    <group col="4">
+                        <field name="name" required="1" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="sh_quality_alert_tags_tree_view" model="ir.ui.view">
+        <field name="name">sh.quality.alert.stage.tree.view</field>
+        <field name="model">sh.qc.alert.tags</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="sh_qc_alert_tags_action" model="ir.actions.act_window">
+        <field name="name">QC Alert Tags</field>
+        <field name="res_model">sh.qc.alert.tags</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                QC Alert Tags
+            </p>
+        </field>
+    </record>
+
+    <menuitem name="QC Alert Tags" action="sh_qc_alert_tags_action" id="sh_qc_alert_tags_root"  parent="sh_quality_control_config" sequence="4"/>
+</odoo>

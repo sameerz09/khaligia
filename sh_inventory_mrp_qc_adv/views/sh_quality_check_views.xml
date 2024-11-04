@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_quality_checks_form_view" model="ir.ui.view">
+        <field name="name">sh.quality.checks.form.view</field>
+        <field name="model">sh.quality.check.line</field>
+        <field name="arch" type="xml">
+            <form string="Quality Check" create="0">
+                <sheet>
+                    <h1>
+                        <field name="name" default_focus="1" placeholder="Name"/>
+                    </h1>
+                    <h2>
+                        <field name="picking_id" readonly="1"/>
+                        <field name="production_id" readonly="1"/>
+                        <field name="workorder_id" readonly="1"/>
+                    </h2>
+                    <group>
+                        <field name="product_id"/>
+                        <field name="picking_type_id"/>
+                        <field name="check_date"/>
+                        <field name="sh_Qc_point_id"/>
+                        <field name="pass_fail_type"/>
+                    </group>
+                    <group>
+                        <field name="status"/>
+                        <field name="qc_point_type"/>
+                        <field name="sh_norm" attrs="{'invisible' : [('qc_point_type', '!=', 'type2')]}"/>
+                        <field name="attachment_ids" widget="many2many_binary" attrs="{'invisible' : [('qc_point_type', '!=', 'type3')]}"/>
+                        <field name="text_message" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="sh_quality_check_tree_view" model="ir.ui.view">
+        <field name="name">sh.quality.check.tree.view</field>
+        <field name="model">sh.quality.check.line</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="picking_id" />
+                <field name="production_id"/>
+                <field name="workorder_id"/>
+                <field name="product_id"/>
+                <field name="picking_type_id"/>
+                <field name="check_date"/>
+                <field name="sh_Qc_point_id"/>
+                <field name="status"/>
+                <field name="qc_point_type"/>
+                <field name="pass_fail_type"/>                
+                <field name="sh_norm" attrs="{'invisible' : [('qc_point_type', '!=', 'type2')]}"/>
+                <field name="attachment_ids" attrs="{'invisible' : [('qc_point_type', '!=', 'type3')]}"/>
+                <field name="text_message" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_quality_check_picking_tree_view" model="ir.ui.view">
+        <field name="name">sh.quality.check.picking.tree.view</field>
+        <field name="model">sh.quality.check.line</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="picking_id" />
+                <field name="product_id"/>
+                <field name="picking_type_id"/>
+                <field name="check_date"/>
+                <field name="sh_Qc_point_id"/>
+                <field name="status"/>
+                <field name="qc_point_type"/>
+                <field name="pass_fail_type"/>                
+                <field name="sh_norm" attrs="{'invisible' : [('qc_point_type', '!=', 'type2')]}"/>
+                <field name="attachment_ids" attrs="{'invisible' : [('qc_point_type', '!=', 'type3')]}"/>
+                <field name="text_message" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_quality_check_production_tree_view" model="ir.ui.view">
+        <field name="name">sh.quality.check.production.tree.view</field>
+        <field name="model">sh.quality.check.line</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="production_id" />
+                <field name="product_id"/>
+                <field name="picking_type_id"/>
+                <field name="check_date"/>
+                <field name="sh_Qc_point_id"/>
+                <field name="status"/>
+                <field name="qc_point_type"/>
+                <field name="pass_fail_type"/>                
+                <field name="sh_norm" attrs="{'invisible' : [('qc_point_type', '!=', 'type2')]}"/>
+                <field name="attachment_ids" attrs="{'invisible' : [('qc_point_type', '!=', 'type3')]}"/>
+                <field name="text_message" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_quality_check_workorder_tree_view" model="ir.ui.view">
+        <field name="name">sh.quality.check.workorder.tree.view</field>
+        <field name="model">sh.quality.check.line</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="workorder_id" />
+                <field name="product_id"/>
+                <field name="picking_type_id"/>
+                <field name="check_date"/>
+                <field name="sh_Qc_point_id"/>
+                <field name="status"/>
+                <field name="qc_point_type"/>
+                <field name="pass_fail_type"/>                
+                <field name="sh_norm" attrs="{'invisible' : [('qc_point_type', '!=', 'type2')]}"/>
+                <field name="attachment_ids" attrs="{'invisible' : [('qc_point_type', '!=', 'type3')]}"/>
+                <field name="text_message" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_quality_check_search_view" model="ir.ui.view">
+        <field name="name">sh.quality.alert.search.view</field>
+        <field name="model">sh.quality.check.line</field>
+        <field name="arch" type="xml">
+            <search string="Quality Checks">
+                <field name="picking_id" />
+                <field name="production_id" />
+                <field name="workorder_id" />
+                <separator />
+                <filter string="Inventory" name="picking_filter" domain="[('picking_id', '!=', False)]" />
+                <filter string="Manufacturing" name="production_filter" domain="[('production_id', '!=', False)]" />                
+                <filter string="Workorder" name="workorder_filter" domain="[('workorder_id', '!=', False)]" />                
+            </search>
+        </field>
+    </record>
+
+    <record id="sh_quality_check_all_action" model="ir.actions.act_window">
+        <field name="name">Quality Check</field>
+        <field name="res_model">sh.quality.check.line</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="sh_quality_check_tree_view"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Quality Checks
+            </p>
+        </field>
+    </record>
+
+    <record id="sh_quality_check_picking_action" model="ir.actions.act_window">
+        <field name="name">Inventory Quality Check</field>
+        <field name="res_model">sh.quality.check.line</field>
+        <field name="context">{'search_default_picking_filter':1}</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="sh_quality_check_picking_tree_view"></field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Inventory Quality Checks
+            </p>
+        </field>
+    </record>
+
+    <record id="sh_quality_check_production_action" model="ir.actions.act_window">
+        <field name="name">Manufacturing Quality Check</field>
+        <field name="res_model">sh.quality.check.line</field>
+        <field name="context">{'search_default_production_filter':1}</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="sh_quality_check_production_tree_view"></field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Manufacturing Quality Checks
+            </p>
+        </field>
+    </record>
+
+    <record id="sh_quality_check_workorder_action" model="ir.actions.act_window">
+        <field name="name">Workorder Quality Check</field>
+        <field name="res_model">sh.quality.check.line</field>
+        <field name="context">{'search_default_workorder_filter':1}</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="sh_quality_check_workorder_tree_view"></field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Workorder Quality Checks
+            </p>
+        </field>
+    </record>
+    
+    <menuitem id="sh_quality_check_main" name="Quality Checks" parent="sh_inventory_mrp_qc_adv.sh_quality_control_main_menu" sequence="2" groups="sh_inventory_mrp_qc_adv.sh_quality_control_manager" />
+    <menuitem name="Quality Check" action="sh_quality_check_all_action" id="sh_quality_check_all"  parent="sh_quality_check_main" sequence="1"/>
+    <menuitem name="Inventory Quality Check" action="sh_quality_check_picking_action" id="sh_quality_check_picking"  parent="sh_quality_check_main" sequence="2"/>
+    <menuitem name="Manufacturing Quality Check" action="sh_quality_check_production_action" id="sh_quality_check_production"  parent="sh_quality_check_main" sequence="3"/>
+    <menuitem name="Workorder Quality Check" action="sh_quality_check_workorder_action" id="sh_quality_check_workorder"  parent="sh_quality_check_main" sequence="4"/>
+</odoo>

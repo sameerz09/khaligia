@@ -1,0 +1,2381 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_inventory_mrp_qc
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.1alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-21 11:26+0000\n"
+"PO-Revision-Date: 2020-11-21 11:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production__sh_mrp_quality_check_ids_nbr
+msgid "# of Sales Orders"
+msgstr "Nombre de commandes de vente"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.report,print_report_name:sh_inventory_mrp_qc.mrp_report_quality_alert_action
+msgid "'MRP Quality Alert Report'"
+msgstr "Rapport d'alerte de qualité MRP '"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.report,print_report_name:sh_inventory_mrp_qc.report_quality_alert_action
+msgid "'Quality Alert Report'"
+msgstr "Rapport d'alerte de qualité '"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.report,print_report_name:sh_inventory_mrp_qc.report_mrp_quality_check_action
+#: model:ir.actions.report,print_report_name:sh_inventory_mrp_qc.report_quality_check_action
+msgid "'Quality Check Report'"
+msgstr "Rapport de vérification de la qualité '"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_doc
+msgid "<b>Date From :</b>"
+msgstr "<B> Date de: </ B>"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_doc
+msgid "<b>To :</b>"
+msgstr "<b> à: </ b>"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_doc
+msgid "<span>Responsible Person:</span>"
+msgstr "<span> personne responsable: </ span>"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_picking_form_view_custom
+msgid ""
+"<strong>Product(s) Quality Control Completed With Some Products Partially "
+"Passed.</strong>"
+msgstr ""
+"<strong>Produit (s) Contrôle de la qualité terminé avec certains produits partiellement"
+"Passé.</strong>"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_production_form_views_custom
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_work_order_inherit
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_picking_form_view_custom
+msgid "<strong>Product(s) Quality Control Failed.</strong>"
+msgstr "<Strong> Produit (S) Contrôle de la qualité a échoué. </ strong>"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_production_form_views_custom
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_work_order_inherit
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_picking_form_view_custom
+msgid "<strong>Product(s) Quality Control Still Pending.</strong>"
+msgstr "<STRUT> Produit (s) Contrôle de la qualité toujours en attente. </ strong>"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_production_form_views_custom
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_work_order_inherit
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_picking_form_view_custom
+msgid "<strong>Product(s) Quality Control Successfully Passed</strong>"
+msgstr "<STRUT> Produit (s) Contrôle de la qualité adopté avec succès </ strong>"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__alias_defaults
+msgid ""
+"A Python dictionary that will be evaluated to provide default values when "
+"creating new records for this alias."
+msgstr ""
+"Un dictionnaire python qui sera évalué pour fournir des valeurs par défaut lorsque"
+"Création de nouveaux enregistrements pour cet alias."
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_team_form_view
+msgid "Accept Emails From"
+msgstr "Accepter des emails de"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_needaction
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_needaction
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_needaction
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__message_needaction
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__message_needaction
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__message_needaction
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__message_needaction
+msgid "Action Needed"
+msgstr "Action nécessaire"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__activity_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__activity_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__activity_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__activity_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__activity_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__activity_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__activity_ids
+msgid "Activities"
+msgstr "Activités"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__activity_exception_decoration
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__activity_exception_decoration
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__activity_exception_decoration
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__activity_exception_decoration
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__activity_exception_decoration
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__activity_exception_decoration
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Décoration d'exception d'activité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__activity_state
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__activity_state
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__activity_state
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__activity_state
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__activity_state
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__activity_state
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__activity_state
+msgid "Activity State"
+msgstr "État d'activité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__activity_type_icon
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__activity_type_icon
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__activity_type_icon
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__activity_type_icon
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__activity_type_icon
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__activity_type_icon
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icône de type d'activité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team_type__alert_count
+msgid "Alert Count"
+msgstr "Comptage d'alerte"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert__alert_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert__alert_ids
+msgid "Alert Line"
+msgstr "Ligne d'alerte"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_doc
+msgid "Alert Ref No."
+msgstr "Alerte Ref n °"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert_line__alert_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_line__alert_id
+msgid "Alert Wizard"
+msgstr "Assistant d'alerte"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__alias_id
+msgid "Alias"
+msgstr "Alias"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__alias_contact
+msgid "Alias Contact Security"
+msgstr "Alias ​​Contact Security"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__alias_name
+msgid "Alias Name"
+msgstr "Alias"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__alias_domain
+msgid "Alias domain"
+msgstr "Domaine d'alias"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__alias_model_id
+msgid "Aliased Model"
+msgstr "Modèle aliasé"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.main_menu_quality_picking
+msgid "All Operations"
+msgstr "Toutes les opérations"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__sh_logged_user
+msgid "Approved By"
+msgstr "Approuvé par"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_attachment_count
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_attachment_count
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_attachment_count
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__message_attachment_count
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__message_attachment_count
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__message_attachment_count
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__message_attachment_count
+msgid "Attachment Count"
+msgstr "Compte de pièce jointe"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__mrp_quality_check_report__state__both
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__quality_check_report__state__both
+msgid "Both"
+msgstr "Les deux"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_qc_measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_allow_qc_measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_measurement_wizard_form_view
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team_type__check_count
+msgid "Check Count"
+msgstr "Chèque compte"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__color
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_tags__color
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__color
+msgid "Color Index"
+msgstr "Index de couleur"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__company_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__company_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__company_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__company_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__company_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__company_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__company_id
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_point_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_team_search_view
+msgid "Company"
+msgstr "Société"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.quality_control_config
+msgid "Configuration"
+msgstr "Configuration"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.correct_measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_correct_measurement_wizard_form_view
+msgid "Confirm Measure"
+msgstr "Confirmer la mesure"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production__partner_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_workorder__partner_id
+msgid "Contact"
+msgstr "Contact"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__control_point_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__sh_control_point
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__control_point_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__sh_control_point
+msgid "Control Point"
+msgstr "Point de contrôle"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.correct_measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_correct_measurement_wizard_form_view
+msgid "Correct Measure"
+msgstr "Mesure correcte"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_correct_qc_measurement
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_mrp_correct_qc_measurement
+msgid "Correct Measurement Wizard"
+msgstr "Assistant de mesure correct"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_doc
+msgid "Create Date"
+msgstr "créer un rendez-vous"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.actions.act_window,help:sh_inventory_mrp_qc.mrp_quality_alert_action
+#: model_terms:ir.actions.act_window,help:sh_inventory_mrp_qc.quality_alert_action
+#: model_terms:ir.actions.act_window,help:sh_inventory_mrp_qc.wo_quality_alert_action
+msgid "Create a New Quality Alert"
+msgstr "Créer une nouvelle alerte de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.actions.act_window,help:sh_inventory_mrp_qc.quality_alert_tags_action
+msgid "Create a New Tag"
+msgstr "Créer une nouvelle étiquette"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_alert_report__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_check_report__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_alert_report__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_check_report__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_correct_qc_measurement__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_allow_qc_measurement__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_correct_qc_measurement__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_measurement__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pass_fail__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pics__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert_line__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_measurement__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_text__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_line__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_tags__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement_line__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team_type__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_global_check__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pass_fail__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pics__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_qc_measurement__create_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_text__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_alert_report__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_check_report__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_alert_report__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_check_report__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_correct_qc_measurement__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_allow_qc_measurement__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_correct_qc_measurement__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_measurement__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pass_fail__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pics__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert_line__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_measurement__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_text__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_line__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_tags__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement_line__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team_type__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_global_check__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pass_fail__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pics__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_qc_measurement__create_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_text__create_date
+msgid "Created on"
+msgstr "Créé sur"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__alias_bounced_content
+msgid "Custom Bounced Message"
+msgstr "Message rebondi sur mesure"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.qc_dashboard_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_qc_dashboard
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__sh_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__sh_date
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.workorder_report_qc_check
+msgid "Date"
+msgstr "Date"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__alias_defaults
+msgid "Default Values"
+msgstr "Les valeurs par défaut"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__sh_description
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__sh_description
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_form_view
+msgid "Description"
+msgstr "La description"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_alert_report__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_check_report__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_workorder__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_alert_report__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_check_report__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_report_sh_inventory_mrp_qc_mrp_quality_alert_doc__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_report_sh_inventory_mrp_qc_mrp_quality_check_doc__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_report_sh_inventory_mrp_qc_quality_alert_doc__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_report_sh_inventory_mrp_qc_quality_check_doc__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_correct_qc_measurement__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_allow_qc_measurement__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_correct_qc_measurement__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_measurement__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pass_fail__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pics__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert_line__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_measurement__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_text__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_line__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_tags__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement_line__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team_type__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_global_check__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pass_fail__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pics__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_qc_measurement__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_text__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_move__display_name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Afficher un nom"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_mrp_quality_check__state__draft
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_qc_measurement_line__state__draft
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_quality_check__state__draft
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__email
+msgid "Email"
+msgstr "E-mail"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_team_form_view
+msgid "Email Alias"
+msgstr "Email alias"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__sh_employee
+msgid "Employee"
+msgstr "Employé"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_alert_report__date_to
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_check_report__date_to
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_alert_report__date_to
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_check_report__date_to
+msgid "End Date"
+msgstr "Date de fin"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_text_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_text_wizard_form_view
+msgid "Enter QC Message :"
+msgstr "Entrez le message QC:"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_text__text_message
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_global_check__text_message
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_text__text_message
+msgid "Enter QC details.."
+msgstr "Entrez les détails de QC .."
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__mrp_quality_check_report__state__fail
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__quality_check_report__state__fail
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_mrp_quality_check__state__fail
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_qc_measurement_line__state__fail
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_quality_check__state__fail
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_pics_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_pass_fail_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_text_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_pass_fail_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_pics_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_text_wizard_form_view
+msgid "Fail"
+msgstr "Échouer"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_global_wizard_form_view
+msgid "Fail & Next"
+msgstr "Échouer et ensuite"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.failed_qc_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.mrp_failed_qc_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.workorder_failed_qc_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_failed_qc
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.mrp_menu_failed_qc
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.workorder_menu_failed_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_qc_dashboard_kanban
+msgid "Failed QC"
+msgstr "Échoué qc"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team_type__failed_qc_count
+msgid "Failed QC Count"
+msgstr "Compte de QC échoué"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_follower_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_follower_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_follower_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__message_follower_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__message_follower_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__message_follower_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__message_follower_ids
+msgid "Followers"
+msgstr "Suiveurs"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_channel_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_channel_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_channel_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__message_channel_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__message_channel_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__message_channel_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Abonnés (canaux)"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_partner_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_partner_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_partner_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__message_partner_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__message_partner_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__message_partner_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Suiveurs (partenaires)"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__activity_type_icon
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_check__activity_type_icon
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_alert_stage__activity_type_icon
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_point__activity_type_icon
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__activity_type_icon
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_alert__activity_type_icon
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_check__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icône géniale de police E.g. FA-Tâches"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__sh_unit_to
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_point_form_view
+msgid "From"
+msgstr "De"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_picking__full_pass
+msgid "Full Pass"
+msgstr "Passage complet"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_check_report__group_by
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_check_report__group_by
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_point_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_team_search_view
+msgid "Group By"
+msgstr "Par groupe"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_mrp_qc_alert__sh_priority__3
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_mrp_quality_alert__sh_priority__3
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_qc_alert__sh_priority__3
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_quality_alert__sh_priority__3
+msgid "High"
+msgstr "Haute"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_alert_report__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_check_report__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_workorder__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_alert_report__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_check_report__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_report_sh_inventory_mrp_qc_mrp_quality_alert_doc__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_report_sh_inventory_mrp_qc_mrp_quality_check_doc__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_report_sh_inventory_mrp_qc_quality_alert_doc__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_report_sh_inventory_mrp_qc_quality_check_doc__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_correct_qc_measurement__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_allow_qc_measurement__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_correct_qc_measurement__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_measurement__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pass_fail__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pics__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert_line__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_measurement__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_text__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_line__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_tags__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement_line__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team_type__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_global_check__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pass_fail__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pics__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_qc_measurement__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_text__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_move__id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_picking__id
+msgid "ID"
+msgstr "identifiant"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__alias_parent_thread_id
+msgid ""
+"ID of the parent record holding the alias (example: project holding the task"
+" creation alias)"
+msgstr ""
+"ID de l'enregistrement parent tenant l'alias (exemple: projet détenant la tâche"
+" alias de création)"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__activity_exception_icon
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__activity_exception_icon
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__activity_exception_icon
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__activity_exception_icon
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__activity_exception_icon
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__activity_exception_icon
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__activity_exception_icon
+msgid "Icon"
+msgstr "Icône"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__activity_exception_icon
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_check__activity_exception_icon
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_alert_stage__activity_exception_icon
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_point__activity_exception_icon
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__activity_exception_icon
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_alert__activity_exception_icon
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_check__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icône pour indiquer une activité d'exception."
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__name_id
+msgid "Id#"
+msgstr "Identifiant#"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_needaction
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_unread
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_needaction
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_unread
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_needaction
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_unread
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_point__message_needaction
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_point__message_unread
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__message_needaction
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__message_unread
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_alert__message_needaction
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_alert__message_unread
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_check__message_needaction
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_check__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si coché, de nouveaux messages nécessitent votre attention."
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_has_error
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_has_sms_error
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_has_error
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_has_sms_error
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_has_error
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_has_sms_error
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_point__message_has_error
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_point__message_has_sms_error
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__message_has_error
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__message_has_sms_error
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_alert__message_has_error
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_alert__message_has_sms_error
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_check__message_has_error
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_check__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si coché, certains messages ont une erreur de livraison."
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__alias_bounced_content
+msgid ""
+"If set, this content will automatically be sent out to unauthorized users "
+"instead of the default message."
+msgstr ""
+"Si défini, ce contenu sera automatiquement envoyé aux utilisateurs non autorisés."
+"au lieu du message par défaut."
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__sh_instruction
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_point_form_view
+msgid "Instruction"
+msgstr "Instruction"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.child_menu_quality_picking_inventory
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.quality_control_report_sub_menu_inventory
+msgid "Inventory"
+msgstr "Inventaire"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_is_follower
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_is_follower
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_is_follower
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__message_is_follower
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__message_is_follower
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__message_is_follower
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__message_is_follower
+msgid "Is Follower"
+msgstr "Est suivi"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_check_report__is_mrp
+msgid "Is MRP"
+msgstr "Est MRP"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_alert_report__operation_type
+msgid "Is Operation"
+msgstr "Est opérationnel"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_alert_report____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_check_report____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_workorder____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_alert_report____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_check_report____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_report_sh_inventory_mrp_qc_mrp_quality_alert_doc____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_report_sh_inventory_mrp_qc_mrp_quality_check_doc____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_report_sh_inventory_mrp_qc_quality_alert_doc____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_report_sh_inventory_mrp_qc_quality_check_doc____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_correct_qc_measurement____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_allow_qc_measurement____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_correct_qc_measurement____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_measurement____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pass_fail____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pics____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert_line____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_measurement____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_text____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_line____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_tags____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement_line____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team_type____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_global_check____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pass_fail____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pics____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_qc_measurement____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_text____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_move____last_update
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_picking____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification sur"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_move__sh_last_qc_date
+msgid "Last Quality Check Date"
+msgstr "Dernière date de vérification de la qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_move__sh_last_qc_state
+msgid "Last Quality Check Status"
+msgstr "Statut de vérification de la dernière qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_alert_report__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_check_report__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_alert_report__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_check_report__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_correct_qc_measurement__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_allow_qc_measurement__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_correct_qc_measurement__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_measurement__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pass_fail__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pics__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert_line__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_measurement__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_text__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_line__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_tags__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement_line__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team_type__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_global_check__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pass_fail__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pics__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_qc_measurement__write_uid
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_text__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_alert_report__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_check_report__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_alert_report__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_check_report__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_correct_qc_measurement__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_allow_qc_measurement__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_correct_qc_measurement__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_measurement__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pass_fail__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pics__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert_line__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_measurement__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_text__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_line__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_tags__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement_line__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team_type__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_global_check__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pass_fail__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pics__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_qc_measurement__write_date
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_text__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__lot_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__lot_id
+msgid "Lot Number"
+msgstr "Numéro de lot"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_mrp_qc_alert__sh_priority__1
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_mrp_quality_alert__sh_priority__1
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_qc_alert__sh_priority__1
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_quality_alert__sh_priority__1
+msgid "Low"
+msgstr "Meugler"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_mrp_pass_fail
+msgid "MEP Quality Measurement Pass Fail"
+msgstr "MEP Qualité Mesure Pass échoue"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.child_menu_quality_picking_mrp
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.quality_control_report_sub_menu_mrp
+msgid "MRP"
+msgstr "MRP"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_mrp_qc_measurement
+msgid "MRP Measurement"
+msgstr "Mesure de MRP"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.mrp_quality_alert_report_action
+msgid "MRP Quality Alert"
+msgstr "Alerte de qualité MRP"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.mrp_quality_alert_report_wizard_action
+msgid "MRP Quality Alert Report"
+msgstr "Rapport d'alerte de qualité MRP"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_mrp_qc_alert
+msgid "MRP Quality Alert Wizard"
+msgstr "Assistant d'alerte de qualité MRP"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.mrp_quality_alert_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.mrp_menu_quality_alert
+msgid "MRP Quality Alerts"
+msgstr "Alertes de qualité MRP"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.mrp_quality_check_report_action
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_mrp_quality_check
+msgid "MRP Quality Check"
+msgstr "Vérification de la qualité MRP"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.mrp_quality_check_report_wizard_action
+#: model:ir.model,name:sh_inventory_mrp_qc.model_mrp_quality_check_report
+msgid "MRP Quality Check Report"
+msgstr "Rapport de vérification de la qualité MRP"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_mrp_measurement
+msgid "MRP Quality Measurement"
+msgstr "Mesure de qualité MRP"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.mrp_pics_wizard_action
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_mrp_pics
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_pics_wizard_form_view
+msgid "MRP Quality Measurement Pictures"
+msgstr "MRP Quality Mesure Images"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_report_sh_inventory_mrp_qc_mrp_quality_alert_doc
+msgid "MRP quality alert report abstract model"
+msgstr "Rapport d'alerte de qualité MRP Abstrait modèle"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_main_attachment_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_main_attachment_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_main_attachment_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__message_main_attachment_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__message_main_attachment_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__message_main_attachment_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Pièce jointe principale"
+
+#. module: sh_inventory_mrp_qc
+#: model:res.groups,name:sh_inventory_mrp_qc.sh_quality_control_manager
+msgid "Manager"
+msgstr "Directeur"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_allow_qc_measurement__mrp_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_correct_qc_measurement__mrp_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_measurement__mrp_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pass_fail__mrp_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pics__mrp_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_measurement__mrp_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__sh_mrp
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_text__mrp_id
+msgid "Manufacturing"
+msgstr "Fabrication"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_search_view
+msgid "Manufacturing Operation"
+msgstr "Opération de fabrication"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__mrp_id
+msgid "Manufacturing Ref."
+msgstr "Fabrication Ref."
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_production_form_views_custom
+msgid "Mark as Done"
+msgstr "Marque comme Terminé"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__number_of_test
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_move__number_of_test
+msgid "Maximum number of tests allowed."
+msgstr "Nombre maximum de tests autorisés."
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_correct_qc_measurement__sh_measure
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_correct_qc_measurement__sh_measure
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_measurement__sh_measure
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_measurement__sh_measure
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__sh_norm
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement_line__sh_measure
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__sh_norm
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_global_check__sh_measure
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_qc_measurement__sh_measure
+msgid "Measure"
+msgstr "Mesure"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement_line__measurement_id
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_mrp_quality_check__qc_type__type2
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_qc_measurement_line__type__type2
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_qc_point__type__type2
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_quality_check__qc_type__type2
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_stock_move_global_check__type__type2
+msgid "Measurement"
+msgstr "La mesure"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement__measurement_ids
+msgid "Measurement Lines"
+msgstr "Lignes de mesure"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_correct_qc_measurement__sh_text
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_allow_qc_measurement__sh_message
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_correct_qc_measurement__sh_text
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_measurement__sh_message
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pass_fail__sh_message
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pics__sh_message
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_text__sh_message
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_global_check__sh_message
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pass_fail__sh_message
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pics__sh_message
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_text__sh_message
+msgid "Measurement Message"
+msgstr "Message de mesure"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_correct_qc_measurement__sh_message
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_correct_qc_measurement__sh_message
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_measurement__sh_message
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement_line__sh_text
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_qc_measurement__sh_message
+msgid "Message"
+msgstr "Un message"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_has_error
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_has_error
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_has_error
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__message_has_error
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__message_has_error
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__message_has_error
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__message_has_error
+msgid "Message Delivery error"
+msgstr "Erreur de livraison de message"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__sh_message
+msgid "Message if Fail"
+msgstr "Message si échoue"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__message_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__message_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__message_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__message_ids
+msgid "Messages"
+msgstr "messages"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_global_check__move_id
+msgid "Move"
+msgstr "Se déplacer"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production__sh_mrp_pass_fail_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_workorder__sh_mrp_workorder_pass_fail_ids
+msgid "Mrp Pass Fail Quality Checks"
+msgstr "MRP Pass FAIL VÉRIFICATIONS DE QUALITÉ"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production__sh_mrp_qc_measurement_ids
+msgid "Mrp QC measurement Quality Checks"
+msgstr "Vérifications de la qualité de la mesure de MRP QC"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.mrp_quality_alert_wizard_action
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_mrp_quality_alert
+msgid "Mrp Quality Alert"
+msgstr "Alerte de qualité MRP"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.mrp_quality_check_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_mrp_quality_check
+msgid "Mrp Quality Check"
+msgstr "Vérification de la qualité MRP"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production__sh_mrp_quality_alert_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production__sh_mrp_quality_check_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_workorder__sh_mrp_workorder_quality_alert_ids
+msgid "Mrp Quality Checks"
+msgstr "Vérifications de qualité MRP"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_text__mrp_quality_point_id
+msgid "Mrp Quality Control Point"
+msgstr "Point de contrôle de la qualité MRP"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_mrp_text
+msgid "Mrp Quality Measurement Text"
+msgstr "Texte de mesure de qualité MRP"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_workorder__sh_mrp_workorder_quality_check_ids
+msgid "Mrp WorkOrder Quality Checks"
+msgstr "Vérifications de la qualité du fonctionnaire de MRP"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production__sh_mrp_measurement_ids
+msgid "Mrp measurement Quality Checks"
+msgstr "Vérifications de la qualité MRP Mesure"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production__sh_mrp_pics_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_workorder__sh_mrp_workorder_pics_ids
+msgid "Mrp pics Quality Checks"
+msgstr "MRP Pics Vérifications de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_report_sh_inventory_mrp_qc_mrp_quality_check_doc
+msgid "Mrp quality check report abstract model"
+msgstr "Rapport de vérification de la qualité MRP Abstrait Modèle"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_tags__name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team_type__name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__name
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_point_tree_view
+msgid "Name"
+msgstr "Nom"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production__need_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_workorder__need_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_picking__need_qc
+msgid "Need QC"
+msgstr "Besoin de qc"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_global_wizard_form_view
+msgid "Next"
+msgstr "Prochain"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__activity_date_deadline
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__activity_date_deadline
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__activity_date_deadline
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__activity_date_deadline
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__activity_date_deadline
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__activity_date_deadline
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Date limite d'activité suivante"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__activity_summary
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__activity_summary
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__activity_summary
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__activity_summary
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__activity_summary
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__activity_summary
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__activity_summary
+msgid "Next Activity Summary"
+msgstr "Résumé de l'activité suivante"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__activity_type_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__activity_type_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__activity_type_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__activity_type_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__activity_type_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__activity_type_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__activity_type_id
+msgid "Next Activity Type"
+msgstr "Type d'activité suivant"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__sh_norm
+msgid "Norm"
+msgstr "Norme"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_mrp_qc_alert__sh_priority__2
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_mrp_quality_alert__sh_priority__2
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_qc_alert__sh_priority__2
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_quality_alert__sh_priority__2
+msgid "Normal"
+msgstr "Normal"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_mrp_allow_qc_measurement
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_allow_qc_measurement_wizard_form_view
+msgid "Not Allow For Quality Check"
+msgstr "Ne pas autoriser la vérification de la qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_needaction_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_needaction_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_needaction_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__message_needaction_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__message_needaction_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__message_needaction_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'actions"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_has_error_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_has_error_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_has_error_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__message_has_error_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__message_has_error_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__message_has_error_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'erreurs"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_needaction_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_needaction_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_needaction_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_point__message_needaction_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__message_needaction_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_alert__message_needaction_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_check__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Nombre de messages nécessitant une action"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_has_error_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_has_error_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_has_error_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_point__message_has_error_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__message_has_error_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_alert__message_has_error_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_check__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de messages avec erreur de livraison"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_unread_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_unread_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_unread_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_point__message_unread_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__message_unread_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_alert__message_unread_counter
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_check__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Nombre de messages non lus"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__mrp_quality_check_report__group_by__sh_mrp
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_doc
+msgid "Operation"
+msgstr "Opération"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_report_qc_check
+msgid "Operation Ref."
+msgstr "Opération Réf."
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__alias_force_thread_id
+msgid ""
+"Optional ID of a thread (record) to which all incoming messages will be "
+"attached, even if they did not reply to it. If set, this will disable the "
+"creation of new records completely."
+msgstr ""
+"ID optionnel d'un fil (enregistrement) à laquelle tous les messages entrants seront"
+"attaché, même s'ils ne l'ont pas répondu. Si défini, cela désactivera le"
+"Création de nouveaux enregistrements complètement."
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_doc
+msgid "Order Ref."
+msgstr "Commandez Réf."
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__alias_user_id
+msgid "Owner"
+msgstr "Propriétaire"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__alias_parent_model_id
+msgid "Parent Model"
+msgstr "Modèle parent"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__alias_parent_thread_id
+msgid "Parent Record Thread ID"
+msgstr "ID de fil d'enregistrement parent"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__alias_parent_model_id
+msgid ""
+"Parent model holding the alias. The model holding the alias reference is not"
+" necessarily the model given by alias_model_id (example: project "
+"(parent_model) and task (model))"
+msgstr ""
+"Modèle parent tenant l'alias. Le modèle tenant la référence d'alias n'est pas"
+" nécessairement le modèle donné par alias_model_id (exemple: projet"
+"(parent_model) et la tâche (modèle))"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_qc_dashboard_kanban
+msgid "Partially Pass"
+msgstr "Passer partiellement"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.passed_qc_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_passed_qc
+msgid "Partially Passed QC"
+msgstr "Passé partiellement QC"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert_line__partner_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__partner_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_line__partner_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__partner_id
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_search_view
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__mrp_quality_check_report__state__pass
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__quality_check_report__state__pass
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_mrp_quality_check__state__pass
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_qc_measurement_line__state__pass
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_quality_check__state__pass
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_pics_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_pass_fail_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_text_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_pass_fail_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_pics_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_text_wizard_form_view
+msgid "Pass"
+msgstr "Passe"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_global_wizard_form_view
+msgid "Pass & Next"
+msgstr "Pass & Suivant"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_mrp_quality_check__qc_type__type1
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_qc_measurement_line__type__type1
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_qc_point__type__type1
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_quality_check__qc_type__type1
+msgid "Pass Fail"
+msgstr "Réussite"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team_type__partially_passed_qc_count
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team_type__passed_qc_count
+msgid "Pass QC Count"
+msgstr "Passer QC compter"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_stock_move_global_check__type__type1
+msgid "Pass-Fail"
+msgstr "Défaillance"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.fully_passed_qc_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.mrp_fully_passed_qc_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.workorder_fully_passed_qc_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_full_passed_qc
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.mrp_menu_full_passed_qc
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.workorder_menu_full_passed_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_qc_dashboard_kanban
+msgid "Passed QC"
+msgstr "Passé qc"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.mrp_pending_qc_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.pending_qc_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.workorder_pending_qc_action
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production__pending_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_workorder__pending_qc
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_pending_qc
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.mrp_menu_pending_qc
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.workorder_menu_pending_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_qc_dashboard_kanban
+msgid "Pending QC"
+msgstr "En attente de QC"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team_type__pending_qc_count
+msgid "Pending QC Count"
+msgstr "En attente de QC compter"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_correct_qc_measurement__picking_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__sh_picking
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_global_check__picking_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pass_fail__picking_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pics__picking_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_qc_measurement__picking_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_text__picking_id
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_doc
+msgid "Picking"
+msgstr "Cueillette"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_search_view
+msgid "Picking Operation"
+msgstr "Cueillette"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__piking_id
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.report_qc_check
+msgid "Picking Ref."
+msgstr "Cueillir ref."
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__operation
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__quality_check_report__group_by__picking
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_point_search_view
+msgid "Picking Type"
+msgstr "Type de cueillette"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__alias_contact
+msgid ""
+"Policy to post a message on the document using the mailgateway.\n"
+"- everyone: everyone can post\n"
+"- partners: only authenticated partners\n"
+"- followers: only followers of the related document or members of following channels\n"
+msgstr ""
+"Politique de poster un message sur le document à l'aide du mailgateway. \ N"
+"- Tout le monde: tout le monde peut poster \ n"
+"- Partenaires: Seulement des partenaires authentifiés \ n"
+"- Abonnés: Seuls les adeptes du document associé ou des membres de canaux suivants \ n"
+
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_report_wizard_view
+msgid "Print"
+msgstr "Imprimer"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert__sh_priority
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__sh_priority
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert__sh_priority
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__sh_priority
+msgid "Priority"
+msgstr "Priorité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_alert_report__product_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_check_report__product_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_alert_report__product_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_check_report__product_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_correct_qc_measurement__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_allow_qc_measurement__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_correct_qc_measurement__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_measurement__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pass_fail__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pics__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert_line__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_measurement__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_text__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_line__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement_line__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_global_check__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pass_fail__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pics__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_qc_measurement__product_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_text__product_id
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__mrp_quality_check_report__group_by__product
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__quality_check_report__group_by__product
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_point_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.workorder_report_qc_check
+msgid "Product"
+msgstr "Produit"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_mrp_production
+msgid "Production Order"
+msgstr "Ordre de production"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_qc_dashboard_kanban
+msgid "QC Alerts"
+msgstr "QC Alertes"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.report,name:sh_inventory_mrp_qc.action_report_picking_qc
+msgid "QC Check Report"
+msgstr "Rapport de chèque QC"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production__qc_fail
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_workorder__qc_fail
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_picking__qc_fail
+msgid "QC Fail"
+msgstr "QC échec"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.report,name:sh_inventory_mrp_qc.action_report_mrp_qc
+msgid "QC MRP Check Report"
+msgstr "QC MRP Check Report"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production__is_mandatory
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_picking__is_mandatory
+msgid "QC Mandatory"
+msgstr "QC obligatoire"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__is_mandatory
+msgid "QC Mandatory ?"
+msgstr "QC obligatoire?"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production__qc_pass
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_workorder__qc_pass
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_picking__qc_pass
+msgid "QC Pass"
+msgstr "QC passe"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production__attachment_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_workorder__attachment_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_picking__attachment_ids
+msgid "QC Pictures"
+msgstr "Qc images"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.workorder_report_qc_check
+msgid "QC Point"
+msgstr "Point QC"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__text_message
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__text_message
+msgid "QC Text"
+msgstr "Texte QC"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__attachment_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__attachment_ids
+msgid "QC pictures"
+msgstr "Qc images"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_qc_dashboard_kanban
+msgid "QCCheck"
+msgstr "Qccheck"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.quality_alert_report_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.quality_alert_wizard_action
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_quality_alert
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_picking__sh_quality_alert_ids
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_mrp_quality_alert_pivot
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_quality_alert_pivot
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_wo_quality_alert_pivot
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_pivot_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_pivot_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_wizard_form_view
+msgid "Quality Alert"
+msgstr "Alerte de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.quality_alert_report_wizard_action
+#: model:ir.actions.report,name:sh_inventory_mrp_qc.mrp_report_quality_alert_action
+#: model:ir.actions.report,name:sh_inventory_mrp_qc.report_quality_alert_action
+#: model:ir.model,name:sh_inventory_mrp_qc.model_mrp_quality_alert_report
+#: model:ir.model,name:sh_inventory_mrp_qc.model_quality_alert_report
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_mrp_quality_alert_report
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_quality_alert_report
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_wo_quality_alert_report
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_report_wizard_view
+msgid "Quality Alert Report"
+msgstr "Rapport d'alerte de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_qc_alert_stage
+msgid "Quality Alert Stage"
+msgstr "Étape d'alerte de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.quality_alert_stage_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_qc_alert_stage
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_stage_form_view
+msgid "Quality Alert Stages"
+msgstr "Étapes d'alerte de la qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.quality_alert_tags_action
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_qc_alert_tags
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.quality_alert_tags_menu
+msgid "Quality Alert Tags"
+msgstr "Tags d'alerte de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_qc_alert
+msgid "Quality Alert Wizard"
+msgstr "Assistant d'alerte de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_mrp_qc_alert_line
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_qc_alert_line
+msgid "Quality Alert Wizard Line"
+msgstr "Ligne de l'assistant d'alerte de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.quality_alert_action
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production__qc_alert_count
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_workorder__qc_alert_count
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_picking__qc_alert_count
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.main_menu_quality_alert
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_quality_alert
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_production_form_views_custom
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_work_order_inherit
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_picking_form_view_custom
+msgid "Quality Alerts"
+msgstr "Alertes de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.quality_check_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.quality_check_report_action
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_quality_check
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_mrp_quality_check_pivot
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_quality_check
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_quality_check_pivot
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_wo_quality_check_pivot
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.quality_main_menu
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_search_view
+msgid "Quality Check"
+msgstr "Contrôle qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.quality_check_report_wizard_action
+#: model:ir.actions.report,name:sh_inventory_mrp_qc.report_mrp_quality_check_action
+#: model:ir.actions.report,name:sh_inventory_mrp_qc.report_quality_check_action
+#: model:ir.model,name:sh_inventory_mrp_qc.model_quality_check_report
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_mrp_quality_check_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_quality_check_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_wo_quality_check_action
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.report_qc_check
+msgid "Quality Check Report"
+msgstr "Rapport de vérification de la qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production__qc_count
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_workorder__qc_count
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_picking__qc_count
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_picking__sh_quality_check_ids
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_production_form_views_custom
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_pivot_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_pivot_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_work_order_inherit
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_picking_form_view_custom
+msgid "Quality Checks"
+msgstr "Vérifications de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.module.category,description:sh_inventory_mrp_qc.module_quality_control_category
+#: model:ir.module.category,name:sh_inventory_mrp_qc.module_quality_control_category
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.quality_control_main_menu
+msgid "Quality Control"
+msgstr "Contrôle de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_production__sh_mrp_quality_point_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_workorder__sh_workorder_quality_point_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_correct_qc_measurement__sh_quality_point_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_allow_qc_measurement__sh_quality_point_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_correct_qc_measurement__sh_quality_point_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_measurement__sh_quality_point_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pass_fail__sh_quality_point_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pics__sh_quality_point_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_global_check__sh_quality_point_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pass_fail__sh_quality_point_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pics__sh_quality_point_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_text__sh_quality_point_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_move__sh_quality_point_id
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_search_view
+msgid "Quality Control Point"
+msgstr "Point de contrôle de la qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.correct_measurement_wizard_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.measurement_wizard_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.mrp_correct_measurement_wizard_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.mrp_qc_measurement_wizard_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.sh_mrp_allow_qc_measurement_wizard_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.sh_mrp_measurement_wizard_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.stock_move_global_wizard_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.stock_move_measurement_wizard_action
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_qc_measurement
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.correct_measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_correct_measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_qc_measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_global_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_measurement_wizard_form_view
+msgid "Quality Measurement"
+msgstr "Mesure de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_qc_measurement_line
+msgid "Quality Measurement Line"
+msgstr "Ligne de mesure de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.sh_mrp_pass_fail_wizard_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.stock_move_pass_fail_wizard_action
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_pass_fail_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_pass_fail_wizard_form_view
+msgid "Quality Measurement Pass/Fail"
+msgstr "Passage de la mesure de qualité / échec"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.stock_move_pics_wizard_action
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_pics_wizard_form_view
+msgid "Quality Measurement Pictures"
+msgstr "Images de mesure de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.sh_mrp_text_wizard_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.stock_move_text_wizard_action
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_text_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_text_wizard_form_view
+msgid "Quality Measurement Text"
+msgstr "Texte de mesure de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.quality_point_action
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_qc_point
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_measurement__quality_point_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement_line__quality_point_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_qc_measurement__quality_point_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_stock_move__sh_quality_point
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_quality_point
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_point_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_point_search_view
+msgid "Quality Point"
+msgstr "Point de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.quality_team_action
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_qc_team
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_quality_team
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_team_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_team_search_view
+msgid "Quality Team"
+msgstr "Équipe de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__alias_force_thread_id
+msgid "Record Thread ID"
+msgstr "ID de fil d'enregistrement"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_doc
+msgid "Ref."
+msgstr "Réf."
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.quality_control_report_main_menu
+msgid "Reporting"
+msgstr "Notification"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert__user_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__user_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert__user_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__logged_user
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__user_id
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_search_view
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__activity_user_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__activity_user_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__activity_user_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__activity_user_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__activity_user_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__activity_user_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__activity_user_id
+msgid "Responsible User"
+msgstr "Utilisateur responsable"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_alert_report__user_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_alert_report__user_ids
+msgid "Responsible Users"
+msgstr "Utilisateurs responsables"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_has_sms_error
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_has_sms_error
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_has_sms_error
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__message_has_sms_error
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__message_has_sms_error
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__message_has_sms_error
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Erreur de livraison SMS"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_wizard_form_view
+msgid "Save"
+msgstr "sauvegarder"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__sequence
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_tags__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_qc_dashboard_kanban
+msgid "Settings"
+msgstr "Paramètres"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__sh_signature
+msgid "Sh Signature"
+msgstr "SH Signature"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.workorder_report_qc_check
+msgid "Sr."
+msgstr "Sr."
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_doc
+msgid "Sr. No."
+msgstr "Sr n °"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_alert_report__stage_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_alert_report__stage_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__stage_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__stage_id
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_search_view
+msgid "Stage"
+msgstr "Organiser"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_alert_report__date_from
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_check_report__date_from
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_alert_report__date_from
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_check_report__date_from
+msgid "Start Date"
+msgstr "Date de début"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement_line__state
+msgid "State"
+msgstr "État"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_quality_check_report__state
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_quality_check_report__state
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__state
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__state
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.report_qc_check
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.workorder_report_qc_check
+msgid "Status"
+msgstr "Statut"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__activity_state
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_check__activity_state
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_alert_stage__activity_state
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_point__activity_state
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__activity_state
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_alert__activity_state
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_check__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Statut basé sur les activités \ n"
+"En retard: la date d'échéance est déjà passée \ n"
+"Aujourd'hui: la date d'activité est aujourd'hui \ n"
+"Planifié: activités futures."
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_stock_move
+msgid "Stock Move"
+msgstr "Bouger"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_stock_move_qc_measurement
+msgid "Stock Move Measurement"
+msgstr "Mesure de mouvement du stock"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_stock_move_global_check
+msgid "Stock Move Quality Measurement Global check"
+msgstr "Stock Déplacer la mesure de la qualité Vérification globale"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_stock_move_pass_fail
+msgid "Stock Move Quality Measurement Pass Fail"
+msgstr "Stock Déplacer la qualité de la mesure de la mesure d'échec"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_stock_move_pics
+msgid "Stock Move Quality Measurement Pictures"
+msgstr "Stock Déplacer des images de mesure de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_stock_move_text
+msgid "Stock Move Quality Measurement Text"
+msgstr "Stock déplacer le texte de mesure de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.constraint,message:sh_inventory_mrp_qc.constraint_sh_qc_alert_tags_name_uniq
+msgid "Tag name already exists!"
+msgstr "Nom de la balise existe déjà!"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__tag_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__tag_ids
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_tags_form_view
+msgid "Tags"
+msgstr "Mots clés"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_mrp_quality_check__qc_type__type3
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_quality_check__qc_type__type3
+msgid "Take A picture"
+msgstr "Prendre une photo"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_qc_point__type__type3
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_stock_move_global_check__type__type3
+msgid "Take a Picture"
+msgstr "Prendre une photo"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_alert__team_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__team_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert__team_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__team
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team_type__team_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__team_id
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_search_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_search_view
+msgid "Team"
+msgstr "Équipe"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_mrp_quality_check__qc_type__type4
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_qc_point__type__type4
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_quality_check__qc_type__type4
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_stock_move_global_check__type__type4
+msgid "Text"
+msgstr "Texte"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__alias_model_id
+msgid ""
+"The model (Odoo Document Kind) to which this alias corresponds. Any incoming"
+" email that does not reply to an existing record will cause the creation of "
+"a new record of this model (e.g. a Project Task)"
+msgstr ""
+"Le modèle (ODOO Document type) auquel cet alias correspond. Tout entrant"
+" courriel qui ne répond pas à un enregistrement existant entraînera la création de"
+"Un nouveau disque de ce modèle (par exemple une tâche de projet)"
+
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__alias_name
+msgid ""
+"The name of the email alias, e.g. 'jobs' if you want to catch emails for "
+"<jobs@example.odoo.com>"
+msgstr ""
+"Le nom de l'alias e-mail, par exemple 'emplois' si vous voulez attraper des courriels pour"
+"<emplois@example.odoo.com>"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__alias_user_id
+msgid ""
+"The owner of records created upon receiving emails on this alias. If this "
+"field is not set the system will attempt to find the right owner based on "
+"the sender (From) address, or will use the Administrator account if no "
+"system user is found for that address."
+msgstr ""
+"Le propriétaire des enregistrements créés lors de la réception de courriels sur cet alias. Si ce"
+"champ n'est pas défini sur le système tentera de trouver le bon propriétaire basé sur"
+"l'adresse de l'expéditeur (à partir de) ou utilisera le compte administrateur si non"
+"L'utilisateur système est trouvé pour cette adresse."
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__title
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__name
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__title
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_doc
+msgid "Title"
+msgstr "Titre"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__sh_unit_from
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_doc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_point_form_view
+msgid "To"
+msgstr "À"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_point_form_view
+msgid "Tolerance"
+msgstr "Tolérance"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__qc_type
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_measurement_line__type
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__type
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__qc_type
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_global_check__type
+msgid "Type"
+msgstr "Taper"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__type_id
+msgid "Type Id"
+msgstr "Type d'identité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__activity_exception_decoration
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_check__activity_exception_decoration
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_alert_stage__activity_exception_decoration
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_point__activity_exception_decoration
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__activity_exception_decoration
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_alert__activity_exception_decoration
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_check__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type de l'activité d'exception sur l'enregistrement."
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_unread
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_unread
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_unread
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__message_unread
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__message_unread
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__message_unread
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__message_unread
+msgid "Unread Messages"
+msgstr "Messages non lus"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__message_unread_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__message_unread_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__message_unread_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__message_unread_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__message_unread_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__message_unread_counter
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Messages non lus compteur"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pics__attachment_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_global_check__attachment_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_stock_move_pics__attachment_ids
+msgid "Upload Pictures"
+msgstr "Télécharger des images"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__sh_logged_user
+#: model:res.groups,name:sh_inventory_mrp_qc.sh_quality_control_user
+msgid "User"
+msgstr "Utilisateur"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__user_ids
+msgid "Users"
+msgstr "Utilisateurs"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_production_form_views_custom
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_qc_measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_picking_form_view_custom
+msgid "Validate"
+msgstr "Valider"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_global_wizard_form_view
+msgid "Validate & Next"
+msgstr "Valider & Suivant"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_mrp_qc_alert__sh_priority__0
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_mrp_quality_alert__sh_priority__0
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_qc_alert__sh_priority__0
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__sh_quality_alert__sh_priority__0
+msgid "Very Low"
+msgstr "Très lent"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.wo_quality_alert_report_action
+msgid "WO Quality Alert"
+msgstr "Wo alerte de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.wo_quality_alert_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.wo_menu_quality_alert
+msgid "WO Quality Alerts"
+msgstr "WO Alertes de qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.wo_quality_check_action
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.wo_quality_check_report_action
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.menu_wo_quality_check
+msgid "WO Quality Check"
+msgstr "WO Vérification de la qualité"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__website_message_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__website_message_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_alert_stage__website_message_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_point__website_message_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_qc_team__website_message_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_alert__website_message_ids
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_quality_check__website_message_ids
+msgid "Website Messages"
+msgstr "Messages de site Web"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__website_message_ids
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_mrp_quality_check__website_message_ids
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_alert_stage__website_message_ids
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_point__website_message_ids
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_qc_team__website_message_ids
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_alert__website_message_ids
+#: model:ir.model.fields,help:sh_inventory_mrp_qc.field_sh_quality_check__website_message_ids
+msgid "Website communication history"
+msgstr "Historique des communications de sites Web"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_mrp_workorder
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_correct_qc_measurement__workorder_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_measurement__workorder_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pass_fail__workorder_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_pics__workorder_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_qc_measurement__workorder_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_alert__workorder_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_quality_check__sh_workorder_id
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_sh_mrp_text__workorder_id
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_search_view
+msgid "Work Order"
+msgstr "Demande de service"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.report,name:sh_inventory_mrp_qc.action_report_workorder_qc
+msgid "Work Order QC Check Report"
+msgstr "Ordre de travail QC Report Report"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.mrp_workorder_quality_alert_report_wizard_action
+msgid "Work Order Quality Alert Report"
+msgstr "Rapport d'alerte de la qualité de la commande de travail"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.actions.act_window,name:sh_inventory_mrp_qc.wo_quality_check_report_wizard_action
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.workorder_report_qc_check
+msgid "Work Order Quality Check Report"
+msgstr "Rapport de vérification de la qualité de la commande de travail"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.workorder_report_qc_check
+msgid "Work Order Ref."
+msgstr "Ordre de travail Réf."
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.child_menu_quality_picking_wo
+#: model:ir.ui.menu,name:sh_inventory_mrp_qc.quality_control_report_sub_menu_wo
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_search_view
+msgid "Workorder"
+msgstr "Demande de service"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_workorder__sh_mrp_workorder_qc_measurement_ids
+msgid "Workorder QC measurement Quality Checks"
+msgstr "Vérifications de la qualité de la mesure de l'entreprise QC"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields,field_description:sh_inventory_mrp_qc.field_mrp_workorder__sh_mrp_workorder_measurement_ids
+msgid "Workorder measurement Quality Checks"
+msgstr "Vérifications de la qualité de la mesure du travail"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__mrp_quality_alert_report__operation_type__manufacturing
+msgid "manufacturing"
+msgstr "fabrication"
+
+#. module: sh_inventory_mrp_qc
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.correct_measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_correct_measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_pics_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_qc_measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_alert_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.mrp_quality_check_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_alert_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.quality_check_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_pass_fail_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.sh_mrp_text_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_global_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_measurement_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_pass_fail_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_pics_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_inventory_mrp_qc.stock_move_text_wizard_form_view
+msgid "or"
+msgstr "ou"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_report_sh_inventory_mrp_qc_quality_alert_doc
+msgid "quality alert report abstract model"
+msgstr "Rapport d'alerte de qualité Signaler un modèle abstrait"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_report_sh_inventory_mrp_qc_quality_check_doc
+msgid "quality check report abstract model"
+msgstr "Rapport de vérification de la qualité Abstrait modèle"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model,name:sh_inventory_mrp_qc.model_sh_qc_team_type
+msgid "sh.qc.team.type"
+msgstr "sh.qc.team.type"
+
+#. module: sh_inventory_mrp_qc
+#: model:ir.model.fields.selection,name:sh_inventory_mrp_qc.selection__mrp_quality_alert_report__operation_type__workorder
+msgid "workorder"
+msgstr "demande de service"

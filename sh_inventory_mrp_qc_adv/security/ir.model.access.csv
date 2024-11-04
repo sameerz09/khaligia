@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sh_qc_dashboard,access_sh_qc_dashboard,model_sh_qc_dashboard,base.group_user,1,1,1,1
+access_sh_qc_team,access_sh_qc_team,model_sh_qc_team,base.group_user,1,1,1,1
+access_sh_qc_point,access_sh_qc_point,model_sh_qc_point,base.group_user,1,1,1,1
+access_sh_qc_alert_stage,access_sh_qc_alert_stage,model_sh_qc_alert_stage,base.group_user,1,1,1,1
+access_sh_qc_alert_tags,access_sh_qc_alert_tags,model_sh_qc_alert_tags,base.group_user,1,1,1,1
+access_sh_quality_check,access_sh_quality_check,model_sh_quality_check,base.group_user,1,1,1,1
+access_sh_quality_check_line,access_sh_quality_check_line,model_sh_quality_check_line,base.group_user,1,1,1,1
+access_sh_quality_alert,access_sh_quality_alert,model_sh_quality_alert,base.group_user,1,1,1,1
+access_sh_master_wizard,access_sh_master_wizard,model_sh_master_wizard,base.group_user,1,1,1,1
+access_sh_qc_alert,access_sh_qc_alert,model_sh_qc_alert,base.group_user,1,1,1,1
+access_sh_qc_alert_line,access_sh_qc_alert_line,model_sh_qc_alert_line,base.group_user,1,1,1,1
+access_mrp_quality_alert_report,access_mrp_quality_alert_report,model_mrp_quality_alert_report,base.group_user,1,1,1,1
+access_mrp_quality_check_report,access_mrp_quality_check_report,model_mrp_quality_check_report,base.group_user,1,1,1,1
+access_quality_alert_report,access_quality_alert_report,model_quality_alert_report,base.group_user,1,1,1,1
+access_quality_check_report,access_quality_check_report,model_quality_check_report,base.group_user,1,1,1,1

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="quality_alert_form_view" model="ir.ui.view">
+        <field name="name">quality.alert.form.view</field>
+        <field name="model">sh.quality.alert</field>
+        <field name="arch" type="xml">
+            <form string="Quality Alert">
+                <header>
+                    <field name="stage_id" widget="statusbar" options="{'clickable': '1'}" />
+                </header>
+                <sheet>
+                    <h1>
+                        <field name="name" default_focus="1" placeholder="Name"/>
+                    </h1>
+                    <group>
+                        <group>
+                            
+                            <field name="title" required="1" />
+                            <field name="partner_id" />
+                            <field name="piking_id" />
+                            <field name="production_id"  />
+                            <field name="workorder_id" />
+                            <field name="product_id" />
+                            <field name="lot_id" />
+                            <field name="company_id" groups="base.group_multi_company" />
+                        </group>
+                        <group>
+                            <field name="create_date" />
+                            <field name="write_date" />
+                            <field name="team_id" />
+                            <field name="user_id" />
+                            <field name="sh_priority" widget="priority" />
+                            <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <field name="sh_description" />
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="quality_alert_tree_view" model="ir.ui.view">
+        <field name="name">quality.alert.tree.view</field>
+        <field name="model">sh.quality.alert</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="title" />
+                <field name="partner_id" />
+                <field name="product_id" />
+                <field name="lot_id" />
+                <field name="create_date" />
+                <field name="write_date" />
+                <field name="team_id" />
+                <field name="user_id" />
+                <field name="stage_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="quality_alert_picking_tree_view" model="ir.ui.view">
+        <field name="name">quality.alert.picking.tree.view</field>
+        <field name="model">sh.quality.alert</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="title" />
+                <field name="piking_id" />
+                <field name="partner_id" />
+                <field name="product_id" />
+                <field name="lot_id" />
+                <field name="create_date" />
+                <field name="write_date" />
+                <field name="team_id" />
+                <field name="user_id" />
+                <field name="stage_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="quality_alert_production_tree_view" model="ir.ui.view">
+        <field name="name">quality.alert.production.tree.view</field>
+        <field name="model">sh.quality.alert</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="title" />
+                <field name="production_id" />
+                <field name="partner_id" />
+                <field name="product_id" />
+                <field name="lot_id" />
+                <field name="create_date" />
+                <field name="write_date" />
+                <field name="team_id" />
+                <field name="user_id" />
+                <field name="stage_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="quality_alert_workorder_tree_view" model="ir.ui.view">
+        <field name="name">quality.alert.workorder.tree.view</field>
+        <field name="model">sh.quality.alert</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="title" />
+                <field name="workorder_id" />
+                <field name="partner_id" />
+                <field name="product_id" />
+                <field name="lot_id" />
+                <field name="create_date" />
+                <field name="write_date" />
+                <field name="team_id" />
+                <field name="user_id" />
+                <field name="stage_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="quality_alert_pivot_view">
+        <field name="name">quality.alert.pivot.view</field>
+        <field name="model">sh.quality.alert</field>
+        <field name="arch" type="xml">
+            <pivot string="Quality Alert" display_quantity="True">
+                <field name="team_id" type="row" />
+                <field name="stage_id" type="col" />
+                <field name="create_date" type="col" />
+            </pivot>
+        </field>
+    </record>
+    <record id="quality_alert_search_view" model="ir.ui.view">
+        <field name="name">quality.alert.search.view</field>
+        <field name="model">sh.quality.alert</field>
+        <field name="arch" type="xml">
+            <search string="Quality Alerts">
+                <field name="name" />
+                <field name="partner_id" />
+                <field name="product_id" />
+                <field name="team_id" />
+                <field name="user_id" />
+                <field name="stage_id" />
+                <field name="piking_id" />
+                <field name="production_id" />
+                <field name="workorder_id" />
+                <group expand="0" string="Group By">
+                    <filter string="Partner" name="partner" context="{'group_by':'partner_id'}" />
+                    <filter string="Product" name="product" context="{'group_by':'product_id'}" />
+                    <filter string="Team" name="team" context="{'group_by':'team_id'}" />
+                    <filter string="Responsible" name="user" context="{'group_by':'user_id'}" />
+                    <filter string="Stage" name="stage" context="{'group_by':'stage_id'}" />
+                    <filter string="Inventory" name="picking" context="{'group_by':'piking_id'}" />
+                    <filter string="Manufacturing" name="production" context="{'group_by':'production_id'}" />
+                    <filter string="Workorder" name="workorder" context="{'group_by':'workorder_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="quality_alert_action" model="ir.actions.act_window">
+        <field name="name">Quality Alerts</field>
+        <field name="res_model">sh.quality.alert</field>
+        <field name="view_mode">tree,form,pivot</field>
+        <field name="view_id" ref="quality_alert_tree_view"></field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create a New Quality Alert</p>
+        </field>
+    </record>
+   
+    <record id="quality_alert_picking_action" model="ir.actions.act_window">
+        <field name="name">Inventory Quality Alerts</field>
+        <field name="res_model">sh.quality.alert</field>
+        <field name="context">{'search_default_picking':1}</field>
+        <field name="view_mode">tree,form,pivot</field>
+        <field name="view_id" ref="quality_alert_picking_tree_view"></field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create a New Quality Alert</p>
+        </field>
+    </record>
+
+    <record id="quality_alert_manufacturing_action" model="ir.actions.act_window">
+        <field name="name">Manufacturing Quality Alerts</field>
+        <field name="res_model">sh.quality.alert</field>
+        <field name="context">{'search_default_production':1}</field>
+        <field name="view_mode">tree,form,pivot</field>
+        <field name="view_id" ref="quality_alert_production_tree_view"></field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create a New Quality Alert</p>
+        </field>
+    </record>
+
+    <record id="quality_alert_workorder_action" model="ir.actions.act_window">
+        <field name="name">Workorder Quality Alerts</field>
+        <field name="res_model">sh.quality.alert</field>
+        <field name="context">{'search_default_workorder':1}</field>
+        <field name="view_mode">tree,form,pivot</field>
+        <field name="view_id" ref="quality_alert_workorder_tree_view"></field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create a New Quality Alert</p>
+        </field>
+    </record>
+
+    <menuitem id="main_menu_quality_alert" name="Quality Alerts" parent="sh_inventory_mrp_qc_adv.sh_quality_control_main_menu" sequence="3" />
+
+    <menuitem id="menu_quality_alert" name="Quality Alerts" parent="main_menu_quality_alert" action="quality_alert_action" sequence="1" />
+    <menuitem id="menu_inventory_quality_alert" name="Inventory Quality Alerts" parent="main_menu_quality_alert" action="quality_alert_picking_action" sequence="2" />
+    <menuitem id="menu_manufacturing_quality_alert" name="Manufacturing Quality Alerts" parent="main_menu_quality_alert" action="quality_alert_manufacturing_action" sequence="3" />
+    <menuitem id="menu_workorder_quality_alert" name="Workorder Quality Alerts" parent="main_menu_quality_alert" action="quality_alert_workorder_action" sequence="4" />
+</odoo>

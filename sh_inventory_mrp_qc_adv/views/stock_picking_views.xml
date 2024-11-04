@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="stock_picking_form_view_custom" model="ir.ui.view">
+        <field name="name">stock.picking.form.view.custom</field>
+        <field name="model">stock.picking</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <xpath expr="/form/header/button[@name='action_assign']" position="after">
+                <button name="action_quality_point" type="object" string="Quality Checks" class="oe_highlight" groups="sh_inventory_mrp_qc_adv.sh_quality_control_user" attrs="{'invisible' : [('has_qc', '=', False)]}"/>
+                <button name="action_quality_alert" type="object" string="Quality Alerts" class="oe_highlight" groups="sh_inventory_mrp_qc_adv.sh_quality_control_user" attrs="{'invisible' : [('has_qc', '=', False)]}"/>
+                <field name="total_checks" invisible="1"/>
+                <field name="has_qc" invisible="1"/>
+                <field name="is_manager" invisible="1"/>
+            </xpath>
+            <xpath expr="//div[@name='button_box']//button[@name='action_see_move_scrap']" position="before">
+                <button name="open_quality_check" class="oe_stat_button" icon="fa-check" type="object"  groups="sh_inventory_mrp_qc_adv.sh_quality_control_user" attrs="{'invisible' : [('has_qc', '=', False)]}">
+                    <field name="qc_count" widget="statinfo" string="Quality Checks" />
+                </button>
+
+                <button name="open_quality_alert" class="oe_stat_button" icon="fa-warning" type="object" groups="sh_inventory_mrp_qc_adv.sh_quality_control_user" attrs="{'invisible' : [('has_qc', '=', False)]}">
+                    <field name="qc_alert_count" widget="statinfo" string="Quality Alerts" />
+                </button>
+            </xpath>
+            <xpath expr="/form/sheet/notebook/page/field/tree/field[@name='product_uom']" position="after">       
+                <field name="has_qc" invisible="1"/>         
+                <button
+                    name="quality_point_line"
+                    type="object"
+                    string=""
+                    class="oe_stat_button"
+                    icon="fa-check-square"
+                    attrs="{'invisible':[('has_qc','=',False)]}"
+                    groups="sh_inventory_mrp_qc_adv.sh_quality_control_user"
+                />
+                <button name="quality_alert" type="object" string="" class="oe_stat_button" icon="fa-warning" attrs="{'invisible':[('has_qc','=',False)]}" groups="sh_inventory_mrp_qc_adv.sh_quality_control_user" />
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Quality Checks" groups="sh_inventory_mrp_qc_adv.sh_quality_control_user" attrs="{'invisible' : [('has_qc', '=', False)]}">
+                    <field name="quality_check_line_lines" attrs="{'readonly':[('is_manager', '=', False)]}">
+                        <tree decoration-success="status=='pass'" decoration-danger="status=='fail'">
+                            <field name="product_id"/>
+                            <field name="picking_type_id"/>
+                            <field name="check_date"/>
+                            <field name="sh_Qc_point_id"/>
+                            <field name="status"/>
+                            <field name="qc_point_type"/>
+                            <field name="sh_norm" attrs="{'invisible' : [('qc_point_type', '!=', 'type2')]}"/>
+                            <field name="attachment_ids" attrs="{'invisible' : [('qc_point_type', '!=', 'type3')]}"/>
+                            <field name="text_message" attrs="{'invisible' : [('qc_point_type', '!=', 'type4')]}"/>
+                        </tree>
+                    </field>
+                </page>
+                <page string="Quality Alerts" attrs="{'invisible' : [('has_qc', '=', False)]}" groups="sh_inventory_mrp_qc_adv.sh_quality_control_user">
+                    <field name="sh_quality_alert_ids" />
+                </page>
+            </xpath>
+            <field name="picking_type_id" position="after">
+                <field name="is_mandatorys" invisible="1" />   
+                <field name="quality_status" invisible="1" />   
+                <field name="check_qc" invisible="1" />
+            </field>
+            <xpath expr="//sheet/div[@name='button_box']" position="after">
+                <div class="alert alert-info text-center o_form_header" attrs="{'invisible': ['|',('has_qc', '=', False),('quality_status', '!=', 'pending')]}" role="alert">
+                    <div>
+                        <strong>Product(s) Quality Control Still Pending.</strong>
+                    </div>
+                </div>
+                <div class="alert alert-info text-center o_form_header" style="background: #efd9d9; color: maroon; border: 1px solid #e9b4b4;" attrs="{'invisible': ['|',('has_qc', '=', False),('quality_status', '!=', 'fail')]}" role="alert">
+                    <div>
+                        <strong>Product(s) Quality Control Failed.</strong>
+                    </div>
+                </div>
+                <div class="alert alert-info text-center o_form_header" style="background: #f3ea7d; color: #86611d; border: 1px solid #f3ea7d;" attrs="{'invisible': ['|',('has_qc', '=', False),('quality_status', '!=', 'partial')]}" role="alert">
+                    <div>
+                        <strong>Product(s) Quality Control Completed With Some Products Partially Passed.</strong>
+                    </div>
+                </div>
+                <div class="alert alert-info text-center o_form_header" style="background: #dceddd; color: green; border: 1px solid #b4efb9;" attrs="{'invisible': ['|',('has_qc', '=', False),('quality_status', '!=', 'pass')]}" role="alert">
+                    <div>
+                        <strong>Product(s) Quality Control Successfully Passed</strong>
+                    </div>
+                </div>
+            </xpath>
+
+            <xpath expr="//button[@name='button_validate'][2]" position="replace">
+                <button name="button_validate" attrs="{'invisible': ['|','|',('state', 'not in', ('waiting', 'confirmed')), ('show_validate', '=', False), ('is_mandatorys', '=', True)]}" string="Validate" type="object" groups="stock.group_stock_user" class="o_btn_validate" data-hotkey="v"/>
+            </xpath>
+            <xpath expr="//button[@name='button_validate'][1]" position="replace">
+                <button name="button_validate" attrs="{'invisible': ['|','|', ('state', 'in', ('waiting','confirmed')), ('show_validate', '=', False),('is_mandatorys', '=', True)]}" string="Validate" type="object" class="oe_highlight" groups="stock.group_stock_user" data-hotkey="v"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="stock_picking_tree_view_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.tree.view.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="type">tree</field>
+        <field name="inherit_id" ref="stock.vpicktree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after"> 
+                <field name="quality_status" invisible="1"/>
+            </field>
+        </field>
+    </record>
+</odoo>

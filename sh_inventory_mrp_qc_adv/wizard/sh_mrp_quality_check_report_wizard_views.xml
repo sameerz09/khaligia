@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_quality_check_report_wizard_view" model="ir.ui.view">
+        <field name="name">mrp.quality.check.report.wizard.view</field>
+        <field name="model">mrp.quality.check.report</field>
+        <field name="arch" type="xml">
+            <form string="Quality Check Report">
+                <group>
+                    <group>
+                    <field name="is_mrp" invisible="1"/>
+                        <field name="date_from" />
+                        <field name="product_ids" widget="many2many_tags" />
+                        <field name="group_by" />
+                    </group>
+                    <group>
+                        <field name="date_to" />
+                        <field name="state" widget="radio" />
+                    </group>
+                </group>
+
+                <footer>
+                    <button name="print_report" string="Print" class="oe_highlight" type="object" />
+                    or
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    
+</odoo>
