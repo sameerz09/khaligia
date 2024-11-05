@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="0">
+
+        <record id="product_sample_fle" model="ir.attachment">
+            <field name="name">product.sample.file</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="appsfolio_import_zip_img/Sample/product.zip"/>
+        </record>
+
+        <record id="partner_sample_file" model="ir.attachment">
+            <field name="name">partner.sample.file</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="appsfolio_import_zip_img/Sample/partner.zip"/>
+        </record>
+
+		<record id="employee_sample_file" model="ir.attachment">
+            <field name="name">employee.sample.file</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="appsfolio_import_zip_img/Sample/employee.zip"/>
+        </record>
+
+    </data>
+</odoo>

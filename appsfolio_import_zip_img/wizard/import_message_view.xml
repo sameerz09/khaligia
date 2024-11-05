@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="import_message_view" model="ir.ui.view">
+        <field name="name">import.message.view</field>
+        <field name="model">import.message</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name"/>
+                <footer>
+                    <button
+                            string="DONE"
+                            class="btn-primary"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="import_wizard_view" model="ir.ui.view">
+        <field name="name">import.wizard.view</field>
+        <field name="model">import.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="select" widget="radio"/>
+                    <field name="select_file" filename="name"/>
+                </group>
+                <footer>
+                    <button
+                            name="import_img"
+                            string="Import"
+                            type="object"
+                            class="btn-primary"/>
+                    <button
+                            string="Cancel"
+                            class="btn-secondary"
+                            special="cancel"/>
+                    <div style="margin-left: auto; margin-right: 0;">
+                        <label for="btn_sample_file" string="Download Sample:"/>
+                        <button
+                                name="btn_sample_file"
+                                string="Zip File"
+                                type="object"
+                                class="btn-primary"
+                                icon='fa-download'/>
+                    </div>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_import_wizard_view" model="ir.actions.act_window">
+        <field name="name">Import Images</field>
+        <field name="res_model">import.wizard</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

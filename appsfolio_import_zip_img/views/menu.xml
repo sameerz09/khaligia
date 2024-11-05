@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<menuitem 
+        id="import_wizard_view_menu" 
+        name="Import Images from ZIP" 
+        action="action_import_wizard_view" 
+        groups="appsfolio_import_zip_img.import_group"
+        sequence="15"
+        web_icon='appsfolio_import_zip_img,static/description/icon.png'
+    />
+</odoo>
