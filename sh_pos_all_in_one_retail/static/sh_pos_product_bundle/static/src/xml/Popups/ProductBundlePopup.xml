@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="ProductBundlePopup" owl="1">
+        <div role="dialog" class="modal-dialog">
+            <div class="popup popup-textinput sh_product_bundle_list_popup">
+                <header class="title">
+                    <t t-esc="props.title" />
+                </header>
+                <div class="main-body touch-scrollable scrollable-y sh_table_body">
+                    <t t-set="count" t-value="1" />
+                    <t t-set="total_price" t-value="0" />
+                    <t t-set="subtotal" t-value="0" />
+                    <table width="100%" class="wh_qty">
+                        <thead>
+                            <tr>
+                                <th class="head_td">No</th>
+                                <th class="head_td">Product</th>
+                                <th class="head_td">Qty</th>
+                                <th class="head_td">UOM</th>
+                                <th class="head_td">Unit Price</th>
+                                <th class="head_td">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="props.bundle_by_product_id" t-as="value" t-key="value[0]" t-if="env.pos.db.get_product_by_id(value[0])">
+                                <t t-set="subtotal" t-value="value[1] * value[3]" />
+                                <t t-set="total_price" t-value="total_price + subtotal" />
+                                <td class="data_td">
+                                    <t t-esc="count"></t>
+                                </td>
+                                <td class="data_td">
+                                    <t t-esc="env.pos.db.get_product_by_id(value[0]).display_name" />
+                                </td>
+                                <td class="data_td">
+                                    <t t-esc="value[1]" />
+                                </td>
+                                <td class="data_td">
+                                    <t t-if="env.pos.units_by_id[value[2]]">
+                                        <t t-esc="env.pos.units_by_id[value[2]].name" />
+                                    </t>
+                                </td>
+                                <td class="data_td">
+                                    <t t-esc="value[3]" />
+                                </td>
+                                <td class="data_td">
+                                    <t t-esc="subtotal" />
+                                </td>
+                                <t t-set="count" t-value=" count + 1" />
+                            </tr>
+                            <tr>
+                                <th colspan="5" class="footer_td text_right_footer">Total :</th>
+                                <th class="footer_td">
+                                    <t t-esc="total_price" />
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <footer class="footer">
+                    <div class="button cancel" t-on-click="cancel">
+                        Cancel
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </t>
+</templates>

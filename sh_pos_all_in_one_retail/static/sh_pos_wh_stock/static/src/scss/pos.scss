@@ -1,0 +1,31 @@
+.pos .product .sh_warehouse_display {left: -5px;color: #212121;background: #FFFFFF;padding: 1px 6px;position: absolute;width: auto;top: 6px;border: 2px solid $sh_pos_primary_color;font-weight: bold;font-size: 12px;}
+.pos .sh_qty_popup .product_content.body .product_image {height: 91px;width: 91px;}
+.pos .sh_qty_popup .product_content.body .sh_product_name .sh_max_qty {font-weight: normal;margin-top: 5px;}
+
+/* odoo 16 */
+.pos .pos-content .product-screen.screen .rightpane .product-list-container .product .product-content .product-image-icon{font-size: 16px; z-index: 1000; color: #919191; margin: 5px;transition: all .5s;}
+.pos .pos-content .product-screen.screen .rightpane .product-list-container .product .product-content .product-image-icon:hover,.pos .pos-content .product-screen.screen .rightpane .product-list-container .product .product-content .product-image-icon:focus{color: $sh_pos_primary_color;}
+.pos .popups .popup.sh_wh_stock_popup #sh_table_id table.wh_qty .head_td,.pos .popups .popup.sh_wh_stock_popup #sh_table_id table.wh_qty .data_td,.pos .popups .popup.sh_wh_stock_popup #sh_table_id table.wh_qty .footer_td{padding: 10px;} 
+.pos .popups .popup.sh_wh_stock_popup #sh_table_id table.wh_qty th.head_td{background: $sh_pos_primary_color;color: #ffffff;font-weight: 600;text-transform: capitalize;font-size: 16px;position: sticky;top: 0;z-index: 1;}
+.pos .popups .popup.sh_wh_stock_popup #sh_table_id table.wh_qty tr:nth-child(odd):not(:first-child){background: $sh_odd_row_color;}
+.pos .popups .popup.sh_wh_stock_popup #sh_table_id table.wh_qty tr:nth-child(even):not(:first-child){background: $sh_even_row_color;}
+.pos .popups .popup.sh_wh_stock_popup #sh_table_id table.wh_qty tr td.data_td{color: #4A4F59;font-weight: normal;font-size: 16px;word-break: break-word;}
+.pos .popups .popup.sh_wh_stock_popup div.main-body{max-height: 250px;overflow: auto;margin: 0px;}
+.pos .popups .popup.sh_wh_stock_popup #sh_table_id table.wh_qty th.footer_td{font-weight: bold;text-transform: capitalize;font-size: 16px;}
+.pos .popups .popup.sh_wh_stock_popup div.main-body::-webkit-scrollbar{width: 0px;height: 0px;}
+.pos .leftpane .orderlines .orderline .sh_orderline_stock_icon{margin-right: 5px;transition: all .5s;}
+.pos .leftpane .orderlines .orderline .sh_orderline_stock_icon:hover{color: $sh_pos_primary_color;}
+.pos .sh_qty_popup .product_content.body .sh_product_name .sh_product_name_warning_popup{font-weight: bold;font-size: 16px;}
+.pos .sh_qty_popup .product_content.body .sh_product_image{margin-bottom: 10px;}
+.pos .sh_qty_popup .product_content.body .sh_product_name .sh_min_qty_warning_popup .sh_bold_qty{font-weight: bold;}
+.pos .sh_qty_popup .product_content.body .sh_product_name .sh_min_qty_warning_popup{font-size: 16px;}
+
+.pos .popups .popup.sh_wh_stock_popup #sh_table_id table.wh_qty tr:hover .data_td{color: $sh_pos_primary_color;cursor: pointer;font-weight: bold;}
+
+
+@media only screen and (max-width: 767.98px){
+    .pos .popups .popup.sh_wh_stock_popup,.pos .popups .popup.sh_qty_popup{max-width: 350px;}
+}
+li.orderline:not(.selected) .sh_orderline_icons.not_mouse_hover {
+    display: none;
+}

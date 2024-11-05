@@ -1,0 +1,11 @@
+/* Orderline */
+.pos .leftpane .order-container .order .orderlines .orderline .sh_orderline_weight_main .sh_orderline_weight_lbl,
+.pos .leftpane .order-container .order .orderlines .orderline .sh_orderline_volume_main .sh_orderline_volume_lbl{font-weight: bold;}
+.pos .leftpane .order-container .order .orderlines .orderline .sh_orderline_weight_main .sh_orderline_weight_val,
+.pos .leftpane .order-container .order .orderlines .orderline .sh_orderline_volume_main .sh_orderline_volume_val{font-weight: normal;}
+.pos .leftpane .order-container .order .orderlines .orderline .sh_orderline_volume_main .sh_orderline_volume_lbl{margin-left: 5px;}
+/* Cart */ 
+.pos .leftpane .order-container .sh_cart_weight_main .sh_cart_total_weight_lbl,
+.pos .leftpane .order-container .sh_cart_vol_main .sh_cart_total_volume_lbl{margin-right: 5px;}
+.pos .leftpane .order-container .sh_cart_weight_main .sh_cart_total_weight_val,
+.pos .leftpane .order-container .sh_cart_vol_main .sh_cart_total_volume_val{font-weight: normal;}

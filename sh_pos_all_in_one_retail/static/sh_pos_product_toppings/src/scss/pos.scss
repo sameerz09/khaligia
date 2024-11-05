@@ -1,0 +1,98 @@
+.pos .popups .sh-pos-topping-products-dialog .body .sh-toppings-products,
+.pos .popups .sh-pos-topping-products-dialog .body .sh-global-toppins {grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));display: grid !important;padding: 3px;gap: 3px;}
+.pos .popups .sh-pos-topping-products-dialog .body .sh-toppings-products .product,
+.pos .popups .sh-pos-topping-products-dialog .body .sh-global-toppins .product {margin: 10px !important;font-size: 12px;}
+.pos .popups .sh-pos-topping-products-popup {width: 70% !important;max-width: 70% !important;}
+
+@media screen and (max-width:768px) {
+    .pos .popups .sh-pos-topping-products-popup {max-width: 80% !important;}
+    .modal-dialog .popup.popup-alert.sh-pos-topping-products-popup.sh-no-topping.sh-lessthan-5-global-toppings{width: 80% !important;}
+}
+.pos .popups .sh-pos-topping-products-popup .body{margin: 0;max-height: 350px !important; min-height: 350px; overflow: auto;}
+.pos .popups .sh-pos-topping-products-popup.sh-no-global-topping main.body{min-height: 350px !important;max-height: 350px !important;overflow: auto !important;}
+.pos .sh-is-topping {display: none !important;}
+.pos .sh_is_topping_line:not(.price_display) {padding-left: 15px;font-size: 80%;width: 95%;font-style: italic}
+.pos .sh_is_topping_line.sh-line-qty-price{padding-left: 35px !important;}
+.pos .sh_is_topping_line.sh-line-qty-price .pos-receipt-right-align{padding-right: 20px !important;}
+.pos .popups .sh-pos-topping-products-dialog .body .sh-toppings-products{overflow: auto;padding: 16px;}   
+
+.pos .popups .sh-pos-topping-products-dialog .body .sh-toppings-products .product .product-content,
+.pos .popups .sh-pos-topping-products-dialog .body .sh-global-toppins .product .product-content{padding: 5px 0px;}
+
+// -------------- popup width manage -------------------//
+.pos .popup.popup-alert.sh-pos-topping-products-popup.sh-no-topping.sh-lessthan-5-global-toppings,
+.pos .popup.popup-alert.sh-pos-topping-products-popup.sh-lessthan-5-toppings{width: 40% !important;}
+.pos .sh-return-is-topping .product-name {margin-left: 30px;}
+.pos .sh-return-is-topping ul {margin-left: 30px !important;} 
+@if $sh_pos_product_style !="style_3" {
+    .pos .sh-pos-topping-products-dialog .sh-pos-topping-products-popup .body .product{border: 1px solid transparent;}
+}
+.pos .sh-pos-topping-products-dialog .sh-pos-topping-products-popup .body .product:focus{border-color: $sh_pos_primary_color !important;}
+.pos .sh-pos-topping-products-dialog .sh-pos-topping-products-popup .body .product:hover{border-color: $sh_pos_primary_color !important;}
+@media only screen and (max-width: 992px) and (min-width: 768px){
+    .pos .popup.popup-alert.sh-pos-topping-products-popup.sh-no-topping.sh-lessthan-5-global-toppings,
+    .pos .popup.popup-alert.sh-pos-topping-products-popup.sh-lessthan-5-toppings{width: 80% !important;}
+}
+@media screen and (max-width: 767.98px) {
+    .pos .popup.popup-alert.sh-pos-topping-products-popup.sh-no-topping.sh-lessthan-5-global-toppings,
+    .pos .popup.popup-alert.sh-pos-topping-products-popup.sh-lessthan-5-toppings{width: 85% !important;}
+    .pos .popups .sh-pos-topping-products-dialog .body .sh-toppings-products, .pos .popups .sh-pos-topping-products-dialog .body .sh-global-toppins{grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;padding: 6px;}
+    .pos .popups .sh-pos-topping-products-dialog .body .sh-toppings-products .product, .pos .popups .sh-pos-topping-products-dialog .body .sh-global-toppins .product{margin: 6px !important;}
+}
+
+/* cart img true */
+@if $sh_image_display_in_cart =="True" {
+    .pos .leftpane .order .orderlines .orderline .topping-item .sh_toppings_description {width: 60%;padding-bottom: 5px;} 
+    .pos .leftpane .order .orderlines .orderline .topping-item .sh_topping_line_content .sh_topping_orderline_price {white-space: nowrap;width: 21%;max-width: 21%;overflow: hidden;text-overflow: ellipsis;font-size: 14px;text-align: right;}
+    .pos .leftpane .order .orderlines .orderline .topping-item .sh_topping_line_content .sh_topping_orderline_trash{width: 2%;}
+    .pos .leftpane .order .orderlines .orderline .topping-item {margin-left: 17%;}
+    .pos .leftpane .order .orderlines .orderline .topping-item .sh_toppings_description .sh_topping_orderline_price {width: 25%;}
+}
+@if $sh_image_display_in_cart =="False" {
+    .pos .leftpane .order .orderlines .orderline .topping-item .sh_toppings_description {width: 70%;padding-bottom: 5px;}
+    .pos .leftpane .order .orderlines .orderline .topping-item .sh_topping_line_content .sh_topping_orderline_price {width: 25%;white-space: nowrap;max-width: 25%;overflow: hidden;text-overflow: ellipsis;text-align: right;}
+  }
+.pos .leftpane .order .orderlines .orderline .topping-item {margin-top: 8px !important;margin-bottom: 8px !important;}
+.pos .leftpane .order .orderlines .orderline .topping-item .sh_topping_line_content{font-size: 14px;width: 100%;display: flex;justify-content: space-between;}
+.pos .leftpane .order .orderlines .orderline .topping-item .sh_toppings_description .sh_topping_orderline_extra_content{display: flex;white-space: nowrap;flex-flow: wrap;font-size: 13px;}
+.pos .leftpane .order .orderlines .orderline .topping-item .sh_toppings_description .sh_product_name{font-weight: 500;font-size: 13px !important;}
+.pos .leftpane .order .orderlines .orderline .topping-item .sh_topping_line_content .sh_topping_orderline_trash{transition: all .5s;}
+.pos .leftpane .order .orderlines .orderline .topping-item .sh_topping_line_content .sh_topping_orderline_trash:hover,.pos .leftpane .order .orderlines .orderline .topping-item .sh_topping_line_content .sh_topping_orderline_trash:focus{cursor: pointer;color: $sh_pos_primary_color;}
+@media only screen and (max-width: 992px) and (min-width: 768px){
+    @if $sh_image_display_in_cart =="True" {
+        .pos .leftpane .order .orderlines .orderline .topping-item{margin-left: 14% !important;}
+    }
+    .pos .leftpane .order .orderlines .orderline .topping-item .sh_toppings_description{width: 64% !important;}
+}
+@media only screen and (max-width: 767.98px){
+    @if $sh_image_display_in_cart =="True" {
+        .pos .leftpane .order .orderlines .orderline .topping-item{margin-left: 0% !important;}
+    }
+    .pos .leftpane .order .orderlines .orderline .topping-item .sh_toppings_description{width: 70% !important;}
+}
+
+.pos .popups .sh_order_type_popup .popup-textarea-wrap{max-height: 300px; overflow: auto;padding: 0;margin: 0;}
+.pos .popups .sh_order_type_popup .popup-textarea-wrap .sh_order_type_div .sh_order_type_table{width: 100%;border-collapse: separate;}
+.pos .popups .sh_order_type_popup .popup-textarea-wrap .sh_order_type_div .sh_order_type_table tbody .sh_order_type_tr.selectedorder{background-color: $sh_pos_primary_color !important; color: #fff !important;}
+.pos .popups .sh_order_type_popup .popup-textarea-wrap .sh_order_type_div .sh_order_type_table tbody tr td .sh-alert{font-size: 15px;padding: 5px 10px;}
+.pos .popups .sh_order_type_popup .popup-textarea-wrap .sh_order_type_div .sh_order_type_table tbody .sh_order_type_tr:hover{color: $sh_pos_primary_color;}
+.pos .popups .sh_order_type_popup .popup-textarea-wrap .sh_order_type_div .sh_order_type_table tbody .sh_order_type_tr td{padding: 10px; text-align: start;}
+.pos .popups .sh_order_type_popup .popup-textarea-wrap .sh_order_type_div .sh_order_type_table tbody .sh_order_type_tr td img{height: 60px !important;width: 90px !important;object-fit: cover;}
+
+
+@if $sh_pos_product_style =="style_1"{
+    .pos .popups .sh_order_type_popup .popup-textarea-wrap .sh_order_type_div .sh_order_type_table tbody .sh_order_type_tr td img{border-radius: 5px;}
+}
+@if $sh_pos_product_style =="style_2"{
+    .pos .popups .sh_order_type_popup .popup-textarea-wrap .sh_order_type_div .sh_order_type_table tbody .sh_order_type_tr td img{  border-radius: 0;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;}
+}
+@if $sh_pos_product_style =="style_3"{
+    .pos .popups .sh_order_type_popup .popup-textarea-wrap .sh_order_type_div .sh_order_type_table tbody .sh_order_type_tr td img{  border-radius: 0;}
+}
+@media only screen and (max-width: 767.98px){
+
+.pos .popups .sh_order_type_popup .popup-textarea-wrap .sh_order_type_div .sh_order_type_table tbody .sh_order_type_tr td img{height: 50px !important;width: 60px !important;object-fit: cover;}
+
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="ShPOConfirmPopup" owl="1">
+        <Draggable>
+            <div class="popup popup-confirm sh_confirm_po_popup">
+                <header class="title drag-handle">
+                    <t t-esc="props.title" />
+                </header>
+                <main class="body">
+                    <t t-if='props.PurhcaseOrderId'>
+                        Purchase Order Ref :
+                        <a target="blank" class="po-name" t-attf-href="/mail/view?model=purchase.order&amp;res_id={{props.PurhcaseOrderId}}">
+                            <t t-esc="props.PurchaseOrderName" />
+                        </a>
+                    </t>
+                    <t t-else=''>
+                        <t t-esc="props.body" />
+                    </t>
+                </main>
+                <footer class="footer">
+                    <div class="button confirm" t-on-click="confirm">
+                        <t t-esc="props.confirmText" />
+                    </div>
+                </footer>
+            </div>
+        </Draggable>
+    </t>
+</templates>

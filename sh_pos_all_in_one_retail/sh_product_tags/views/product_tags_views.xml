@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<!-- ACTIONS (SERVER) -->
+
+	 <record id="model_product_template_update_mass_tag_action" model="ir.actions.server">
+        <field name="name">Update Mass Tag</field>
+        <field name="model_id" ref="sh_pos_all_in_one_retail.model_product_template" />
+        <field name="binding_model_id" ref="product.model_product_template" />
+        <field name="groups_id" eval="[(4, ref('sh_pos_all_in_one_retail.sh_product_tags_user_id'))]" />
+        <field name="state">code</field>
+        <field name="binding_view_types">list</field>
+        <field name="code"> action = model.action_mass_tag_update()</field>
+    </record>
+    
+    <!-- SLIDE.CHANNEL.TAG -->
+    <record id="sh_product_tag_search" model="ir.ui.view">
+        <field name="name">sh.product.tag.search</field>
+        <field name="model">sh.product.tag</field>
+        <field name="arch" type="xml">
+            <search string="Product Tags">
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <record id="sh_product_tag_form" model="ir.ui.view">
+        <field name="name">sh.product.tag.form</field>
+        <field name="model">sh.product.tag</field>
+        <field name="arch" type="xml">
+            <form string="Product Tag">
+                <sheet>
+                    <group name="sh_product_tags_common_fields">
+                        <group>
+                        	 <field name="name" />
+                            <field name="sequence" />
+                            <field name="sh_color" widget="color_picker"/>
+                            <field name="product_ids" widget="many2many_tags" options="{'no_create_edit': True}"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_product_tag_tree" model="ir.ui.view">
+        <field name="name">sh.product.tag.tree</field>
+        <field name="model">sh.product.tag</field>
+        <field name="arch" type="xml">
+            <tree sample='1'>
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="sh_color" widget="color_picker"/>
+                <field name="product_ids" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_product_tag_action" model="ir.actions.act_window">
+        <field name="name">Product Tags</field>
+        <field name="res_model">sh.product.tag</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" eval="False"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create new tags for your product
+            </p>
+            <p>
+                Create tags that fit your business to better manage and track your products.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="sh_product_tag_menu" name="Product Tags" action="sh_product_tag_action" parent="point_of_sale.pos_config_menu_catalog" groups="base.group_user" />
+</odoo>

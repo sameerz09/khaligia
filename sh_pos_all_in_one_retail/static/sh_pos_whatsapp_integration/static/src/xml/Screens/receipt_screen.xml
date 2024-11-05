@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="ReceiptScreen" t-inherit="point_of_sale.ReceiptScreen" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('print')]" position="after">
+            <t t-if="env.pos.config.enable_whatsapp">
+                <div class="button send_wp" t-on-click="() => this.trigger('click-send_wp')" style="margin-left: 5px;"><i class="fa fa-whatsapp"></i> Send By Whatsapp</div>
+
+                <div class="button send_wp_direct" t-on-click="() => this.trigger('click-send_wp_dierct')" style="margin-left: 5px;"><i class="fa fa-whatsapp"></i> Send By Whatsapp Direct</div>
+            </t>
+        </xpath>
+    </t>
+
+</templates>

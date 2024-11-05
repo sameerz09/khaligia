@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+	<t t-name="ReceiptScreen" t-inherit="point_of_sale.ReceiptScreen" t-inherit-mode="extension" owl="1">
+		<!-- <xpath expr="//div[hasclass('top-content')]" position="replace">
+			<div></div>
+		</xpath> -->
+		<xpath expr="//div[hasclass('actions')]" position="replace">
+			<div class="actions sh_receipt_actions">
+				<!-- <h1 t-if="!env.isMobile">
+                    <t t-esc="orderAmountPlusTip" />
+                </h1> -->
+                <h1>How would you like to receive your receipt?</h1>
+                <div class="buttons">
+                	<div class="button print" t-on-click="onDisplaySendEmail">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i> Send Email
+                    </div>
+                    <div class="button print" t-on-click="printReceipt">
+                        <i class="fa fa-print"></i> Print Receipt
+                    </div>
+                </div>
+                <form t-on-submit.prevent="onSendEmail" class="send-email hide_send_mail">
+                    <div class="email-icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                    <div class="input-email">
+                        <input type="email" placeholder="Email Receipt" t-model="orderUiState.inputEmail" />
+                        <button class="send" t-att-class="{ highlight: is_email(orderUiState.inputEmail) }" type="submit">Send</button>
+                    </div>
+                </form>
+                <t t-if="orderUiState.emailSuccessful !== null">
+                    <div class="notice" t-attf-class="{{ orderUiState.emailSuccessful ? 'successful' : 'failed' }}">
+                        <t t-esc="orderUiState.emailNotice"></t>
+                    </div>
+                </t>
+            </div>
+            <div class="top-content sh_receipt_top_content">
+                <div class="top-content-center">
+                </div>
+                <!-- <div class="button next" t-att-class="{ highlight: !locked }"
+                    t-on-click="orderDone">
+                    <t t-if="!env.isMobile">
+                    	New Order <i class="fa fa-angle-double-right"></i>
+                    </t>
+                    <t t-if="env.isMobile">
+                    	<i class="fa fa-plus"></i>
+                    </t>
+                </div> -->
+            </div>
+		</xpath>
+	</t>
+</templates>

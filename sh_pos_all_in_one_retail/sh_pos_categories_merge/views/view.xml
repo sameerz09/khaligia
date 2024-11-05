@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <!--  Add field for sync in category form -->
+    <record id="sh_product_category_inherit" model="ir.ui.view">
+        <field name="name">Sh Product Category Inherit</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="product.product_category_form_view" />
+        <field name="arch" type="xml">
+            <field name="parent_id" position="after">
+                <field name="hide_sync_field" invisible="1" />
+                <field name="sync_with_pos_category" attrs="{'invisible':[('hide_sync_field','=',True)]}" />
+            </field>
+        </field>
+    </record>
+</odoo>

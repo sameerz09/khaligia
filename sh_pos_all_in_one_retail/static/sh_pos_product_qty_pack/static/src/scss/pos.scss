@@ -1,0 +1,16 @@
+
+.pos .pos-content .receipt-screen .pos-receipt-container .pos-receipt .baglabel{font-size: 15px;margin-left: 5px;}
+/* odoo 16 */ 
+.pos .rightpane .product-list-container .product .sh_product_qty_icon {font-size: 16px;border-radius: 2px; z-index: 1000; color: #919191; margin: 5px;transition: all .5s;}
+.pos .rightpane .product-list-container .product .sh_product_qty_icon:hover,.pos .rightpane .product-list-container .product .sh_product_qty_icon:focus{color: $sh_pos_primary_color;}
+.pos .popups .sh_product_custom_qty_popup .add_qty{font-size: 16px;min-height: 35px;}
+.pos .popups .sh_product_custom_qty_popup .add_qty{border: 1px solid #dcdcdc;box-shadow: none;}
+.pos .popups .sh_product_custom_qty_popup .add_qty:hover,.pos .popups .sh_product_custom_qty_popup .add_qty:focus{border: 1px solid $sh_pos_primary_color;outline: none;box-shadow: none;}
+.pos .pos-content .order-container .order .orderlines .orderline .sh_qty_in_bag_orderline{margin-left: 10px;}
+.pos .pos-content .order-container .order .orderlines .orderline .sh_qty_in_bag_orderline .sh_fa_edit{transition: all .5s;cursor: pointer;}
+.pos .pos-content .order-container .order .orderlines .orderline .sh_qty_in_bag_orderline .sh_orderline_bag_span{margin-left: 5px;}
+.pos .rightpane .product-list-container .product .price-tag.sh_bag_qty_tag{position: absolute;top: 29px;background: $sh_pos_primary_color;padding: 3px 6px;color: #fff;right: -5px;font-size: 12px;}
+
+@media only screen and (max-width: 767.98px){
+	.pos .popups .sh_product_custom_qty_popup{width: 310px !important;max-width: 310px !important;}
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <!-- <t t-extend="Orderline" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension">
+        <xpath expr="//span[hasclass('product-name')]" position="before">
+            <t t-if="env.pos.config.enable_product_bundle and props.line.get_product().sh_is_bundle">
+                <span class="product-bundle-icon sh_product_bundle_icon_orderline" t-on-click="() => this.trigger('click-product-bundle-icon',props.line.get_product())">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </span>
+            </t>
+        </xpath>
+    </t> -->
+</templates>

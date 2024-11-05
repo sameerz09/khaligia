@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="ProductItem" t-inherit="point_of_sale.ProductItem" t-inherit-mode="extension">
+        <!-- <xpath expr="//div[hasclass('product-name')]" position="after">
+            <t t-if="env.pos.config.enable_product_bundle and props.product.sh_is_bundle">
+                <span class="product-bundle-icon sh_product_bundle_icon" t-on-click.stop="() => this.trigger('click-product-bundle-icon',props.product)">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </span>
+                <img class="sh_product_bundle_badge" src="/sh_pos_all_in_one_retail/static/sh_pos_product_bundle/static/src/img/bundle_product_tag.png" alt="bundle_product_tag_ribbon"></img>
+            </t>
+        </xpath> -->
+        <!-- <xpath expr="//div[hasclass('product-name')]" position="attributes">
+            <attribute name="t-att-title" >props.product.display_name</attribute>
+        </xpath> -->
+    </t>
+</templates>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="TemplateProductsButton" owl="1">
+        <div class="control-button">
+            <a class="btn btn-primary" t-on-click="() => this.trigger('click-product-template-icon')">
+                <span class="fa fa-file"></span>
+                <span>Template Products</span>
+            </a>
+        </div>
+    </t>
+    
+</templates>

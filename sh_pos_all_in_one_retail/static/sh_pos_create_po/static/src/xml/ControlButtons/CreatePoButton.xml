@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="CreatePoButton" owl="1">
+        <div class="control-button">
+            <span class="fa fa-credit-card"></span>
+            <span>Create Purchase Order</span>
+        </div>
+    </t>
+</templates>

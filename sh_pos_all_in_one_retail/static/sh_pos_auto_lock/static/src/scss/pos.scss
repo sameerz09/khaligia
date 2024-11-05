@@ -1,0 +1,41 @@
+.blur_screen {position: absolute;top: 0;content: "";bottom: 0;left: 0;right: 0;height: 100%;width: 100%;z-index: 1;background: linear-gradient(-11deg, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.9) 100%);}
+.blur_screen h3 {position: absolute;top: 58%;left: 51%;transform: translate(-50%, 0%);color: #fff;font-size: 23px;}
+.blur_screen:after {
+    position: absolute;
+    content: "\f13e";
+    font-size: 60px;
+    font-family: "fontAwesome";
+    color: #fff;
+    top: 50%;
+    
+    left: 50%;
+    z-index: 2;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    padding: 20px 30px 18px 30px;
+    transform: translate(-50%, -50%);
+}
+
+.pos .popup.popup-number.popup-password .title {
+    margin-bottom: 15px !important;
+    padding: 14px 20px !important;
+}
+
+.pos .popup.popup-number.popup-password .popup-numpad {
+    margin: 8px auto !important;
+}
+
+.pos .popup.popup-number.popup-password .popup-numpad .input-button,
+.pos .popup.popup-number.popup-password .popup-numpad .mode-button {
+    height: 45px !important;
+    width: 45px !important;
+}
+
+.pos .popup.popup-number.popup-password .popup-input.value {
+    padding: 5px 10px !important;
+    min-height: 35px !important;
+}
+
+.pos .popup.popup-number.popup-password .popup-numpad br {
+    display: none;
+}

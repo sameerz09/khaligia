@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="WhatsappMessagePopup" owl="1">
+        <div role="dialog" class="modal-dialog">
+            <div class="popup popup-text popup-lg product-configurator-popup sh_wh_popup">
+                <header class="title">
+                    Send Whatsapp Message
+                </header>
+                <div class="main-body touch-scrollable scrollable-y" style="padding: 10px 20px;">
+                    <div class="d-flex sh_box">
+                        <label class="sh_lbl">Whatsapp Number</label>
+                        <span class="sh_form_element" style="text-align: left;"><input readonly="" type="text" class="mobile_no" t-att-value="props.mobile_no" name="mobile_no" /></span>
+                    </div>
+                    <div class="d-flex sh_box">
+                        <label class="sh_lbl">Message</label>
+                        <textarea 
+                            placeholder="Enter Message Here.."
+                            class="wp_message sh_form_element"
+                            t-att-value="props.message"
+                            name="message"
+                        />
+                    </div>
+
+                    <a class="wp_url" target="blank" href=""><span></span></a>
+                    <div class="sh_bottom_note">
+                        <p><strong>Note:</strong></p>
+                        <p>1) Use *text* to make text bold.</p>
+                        <p>2) Use _text_ to make text italic.</p>
+                        <p>3) Use %0A after/before Text if you want to add blank line.</p>
+                        <p>4) use %20 after/before any Text if you want to give space.</p>
+                        <p>5) go to users => preferences to add signature.</p>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <div class="button confirm highlight" t-on-click="confirm">
+                        <t t-esc="props.confirmText" />
+                    </div>
+                    <div class="button cancel" t-on-click="cancel">
+                        <t t-esc="props.cancelText" />
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </t>
+</templates>

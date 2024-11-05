@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_merge_pos_category_form_wizard" model="ir.ui.view">
+        <field name="name">sh.merge.pos.category.wizard</field>
+        <field name="model">merge.pos.category.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Select the operation to do.">
+               
+                    <group string="Select the operation to do.">
+                        <field name="operation" widget="radio" nolabel="1" />
+                    </group>
+                    <group string="Select Categories to merge with POS" attrs="{'invisible':[('operation','=','assign_category')]}">
+                        <field name="category_ids" style="width: 100%" widget="many2many_list" nolabel="1" />
+                        <div>
+                            <field name="check_available_pos" attrs="{'invisible':[('operation','=','create_category')]}" style="width: 100%" />
+                        </div>
+                    </group>
+             
+                <footer>
+                    <button name="button_apply" string="Apply" type="object" class="btn-primary" />
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_merge_pos_category_action" model="ir.actions.act_window">
+        <field name="name">Merge POS Category</field>
+        <field name="res_model">merge.pos.category.wizard</field>
+        <field name="view_id" ref="sh_merge_pos_category_form_wizard" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_merge_pos_category"
+        name="Merge POS Category"
+        groups="point_of_sale.group_pos_manager,point_of_sale.group_pos_user"
+        parent="point_of_sale.menu_point_config_product"
+        sequence="20"
+        action="sh_merge_pos_category_action"
+    />
+</odoo>

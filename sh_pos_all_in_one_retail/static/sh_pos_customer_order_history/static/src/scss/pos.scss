@@ -1,0 +1,8 @@
+.pos .subwindow .subwindow-container-fix {overflow-x: auto !important;}
+.pos .sh_pos_order_detail_table table th,.pos .sh_pos_order_detail_table table td,.pos .sh_client_list_table th,.pos .sh_client_list_table td{padding: 12px 12px !important;line-height: unset !important;}
+.pos .sh_pos_order_detail_table table th,.pos .sh_client_list_table th{background: #ccc;}
+.pos .sh_pos_order_detail_table{margin-top: 40px; width: 100%;overflow: auto;}
+.pos .sh_client_list_table{line-height: unset !important;}
+.pos .sh_pos_order_detail_table{width: 100%;}
+.pos .highlight {transition: all 150ms linear; }
+.pos .sh_pos_order_detail_table table.Order-Tbl {width: 100%;border: 1px solid #888;box-shadow: rgba(0, 0 ,0 , 0.16) 0px 5px 5px 0px, rgba(0, 0, 0, 0.12) 0px 2px 10px 0px;text-align: center;font-size: 15px;}

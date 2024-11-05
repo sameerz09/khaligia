@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<template id="template" xml:space="preserve">
+    <t t-name="OrderTypeButton" owl="1">
+        <div class="control-button" t-on-click="onClickOrderTypeBtn" >
+            <t t-if="env.pos.current_order_type">
+                <span>
+                    <t t-esc="env.pos.current_order_type.name"/>
+                </span>
+            </t>
+            <t t-else="">
+                <span></span>
+                <span>Order Type</span>
+            </t>
+        </div>
+    </t>
+</template>

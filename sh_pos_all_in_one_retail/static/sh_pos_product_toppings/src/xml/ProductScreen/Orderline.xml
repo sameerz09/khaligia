@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="tempalte" xml:space="preserve">
+    
+    <t t-name="Orderline" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension" owl="1">
+        <xpath expr="//ul[hasclass('info-list')]" position="after">
+            <t t-if="props.line.is_has_topping">
+                <div class='topping-item' t-if='props.line.Toppings'>
+                    <t t-foreach="props.line.Toppings" t-as="topping" t-key="topping.id">
+                        <div class="sh_topping_line_content">
+                            <div class="sh_toppings_description">
+                                <t t-if="topping">
+                                    <!-- <div class="sh_topping_orderline_detail"> -->
+                                        <div class="sh_product_name">
+                                            <t t-esc='topping.full_product_name' />
+                                        </div>
+                                        <div class="sh_topping_orderline_extra_content">
+                                            <em>
+                                                <t t-esc="topping.quantityStr" />
+                                            </em>
+
+                                            <div style="margin-left: 5px;">
+                                                <t t-esc="topping.unit" />
+                                            </div>
+                                            <span style="padding: 0px 5px"> at </span>
+                                            <div class="addon-orderline-price">
+                                                <t t-esc="env.pos.format_currency(topping.price_unit)" />
+                                            </div>
+                                            <span style="padding: 0px 5px"> / </span>
+                                            <t t-esc="topping.unit" />
+                                        </div>
+                                    <!-- </div> -->
+                                </t>
+                            </div>
+                            <div style="padding: 0px 5px" class="fa fa-trash sh_topping_orderline_trash" t-att-data-line="topping.id" t-on-click="() => this._clickRemoveLine(topping.id)"></div>
+                            <div class="sh_topping_orderline_price" style="float: right;">
+                                <span><t t-esc="env.pos.format_currency(topping.price_subtotal_incl)" /></span>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </xpath>
+        <xpath expr="//li[hasclass('orderline')]" position="attributes">
+            <attribute name="t-attf-class">{{ props.line.is_topping  ? 'sh-is-topping' : '' }}</attribute>
+        </xpath>
+    </t>
+
+</templates>

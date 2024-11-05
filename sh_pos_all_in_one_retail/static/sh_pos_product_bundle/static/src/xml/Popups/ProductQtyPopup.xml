@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="ProductQtyPopup" owl="1">
+        <div class="modal-dialog" role="dialog">
+            <div class="popup popup-textinput sh_product_bundle_popup">
+                <header class="title">
+                    Product Bundle
+                </header>
+                <div class="main-body touch-scrollable scrollable-y sh_product_bundle_body">
+                    <div class="sh_qty_price_div">
+                        <span>
+                            <label class="sh_lbl">Quantity : </label>
+                            <input type="text" id="product_qty" value="1" t-on-change="captureChange" />
+                        </span>
+                        <span style="margin-left: 10px;">
+                            <label class="sh_lbl">Price : </label>
+                            <input type="text" id="product_price" t-att-value="props.price" />
+                        </span>
+                    </div>
+                    <br />
+                    <center style="margin-bottom: 10px;font-size: 18px;">Bundle Products</center>
+                    
+                    <t t-set="count" t-value="1" />
+                    <div class="sh_bundle_table_div">
+                        <table width="100%" class="wh_qty" id="bundle_product_table">
+                            <tr>
+                                <th width="10%" class="head_td">No</th>
+                                <th width="55%" class="head_td">Product</th>
+                                <th width="15%" class="head_td">Qty</th>
+                                <th width="20%" class="head_td">UOM</th>
+                            </tr>
+                            <tbody >
+                                <tr class="data_tr" t-foreach="props.bundle_by_product_id" t-as="value" t-key="value" t-att-data-id="value[0]" t-if="env.pos.db.get_product_by_id(value[0])">
+                                    <t t-set="total_price" t-value="0" />
+                                    <t t-set="total_price" t-value="value[1] * value[3]" />
+                                    <td class="data_td"><t t-esc="count"></t></td>
+                                    <td class="data_td"><t t-esc="env.pos.db.get_product_by_id(value[0]).display_name"></t></td>
+                                    <td class="data_td">
+                                        <input type="hidden" class="hidden_qty" t-att-value="value[1]" />
+                                        <input type="text" class="qty_input" onfocus="blur();" />
+                                    </td>
+                                    <td class="data_td">
+                                        <t t-if="env.pos.units_by_id[value[2]]">
+                                            <t t-esc="env.pos.units_by_id[value[2]].name"></t>
+                                        </t>
+                                        <t t-else="">
+                                            -
+                                        </t>
+                                    </td>
+                                    <t t-set="count" t-value="count + 1" />
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <footer class="footer">
+                    <div class="button confirm highlight" t-on-click="confirm">Add To Cart</div>
+                    <div class="button cancel" t-on-click="cancel">Close</div>
+                </footer>
+            </div>
+        </div>
+    </t>
+</templates>

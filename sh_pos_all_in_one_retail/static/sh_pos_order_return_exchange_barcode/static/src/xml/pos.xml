@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="sh_pos_all_in_one_retail.ReturnOrderPopup" t-inherit="sh_pos_all_in_one_retail.ReturnOrderPopup" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('sh_return_exchange_main_body')]" position="after">
+            <div class="sh_radio_btn_div" t-if="props.from_barcode">
+                <div class="sh_return_exchange_radio">
+                    <t t-if="env.pos.config.sh_allow_return and env.pos.config.sh_allow_exchange">
+                        <label class="sh_custom_radio sh_control_radio" for="return_radio">Return
+                            <input type="radio" id="return_radio" value="Return" t-on-click="Return_order" name="return_exchange_radio" checked="true" />
+                            <div class="sh_custom_radio_indicator"></div>
+                        </label>
+                        <label class="sh_custom_radio sh_control_radio" t-on-click="Exchange_order" for="exchange_radio">Exchange
+                            <input type="radio" id="exchange_radio" value="Exchange" name="return_exchange_radio"  />
+                            <div class="sh_custom_radio_indicator"></div>
+                        </label>
+                    </t>
+                    <t t-if="env.pos.config.sh_allow_return and !env.pos.config.sh_allow_exchange">
+
+                        <label class="sh_custom_radio sh_control_radio" for="return_radio">Return
+                            <input type="radio" id="return_radio" t-on-click="Return_order" value="Return" name="return_exchange_radio" checked="checked" />
+                            <div class="sh_custom_radio_indicator"></div>
+                        </label>
+                    </t>
+                    <t t-if="!env.pos.config.sh_allow_return and env.pos.config.sh_allow_exchange">
+
+                        <label class="sh_custom_radio sh_control_radio" t-on-click="Exchange_order" for="exchange_radio">Exchange
+                            <input type="radio" id="exchange_radio" value="Exchange" name="return_exchange_radio" checked="checked" />
+                            <div class="sh_custom_radio_indicator"></div>
+                        </label>
+                    </t>
+
+                    <br />
+                </div>
+                <div class="sh_same_product_checkbox sh_barcode_popup_exchange_label" style="display: none;">
+                    <div class="sh_custom_checkbox_exchange">
+                        <label class="sh_custom sh_cust_checkbox" for="exchange_checkbox">Exchange With Same Products
+                            <input type="checkbox" checked="checked" id="exchange_checkbox" />
+                            <div class="sh_cust_checkbox_indicator"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </t>
+</templates>

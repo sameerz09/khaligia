@@ -1,0 +1,26 @@
+.pos .templateproductlist-screen .window,
+.pos .templateproductlist-screen .full-content .subwindow {display: block;}
+.pos .templateproductlist-screen .full-content .subwindow-container {display: block;height: 100%;}
+.pos .templateproductlist-screen .full-content .subwindow.collapsed,.pos .templateproductlist-screen .full-content .subwindow-container.collapsed {height: auto;}
+.pos .templateproductlist-screen .template-list {width: 100%;}
+
+/* odoo 16 */ 
+.pos .pos-content .sh_template_screen thead th{background: #4A4F59;color: #ffffff;font-weight: bold;font-size: 16px;text-transform: capitalize;}
+.pos .pos-content .sh_template_screen thead th,.pos .pos-content .sh_template_screen tbody td{padding: 10px;font-size: 16px;}
+.pos .pos-content .sh_template_screen .template-list .template-list-contents tr.template-line{cursor: pointer;transition: all .5s;}
+.pos .pos-content .sh_template_screen .template-list .template-list-contents tr.template-line:nth-child(odd){background: $sh_odd_row_color;font-size: 16px;color: #4A4F59;font-weight: normal;}
+.pos .pos-content .sh_template_screen .template-list .template-list-contents tr.template-line:nth-child(even){background: $sh_even_row_color;font-size: 16px;color: #4A4F59;font-weight: normal;}
+.pos .pos-content .sh_template_screen .template-list .template-list-contents tr.template-line.highlight,.pos .pos-content .sh_template_screen .template-list .template-list-contents tr.template-line:hover{color: $sh_pos_primary_color;font-weight: bold;}
+.pos .pos-content .sh_template_screen thead th:first-child,
+.pos .pos-content .sh_template_screen .template-list .template-list-contents tr.template-line td:first-child{width: 80%;word-break: break-word;}
+.pos .pos-content .sh_template_screen thead th:last-child,
+.pos .pos-content .sh_template_screen .template-list .template-list-contents tr.template-line td:last-child{width: 20%;word-break: break-word;}
+
+.pos .pos-content .templateproductlist-screen.screen .top-content .searchbox-client .sh_searchbox_temp_screen{line-height: 32px;padding: 3px 13px;font-size: 14px;margin-top: 12px;margin-bottom: 12px;margin-left: 6px;margin-right: 6px;border: solid 1px #E0E2E6;color: #4A4F59;cursor: pointer;transition: all 150ms linear;width: 200px;}
+.pos .pos-content .templateproductlist-screen.screen .sh_searchbox_client_top_part{display: flex;justify-content: flex-end;}
+.pos .pos-content .templateproductlist-screen.screen .top-content .searchbox-client .sh_searchbox_temp_screen:hover,.pos .pos-content .templateproductlist-screen.screen .top-content .searchbox-client .sh_searchbox_temp_screen:active,.pos .pos-content .templateproductlist-screen.screen .top-content .searchbox-client .sh_searchbox_temp_screen:focus,.pos .pos-content .templateproductlist-screen.screen .top-content .searchbox-client .sh_searchbox_temp_screen:focus-visible{border: 1px solid #017e84;box-shadow: none;outline: none;}
+
+@media only screen and (max-width: 767.98px){
+    .pos .pos-content .sh_template_screen thead th:first-child,.pos .pos-content .sh_template_screen .template-list .template-list-contents tr.template-line td:first-child{width: 70%;word-break: break-word;}
+    .pos .pos-content .sh_template_screen thead th:last-child,.pos .pos-content .sh_template_screen .template-list .template-list-contents tr.template-line td:last-child{width: 30%;word-break: break-word;}
+}

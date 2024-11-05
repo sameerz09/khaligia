@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="sh_pos_logo.OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//img[hasclass('pos-receipt-logo')]" position="replace">
+            <t t-if="env.pos.config.sh_pos_logo">
+                <img t-att-src="'/web/image?model=pos.config&amp;field=receipt_logo&amp;id='+env.pos.config.id" alt="Logo" class="pos-receipt-logo" />
+            </t>
+            <t t-else="">
+                <img class="pos-receipt-logo" t-att-src="receipt.company.logo" alt="Logo" />
+            </t>
+        </xpath>
+    </t>
+
+</templates>

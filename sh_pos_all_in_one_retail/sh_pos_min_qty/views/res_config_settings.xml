@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id='sh_pos_min_qty_product_template_view_inherit' model='ir.ui.view'>
+        <field name='name'>product.product.form.view.inherit</field>
+        <field name='model'>product.product</field>
+        <field name='inherit_id' ref='product.product_normal_form_view'></field>
+        <field name='arch' type='xml'>
+            <field name='barcode' position='after'>
+                <field name='sh_minimum_qty_pos'></field>
+            </field>
+        </field>
+    </record>
+    <record id='sh_pos_min_qty_product_view_inherit' model='ir.ui.view'>
+        <field name='name'>product.product.form.view.inherit</field>
+        <field name='model'>product.template</field>
+        <field name='inherit_id' ref='product.product_template_only_form_view'></field>
+        <field name='arch' type='xml'>
+            <field name='barcode' position='after'>
+                <field name='sh_minimum_qty_pos'></field>
+            </field>
+        </field>
+    </record>
+</odoo>

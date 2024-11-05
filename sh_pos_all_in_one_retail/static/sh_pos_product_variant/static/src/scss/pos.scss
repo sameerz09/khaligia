@@ -1,0 +1,76 @@
+.pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup:not(.sh_morethan_15_variants):not(.sh_lessthan_8_variants) {width: 600px;max-width: 600px;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup.sh_morethan_15_variants {max-width: 835px;width: 835px;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup.sh_lessthan_8_variants {max-width: 695px;width: 695px;}
+.pos .popups .modal-dialog.sh_pos_variant_popup main.main:not(.sh_no_variant) {max-height: 310px;height: 310px;overflow: auto;margin: 0px;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup:not(.sh_morethan_15_variants):not(.sh_lessthan_8_variants).sh_less_than_8_with_alter main.main {max-height: 360px;height: 360px;overflow: unset;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup .product-list .product,
+.pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup .product_alternative_list .product,
+.pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup .sh_have_alternative_product .product {margin: 10px !important;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup .product-list .product{display: inline-block;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup .product-list .product .product-name{margin-bottom: 0.5rem;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup .product-list.sh_have_alternative_product {max-height: 180px;height: 180px;overflow: auto;margin: 10px 0px;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup:not(.sh_morethan_15_variants):not(.sh_lessthan_8_variants) main.main>.product-list.sh_have_alternative_product {max-height: 140px;height: 140px;overflow: auto;margin: 0px 0px 10px 0px;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup .product_alternative_list {max-height: 160px !important;max-height: 160px !important;height: 160px;overflow: auto;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup:not(.sh_morethan_15_variants):not(.sh_lessthan_8_variants) main.main .product_alternative_list {max-height: 170px;height: 170px;}
+
+@media (max-width: 992px) and (min-width: 768px) {
+    .pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup:not(.sh_morethan_15_variants):not(.sh_lessthan_8_variants) main.main>.product-list.sh_have_alternative_product {max-height: 120px;height: 120px;}
+    .pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup.sh_morethan_15_variants {max-width: 600px;}
+}
+.pos .popups .modal-dialog.sh_pos_variant_popup .sh_product_variants_popup main.main>.product-list {font-size: 12px;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .sh_product_variants_popup .sh_header_right_searchbox input:focus {box-shadow: 0px 0px 0px 2px $sh_pos_primary_color;}
+
+@media only screen and (max-width: 767.98px) {
+    .pos .product .product-img .price-tag.sh_has_variant {top: 11px;font-size: 10px;}
+    .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup {width: 320px;max-width: 320px;}
+    .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup .product-img>img {max-height: 100%;max-width: 100%;}
+    .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup header.title {font-size: 18px;}
+    .pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup .product-list {justify-content: center;}
+    .pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup:not(.sh_morethan_15_variants):not(.sh_lessthan_8_variants) main.main>.product-list.sh_have_alternative_product {max-height: 120px;height: 120px;}
+    .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup .sh_header_right_searchbox{margin-left: 12px;}
+    .pos .popups .modal-dialog.sh_pos_variant_popup main.main::-webkit-scrollbar{width: 0px;height: 0px;}
+}
+.sh_attribute_name_and_value .highlight {background-color: $sh_pos_primary_color !important;color: #fff !important;}
+.sh_attribute_id {display: flex;padding-left: 15px;}
+.sh_pos_variant_popup .sh_group_by_attribute {text-align: left;height: auto;}
+
+.sh_pos_variant_popup .sh_group_by_attribute.sh_attribute_name_with_alternative {text-align: left !important;height: 165px;overflow-y: auto !important;overflow-x: auto !important;padding-left: 10px;}
+.sh_product_variants_popup.sh_product_variants_popup_by_attribute_name main.sh_no_variant {max-height: 315px !important;height: 315px !important;}
+.sh_product_variants_popup.sh_product_variants_popup_by_attribute_name main:not(.sh_no_variant) {max-height: 365px !important;height: 365px !important;}
+.sh_product_variants_popup.sh_product_variants_popup_by_attribute_name main.sh_only_attributes {max-height: 250px !important;height: 250px !important;}
+.sh_group_by_attribute .sh_attribute_name_id {display: flex;padding: 5px;padding-right: 20px;text-transform: capitalize;color: #414141;align-items: center;position: relative;font-size: 16px;}
+.sh_group_by_attribute .sh_attribute_name_id:after {position: absolute;font-family: 'FontAwesome';content: '\f061';right: 0;font-size: 15px;}
+.sh_group_by_attribute .sh_attribute_name_and_value{display: flex;}
+
+.sh_group_by_attribute .sh_attribute_name_id>h5 {margin: 0px;text-align: center;padding: 0px 20px 0px 10px;}
+.sh_attribute_name_and_value .sh_attribute_id #attribute_value {padding: 4px 10px;margin: 10px 5px;display: flex;background: #ffffff;border-radius: 0px;font-size: 15px;justify-content: center;align-items: center;border: 1px solid #e7e7e7;white-space: nowrap;cursor: pointer;font-weight: normal;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .sh_product_variants_popup.sh_attr_no_alternative_popup{height: 350px !important;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .sh_product_variants_popup main.sh_product_attr_no_alternative{height: 220px !important;max-height: 220px !important;overflow: auto;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .sh_product_variants_popup main.sh_product_attr_no_alternative .sh_group_by_attribute{height: 220px !important;max-height: 220px !important;padding-left: 10px;}
+
+@media screen and (max-width:567px) {
+    .sh_pos_variant_popup .sh_group_by_attribute #attribute_value {margin: 10px 0px 10px 10px;}
+}
+.pos .popups .modal-dialog.sh_pos_variant_popup .sh_product_variants_popup .main.sh_no_variant .product_alternative_list{height: 260px !important;max-height: 260px !important;}
+
+@media only screen and (max-width: 768px){
+    .pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup .product-list{padding: 10px 5px;gap: 2px;justify-content: unset;}
+}
+
+/* odoo 16 */ 
+.pos .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup .sh_header_right_searchbox .sh_header_search{width: 26%; border-radius: 0px; float: right; font-size: 14px; margin-top: -30px; min-height: 38px;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup footer.footer{display: flex;justify-content: center;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup footer.footer .button.cancel{float: unset;margin-right: 0px;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup:not(.sh_morethan_15_variants):not(.sh_lessthan_8_variants) .sh_top_variant_with_alternative_bottom{height: 160px;max-height: 160px;overflow: auto;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup .sh_top_variant_with_alternative_bottom .sh_have_alternative_product,
+.pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup .product_alternative_list .alternative_product_value{ display: grid;grid-template-columns: repeat(auto-fill, minmax(122px, 1fr));padding: 3px;gap: 3px;font-size: 12px;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup .heading_alternative_pro{padding: 6px 0px;background: $sh_pos_primary_color;color: white;}
+
+.pos .popups .modal-dialog.sh_pos_variant_popup .sh_product_variants_popup.sh_less_than_8_with_alter main.main.sh_no_variant{max-height: 335px !important;height: 335px !important;overflow: auto;}
+.pos .popups .modal-dialog.sh_pos_variant_popup .sh_product_variants_popup.sh_less_than_8_with_alter main.main.sh_no_variant .product_alternative_list{height: 300px !important;max-height: 300px !important;}
+
+.pos .popups .modal-dialog.sh_pos_variant_popup .footer .button.confirm{background: $sh_pos_primary_color;color: #ffffff;border: 1px solid $sh_pos_primary_color;}
+
+@media only screen and (max-width: 767.98px){
+    .pos .modal-dialog.sh_pos_variant_popup .popup.sh_product_variants_popup .sh_header_right_searchbox .sh_header_search{width: 23%;}
+}

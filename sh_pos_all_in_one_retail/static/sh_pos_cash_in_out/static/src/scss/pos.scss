@@ -1,0 +1,143 @@
+.pos table.sh_payment_table,.pos .popups .sh_closing_total_table {width: 100%;}
+.pos .sh_cash_in_out_option_modal_dialog .closing_balance_popup,.pos .sh_cash_in_out_option_modal_dialog .sh_payment_popup {max-width: 550px !important;}
+.pos .sh_cash_in_out_option_modal_dialog .sh_payment_popup .main_div_sh_payment .main_div_sh_payment_table .sh_payment_table thead {background: #01666b;color: #fff;font-size: 16px;position: sticky;top: 0;}
+.pos .sh_cash_in_out_option_modal_dialog .sh_payment_popup .main_div_sh_payment .main_div_sh_payment_table .sh_payment_table thead th {padding: 8px 10px;font-size: 16px;}
+.pos .sh_cash_in_out_option_modal_dialog .sh_payment_popup .main_div_sh_payment .main_div_sh_payment_table .sh_payment_table thead th{white-space: nowrap;}
+.pos .popups .sh_cash_in_out_option_modal_dialog .closing_balance_popup .main_div_cash_control .sh_closing_total_table .sh_closing_total td,.pos .sh_cash_in_out_option_modal_dialog .sh_payment_popup .main_div_sh_payment .main_div_sh_payment_table .sh_payment_table tbody td {padding: 10px;}
+.pos .popups .sh_cash_in_out_option_modal_dialog .closing_balance_popup .main_div_cash_control .sh_closing_total {font-size: 16px;background: #01666b;color: #fff;text-transform: uppercase;}
+.pos .popups .sh_cash_in_out_option_modal_dialog .closing_balance_popup .main_div_cash_control .sh_closing_total .cancel_line {cursor: pointer;}
+.pos .popups .sh_cash_in_out_option_modal_dialog .closing_balance_popup .sh_set_closing_body_div {height: 200px;min-height: 200px;overflow: auto;}
+.pos .sh_popup_confirm .sh_confirm_footer .button.pos_session_close {width: 145px !important;}
+.pos .sh_cash_in_out_option_modal_dialog .sh_payment_popup .main_div_sh_payment .main_div_sh_payment_table .sh_payment_table tbody td {font-size: 16px;font-weight: normal;white-space: nowrap;}
+.pos .sh_cash_in_out_option_modal_dialog .sh_payment_popup .main_div_sh_payment .main_div_sh_payment_footer {background: #fff;padding: 10px;width: 70%;margin: 12px auto;border-radius: 4px;}
+.pos .sh_cash_in_out_option_modal_dialog .sh_payment_popup .main_div_sh_payment .main_div_sh_payment_table .sh_payment_table tr {cursor: pointer;transition: all .5s;}
+.pos .sh_cash_in_out_option_modal_dialog .sh_payment_popup .main_div_sh_payment .main_div_sh_payment_table .sh_payment_table tr:hover td{color: $sh_pos_primary_color;font-weight: bold;}
+.pos .sh_cash_in_out_option_modal_dialog .sh_payment_popup .main_div_sh_payment .main_div_sh_payment_table {max-height: 162px;overflow: auto;}
+.pos .sh_cash_in_out_option_modal_dialog .sh_payment_popup .main_div_sh_payment .main_div_sh_payment_footer .sh_lbl {font-weight: bold;font-size: 15px;}
+.pos .sh_cash_in_out_option_modal_dialog .sh_payment_popup .main_div_sh_payment .main_div_sh_payment_footer .sh_value {font-size: 15px;font-weight: normal;margin-left: 14px;}
+.pos .sh_cash_in_out_option_modal_dialog .closing_balance_popup .title,
+.pos .sh_cash_in_out_option_modal_dialog .sh_payment_popup .title {padding: 15px;}
+
+@media only screen and (max-width: 767.98px) and (min-width: 321px) {
+    .pos .sh_cash_in_out_option_modal_dialog .closing_balance_popup,.pos .sh_cash_in_out_option_modal_dialog .sh_payment_popup,.pos .modal-dialog .sh_popup_confirm {max-width: 320px !important;}
+    .pos .popups .modal-dialog {padding: 10px 0px 10px 0px;}
+
+    .pos .sh_cash_in_out_option_modal_dialog .sh_payment_popup .main_div_sh_payment .main_div_sh_payment_table .sh_payment_table thead {font-size: 14px;}
+    .pos .popups .sh_cash_in_out_option_modal_dialog .closing_balance_popup .sh_set_closing_body_div {height: 210px;min-height: 210px;}
+    .pos .sh_cash_in_out_option_modal_dialog .sh_payment_popup .main_div_sh_payment .main_div_sh_payment_footer {width: 80%;}
+    .pos .modal-dialog .sh_popup_confirm .footer.sh_confirm_footer .button {font-size: 13px;}
+    .pos .modal-dialog .sh_popup_confirm .footer.sh_confirm_footer .button.pos_close,
+    .pos .modal-dialog .sh_popup_confirm .footer.sh_confirm_footer .button.cancel {width: 78px;}
+    .pos .sh_popup_confirm .sh_confirm_footer .button.pos_session_close {width: 116px !important;}
+    .pos *::-webkit-scrollbar {width: 2px;height: 2px;}
+}
+
+@media only screen and (max-width: 767.98px) {
+
+    .pos .sh_cash_in_out_option_modal_dialog .closing_balance_popup .sh_closing_footer .closing_right_button .button.back {font-size: 0px; width: 42px;position: relative;}
+    .pos .sh_cash_in_out_option_modal_dialog .closing_balance_popup .sh_closing_footer .closing_right_button .button.back:after {position: absolute;content: "\f060";font-family: "FontAwesome";top: 0;left: 35%;font-size: 15px;}
+    .pos .sh_cash_in_out_option_modal_dialog .closing_balance_popup .sh_closing_footer .closing_right_button .button {width: 73px;}
+    .pos .popup .button:active {color: white;background: #01666b;border: 1px solid #01666b;}
+    .pos *::-webkit-scrollbar {width: 2px;height: 2px;}
+    .pos .popups .sh_cash_in_out_option_modal_dialog .closing_balance_popup .main_div_cash_control .sh_closing_total {font-size: 14px;}
+}
+
+@media only screen and (max-width: 320px) {
+    .pos .sh_cash_in_out_option_modal_dialog .closing_balance_popup,.pos .sh_cash_in_out_option_modal_dialog .sh_payment_popup,.pos .modal-dialog .sh_popup_confirm {max-width: 300px !important;}
+    .pos .popups .modal-dialog {padding: 10px 0px 10px 0px;}
+    .pos .sh_cash_in_out_option_modal_dialog .closing_balance_popup .sh_closing_footer .closing_right_button .button:not(.back) {width: 66px;}
+    .pos .sh_cash_in_out_option_modal_dialog .sh_payment_popup .main_div_sh_payment .main_div_sh_payment_footer {width: 80%;}
+}
+
+.pos .sh_statement_date {display: none;}
+.pos .sh_statement_date.show {display: block !important;}
+.pos .pos-receipt.sh_pos_statement_receipt table.sh_in_out_statement_table {width: 100%;font-size: 12px;}
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup {width: 520px;max-width: 520px;}
+
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .main_sub_div_sh_statement .sh_statement_option .sh_rd_input,
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .footer .sh_print_statement_option .sh_print_input {width: 18px;min-height: 18px;box-shadow: none;margin-top: 0px;margin-right: 8px;}
+
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .title {padding: 15px;font-size: 18px;}
+
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .main_sub_div_sh_statement .sh_statement_option .sh_rd_lbl,
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .sh_print_statement_option .sh_print_lbl {font-size: 16px;font-weight: normal;}
+
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .main_sub_div_sh_statement .sh_statement_option .sh_session_div,
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .main_sub_div_sh_statement .sh_statement_option .sh_date_div,
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .sh_print_statement_option .sh_pdf_div,
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .sh_print_statement_option .sh_receipt_div {display: flex;align-items: center;}
+
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .main_sub_div_sh_statement {padding: 15px;}
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .main_sub_div_sh_statement .sh_statement_option {display: flex;justify-content: center;padding: 5px 10px 5px 10px;}
+
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .main_sub_div_sh_statement .sh_statement_option .sh_session_div,
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .sh_print_statement_option .sh_pdf_div {margin-right: 15px;}
+
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .sh_print_statement_option {display: flex;align-items: center;padding: 10px;justify-content: center;}
+
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .sh_statement_date .sh_start_date,
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .sh_statement_date .sh_end_date {display: flex;justify-content: center;align-items: center;}
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .sh_statement_date .sh_start_date {margin-bottom: 10px;}
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .sh_statement_date .sh_start_date .sh_start_date_lbl,
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .sh_statement_date .sh_end_date .sh_end_date_lbl {font-size: 16px;}
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .sh_statement_date .sh_start_date .sh_start_date_value .start_date,
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .sh_statement_date .sh_end_date .sh_end_date_value .end_date {font-size: 16px;width: 90%;border-radius: 0px;}
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .sh_statement_date .sh_end_date .sh_end_date_lbl {margin-right: 8px;}
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .sh_statement_date .sh_start_date .sh_start_date_value .start_date:focus,
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .sh_statement_date .sh_end_date .sh_end_date_value .end_date:focus {outline: none;box-shadow: 0px 0px 0px 1px $sh_pos_primary_color;}
+
+.pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .sh_statement_date {margin-bottom: 8px;margin-top: 10px;}
+@media only screen and (max-width: 767.98px) {
+    .pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup {width: 320px;max-width: 320px;}
+
+    .pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .main_sub_div_sh_statement .sh_statement_option .sh_rd_lbl,
+    .pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .footer .sh_print_statement_option .sh_print_lbl,
+    .pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .sh_statement_date .sh_start_date .sh_start_date_value .start_date,
+    .pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .sh_statement_date .sh_end_date .sh_end_date_value .end_date {font-size: 14px;}
+    .pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .main_sub_div_sh_statement .sh_statement_option .sh_rd_input,
+    .pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .footer .sh_print_statement_option .sh_print_input {margin-right: 6px}
+
+    .pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .main_div_sh_statement .main_sub_div_sh_statement .sh_statement_option .sh_session_div,
+    .pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .footer .sh_print_statement_option .sh_pdf_div {margin-right: 10px}
+
+    .pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .footer .sh_print_statement_option .sh_pdf_div {margin-bottom: 0px}
+
+    .pos .popups .modal-dialog.sh_cash_in_out_statement_modal_dialog .sh_cash_in_out_statement_popup .footer .sh_print_statement_option {display: flex;align-items: center;justify-content: center;width: 93%}
+
+}
+
+.pos .pos-receipt.sh_pos_statement_receipt .sh_in_out_statement_table {text-align: center;}
+
+.pos .pos-receipt.sh_pos_statement_receipt .sh_in_out_statement_table tbody td {padding: 8px;word-break: break-word;}
+
+.pos .pos-receipt.sh_pos_statement_receipt .sh_in_out_statement_table tbody tr:not(:last-child) {border-bottom: 1px solid #ebebeb;}
+
+.pos .pos-receipt.sh_pos_statement_receipt .sh_in_out_statement_table thead th,
+.pos .pos-receipt.sh_pos_statement_receipt .sh_in_out_statement_table tfoot td {padding: 8px;}
+
+.pos .pos-receipt.sh_pos_statement_receipt .sh_in_out_statement_table tfoot td {font-weight: bold;}
+
+.pos .pos-receipt.sh_pos_statement_receipt .sh_in_out_statement_table thead th {text-transform: uppercase;}
+
+.pos .pos-receipt.sh_pos_statement_receipt .sh_in_out_statement_table thead {border-bottom: 2px solid #ebebeb;}
+
+.pos .pos-receipt.sh_pos_statement_receipt .sh_in_out_statement_table tfoot {border-top: 2px solid #ebebeb;}
+
+.pos .pos-receipt.sh_pos_statement_receipt .pos-receipt-contact {font-size: 12px;}
+
+.pos .button.validation .pay-circle .fa {left: 0 !important;top: -5px !important;}
+
+
+
+/* custom radio button for Print statement wizard */
+
+.pos .main_div_sh_statement .sh_custom_radio_btn [type="radio"]:checked,.pos .main_div_sh_statement .sh_custom_radio_btn [type="radio"]:not(:checked),
+.pos .sh_cash_in_out_statement_popup .footer .sh_custom_radio_btn [type="radio"]:checked,.pos .sh_cash_in_out_statement_popup .footer .sh_custom_radio_btn [type="radio"]:not(:checked) {position: absolute;left: -9999px;}
+.pos .main_div_sh_statement .sh_custom_radio_btn [type="radio"]:checked + label,.pos .main_div_sh_statement .sh_custom_radio_btn [type="radio"]:not(:checked) + label,
+.pos .sh_cash_in_out_statement_popup .footer .sh_custom_radio_btn [type="radio"]:checked + label,.pos .sh_cash_in_out_statement_popup .footer .sh_custom_radio_btn [type="radio"]:not(:checked) + label{position: relative;padding-left: 28px;cursor: pointer;line-height: 20px;display: inline-block;color: #666;}
+.pos .main_div_sh_statement .sh_custom_radio_btn [type="radio"]:checked + label:before,.pos .main_div_sh_statement .sh_custom_radio_btn [type="radio"]:not(:checked) + label:before,
+.pos .sh_cash_in_out_statement_popup .footer .sh_custom_radio_btn [type="radio"]:checked + label:before,.pos .sh_cash_in_out_statement_popup .footer .sh_custom_radio_btn [type="radio"]:not(:checked) + label:before {content: '';position: absolute;left: 0;top: 0;width: 18px;height: 18px;border: 1px solid #cccccc;border-radius: 100%;background: #fff;}
+.pos .main_div_sh_statement .sh_custom_radio_btn [type="radio"]:checked + label:after,.pos .main_div_sh_statement .sh_custom_radio_btn [type="radio"]:not(:checked) + label:after,
+.pos .sh_cash_in_out_statement_popup .footer .sh_custom_radio_btn [type="radio"]:checked + label:after,.pos .sh_cash_in_out_statement_popup .footer .sh_custom_radio_btn [type="radio"]:not(:checked) + label:after {content: '';width: 12px;height: 12px;background: $sh_pos_primary_color;position: absolute;top: 4px;left: 4px;border-radius: 100%;-webkit-transition: all 0.2s ease;transition: all 0.2s ease;}
+.pos .main_div_sh_statement .sh_custom_radio_btn [type="radio"]:not(:checked) + label:after,.pos .sh_cash_in_out_statement_popup .footer .sh_custom_radio_btn [type="radio"]:not(:checked) + label:after {opacity: 0;-webkit-transform: scale(0);transform: scale(0);}
+.pos .main_div_sh_statement .sh_custom_radio_btn [type="radio"]:checked + label:after,.pos .sh_cash_in_out_statement_popup .footer .sh_custom_radio_btn [type="radio"]:checked + label:after {opacity: 1;-webkit-transform: scale(1);transform: scale(1);}

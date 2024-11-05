@@ -1,0 +1,54 @@
+.pos .payment-screen.screen .paymentmethods-container .pymnt_header_note {font-weight: bold;font-size: 16px;margin-left: 16px;margin-top: 10px;}
+.pos .payment-screen.screen .paymentmethods-container .payment_order_note {margin: 10px 16px;display: flex;flex-wrap: wrap;}
+.pos .payment-screen.screen .paymentmethods-container #payment_note_textarea {width: 100%;resize: none;height: 104px;font-size: 15px;}
+.pos .sh_add_new_note_popup .name_not_valid {border: 2px solid red !important;}
+.pos .sh_add_new_note_popup .name_not_valid:focus{box-shadow: none;}
+.pos .line_note_popup .note_body #textarea_note,
+.pos .global_note_popup .note_body #textarea_note {height: 104px;resize: none;font-size: 15px;width: 80%;box-shadow: none;border: 1px solid #dcdcdc;}
+.pos .sh_pre_define_note_table .input_name {display: none;}
+.pos .sh_pre_define_note_table .show_input_name {display: block;}
+.pos .sh_pre_define_note_table .hide_note_name {display: none;}
+.pos .sh_pre_define_note_table {width: 100%;font-size: 16px;}
+.pos .note_icon {width: 20px;}
+.pos-receipt-container .pos-receipt .line_note_div {color: #9e9e9e;margin-left: 20px;font-size: 13px;padding: 6px 0px 6px 0px;}
+.pos .leftpane .order_note_div {float: left;margin-left: 14px;margin-top: -7px;width: 50%;}
+.pos .leftpane .order_note_cart_div {text-align: left;font-size: 20px;padding: 10px;}
+.pos .leftpane .note_cart_div {float: left;font-weight: normal;padding: 10px;width: 100%;word-break: break-all;text-align: left;}
+.popup.popup-text.popup-lg.product-configurator-popup.line_note_popup,.popup.popup-text.popup-lg.product-configurator-popup.global_note_popup {width: 40% !important;}
+.pos .line_note_popup .dmy.btn.btn-secondary.each_note_button,.pos .global_note_popup .dmy.btn.btn-secondary.each_note_button{font-size: 13px;padding: 8px;margin-top: 10px;color: #555555;}
+.pos #note_button {padding: 10px;}
+
+.pos .line_note_popup .button_div,
+.pos .global_note_popup .button_div {padding: 10px;height: 100%;max-height: 80px;overflow-y: auto;}
+.pos .line_note_popup .button_div::-webkit-scrollbar, .pos .global_note_popup .button_div::-webkit-scrollbar{width: 0px;}
+.pos .line_note_popup .dmy.btn.btn-secondary.each_note_button.selected,
+.pos .global_note_popup .dmy.btn.btn-secondary.each_note_button.selected {background: $sh_pos_primary_color;color: #fff;border: 1px solid $sh_pos_primary_color;}
+.pos .templateproductlist-screen.screen .top-content .button.new-note{background: $sh_pos_primary_color;color: #ffffff;}
+
+.pos .footer .sh_store_checkbox input#store_checkbox {min-height: 15px !important;width: auto !important;vertical-align: middle;margin-left: 8px;}
+.pos .footer .sh_store_checkbox {margin-top: 18px !important;float: left !important;}
+.pos .footer .sh_store_checkbox label {font-size: 15px !important;font-weight: normal !important;vertical-align: middle;}
+
+@media only screen and (max-width: 767.98px) {
+    .popup.popup-text.popup-lg.product-configurator-popup.line_note_popup,.popup.popup-text.popup-lg.product-configurator-popup.global_note_popup {width: 80% !important;top: 40% !important;}
+    .popup.popup-text.popup-lg.product-configurator-popup.line_note_popup textarea#textarea_note,.popup.popup-text.popup-lg.product-configurator-popup.global_note_popup textarea#textarea_note {width: 80% !important;}
+    .pos .global_note_popup:not(.sh_add_new_note_popup) .footer,
+    .pos .line_note_popup:not(.sh_add_new_note_popup) .footer {height: 90px !important;display: block;}
+    .pos .footer .sh_store_checkbox {float: unset !important;margin-top: 5px !important;}
+}
+
+.pos .sh_pre_define_note_list .sh_pre_define_note_table tbody td,.pos .sh_pre_define_note_list .sh_pre_define_note_table thead th {padding: 8px 12px;}
+.pos .sh_pre_define_note_list .sh_pre_define_note_table .name_td .show_input_name input {padding: 5px 8px !important;width: 80%;border: 1px solid #c1c1c1;}
+.pos .sh_pre_define_note_list .sh_pre_define_note_table .name_td .show_input_name input:focus-visible{outline: none;border: 1px solid $sh_pos_primary_color;}
+.pos .sh_pre_define_note_list .sh_pre_define_note_table tr{transition: all .5s;}
+.pos .sh_pre_define_note_list .sh_pre_define_note_table tr:hover td{color: $sh_pos_primary_color;cursor: pointer;font-weight: bold;}
+@media only screen and (max-width: 920px) and (min-width: 577px) {
+    .popup.popup-text.popup-lg.product-configurator-popup.line_note_popup,.popup.popup-text.popup-lg.product-configurator-popup.global_note_popup {width: 60% !important;}
+}
+/* custom checkbox */ 
+.pos .modal-dialog .popup .footer .sh_store_checkbox {position: relative;padding-left: 12px;margin-bottom: 0px;cursor: pointer;font-size: 16px;margin-left: 10px;}
+.pos .modal-dialog .popup .footer .sh_store_checkbox input[type="checkbox"].sh_custom_input {position: absolute;opacity: 0;}
+.pos .modal-dialog .popup .footer .sh_store_checkbox .sh_custom_label {position: relative;cursor: pointer;padding: 0;}
+.pos .modal-dialog .popup .footer .sh_store_checkbox .sh_custom_label::before{content: "";margin-right: 10px;display: inline-block;vertical-align: text-top;width: 20px;height: 20px;background: #e6e6e6;}
+.pos .modal-dialog .popup .footer .sh_store_checkbox input[type="checkbox"]:checked + .sh_custom_label::before{background: $sh_pos_primary_color;}
+.pos .modal-dialog .popup .footer .sh_store_checkbox input[type="checkbox"]:checked + .sh_custom_label:after {content: "";position: absolute;left: 5px;top: 9px;background: white;width: 2px;height: 2px;box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;transform: rotate(45deg);}

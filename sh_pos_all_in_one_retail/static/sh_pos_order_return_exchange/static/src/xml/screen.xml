@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="OrderListScreen" t-inherit="sh_pos_all_in_one_retail.OrderListScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//th[hasclass('sh_orderlist_state_th')]" position="after">
+            <th class="sh_order_return_icon_th" t-if="env.pos.config.sh_allow_exchange or env.pos.config.sh_allow_return"></th>
+        </xpath>
+        <xpath expr="//th[hasclass('pos_order_state_th')]" position="after">
+            <t t-if="env.pos.config.sh_allow_return">
+                <th class="sh_return_status_th">Return Status</th>
+            </t>
+        </xpath>
+        <xpath expr="//div[hasclass('sh_service_back_btn')]" position="after">
+            <span class="button return_order_button" t-on-click="return_order_filter">
+                <span class="sh_return_order_span_top_btn">Return Orders</span>
+            </span>
+        </xpath>
+        <xpath expr="//td[hasclass('pos_order_state')]" position="after">
+            <td class="sh_order_return_icon_td" t-if="env.pos.config.sh_allow_exchange or env.pos.config.sh_allow_return">
+                <t t-if="pos_order.return_status != 'fully_return'">
+                    <span class="order_return" t-if="env.pos.config.sh_allow_exchange">
+                        <span class="tool" data-tip="Exchange" title="Exchange">
+                            <i class="fa fa-exchange order_exchange" aria-hidden="true" t-on-click="exchange_pos_order"></i>
+                        </span>
+                    </span>
+                </t>
+                <t t-if="(pos_order.return_status != 'fully_return') and (!pos_order.is_return_order)">
+                    <span class="order_exchange" t-if="env.pos.config.sh_allow_return">
+                        <span class="tool" data-tip="Return" title="Return">
+                            <i class="fa fa-reply order_return" aria-hidden="true" t-on-click="return_pos_order"></i>
+                        </span>
+                    </span>
+                </t>
+            </td>
+        </xpath>
+        <xpath expr="//td[hasclass('pos_order_state')]" position="after">
+            <t t-if="env.pos.config.sh_allow_return">
+                <td class="sh_return_status_td">
+                    <t t-if="pos_order.return_status">
+                        <t t-if="pos_order.return_status == 'nothing_return'">
+                            -
+                        </t>
+                        <t t-if="pos_order.return_status == 'partialy_return'">
+                            Partially-Returned
+                        </t>
+                        <t t-if="pos_order.return_status == 'fully_return'">
+                            Fully-Returned
+                        </t>
+                    </t>
+                </td>
+            </t>
+        </xpath>
+        <xpath expr="//table[hasclass('inner_data_table')]//tr[1]" position="before">
+            <t t-if="pos_order.return_status != 'nothing_return'">
+                <tr t-att-id="pos_order.pos_reference.split(' ')[1]" class="order_data_row order_data_header sh_return_order_ref_inner_tr">
+                    <td colspan="6" class="sh_return_order_ref_td">
+                        <span class="sh_return_order_ref_lable">Return Order Reference : </span>
+                        <span class="sh_return_order_ref_val">
+                            <t t-if="pos_order.old_pos_reference">
+                                <t t-esc="pos_order.old_pos_reference" />
+                            </t>
+                        </span>
+                    </td>
+                </tr>
+            </t>
+        </xpath>
+        <xpath expr="//table[hasclass('inner_data_table')]//tr//th[2]" position="after">
+            <th class="sh_return_qty_inner_table_th">
+                <t t-if="pos_order.return_status != 'nothing_return'">
+                    Return Quantity
+                </t>
+            </th>
+        </xpath>
+        <xpath expr="//td[hasclass('sh_inner_table_qty_td')]" position="after">
+            <td class="sh_return_qty_inner_table_td">
+                <t t-if="pos_order.return_status != 'nothing_return'">
+                    <t t-if="env.pos.db.sh_get_orderline_by_id(pos_order_line) and env.pos.db.sh_get_orderline_by_id(pos_order_line).sh_return_qty">
+                        <t t-esc="env.pos.db.sh_get_orderline_by_id(pos_order_line).sh_return_qty" />
+                    </t>
+                </t>
+            </td>
+        </xpath>
+        <xpath expr="//td[hasclass('sh_inner_table_product_td')]" position="inside">
+            <t t-if="(env.pos.db.get_product_by_id(env.pos.db.order_line_by_id[pos_order_line].product_id[0]) and env.pos.db.get_product_by_id(env.pos.db.order_line_by_id[pos_order_line].product_id[0]).sh_product_non_exchangeable) or (env.pos.db.get_product_by_id(env.pos.db.order_line_by_id[pos_order_line].product_id[0]) and env.pos.db.get_product_by_id(env.pos.db.order_line_by_id[pos_order_line].product_id[0]).sh_product_non_returnable)">
+                <t t-if="(env.pos.db.get_product_by_id(env.pos.db.order_line_by_id[pos_order_line].product_id[0]) and env.pos.db.get_product_by_id(env.pos.db.order_line_by_id[pos_order_line].product_id[0]).sh_product_non_exchangeable) and (env.pos.db.get_product_by_id(env.pos.db.order_line_by_id[pos_order_line].product_id[0]) and env.pos.db.get_product_by_id(env.pos.db.order_line_by_id[pos_order_line].product_id[0]).sh_product_non_returnable)">
+                    <span class="no_return_exchange"> (Non-Returnable) (Non-Exchangeable)</span>
+                </t>
+                <t t-else="">
+                    <t t-if="env.pos.db.get_product_by_id(env.pos.db.order_line_by_id[pos_order_line].product_id[0]) and env.pos.db.get_product_by_id(env.pos.db.order_line_by_id[pos_order_line].product_id[0]).sh_product_non_exchangeable">
+                        <span class="no_exchange"> (Non-Exchangeable)</span>
+                    </t>
+                    <t t-if="env.pos.db.get_product_by_id(env.pos.db.order_line_by_id[pos_order_line].product_id[0]) and env.pos.db.get_product_by_id(env.pos.db.order_line_by_id[pos_order_line].product_id[0]).sh_product_non_returnable">
+                        <span class="no_return"> (Non-Returnable)</span>
+                    </t>
+                </t>
+            </t>
+            <!-- <t t-else="">
+                <t t-if="(env.pos.db.get_product_by_id(env.pos.db.order_line_by_uid[pos_order_line].product_id) and env.pos.db.get_product_by_id(env.pos.db.order_line_by_uid[pos_order_line].product_id).sh_product_non_exchangeable) or (env.pos.db.get_product_by_id(env.pos.db.order_line_by_uid[pos_order_line].product_id) and env.pos.db.get_product_by_id(env.pos.db.order_line_by_uid[pos_order_line].product_id).sh_product_non_returnable)" >
+                    <t t-if="(env.pos.db.get_product_by_id(env.pos.db.order_line_by_uid[pos_order_line].product_id) and env.pos.db.get_product_by_id(env.pos.db.order_line_by_uid[pos_order_line].product_id).sh_product_non_exchangeable) and (env.pos.db.get_product_by_id(env.pos.db.order_line_by_uid[pos_order_line].product_id) and env.pos.db.get_product_by_id(env.pos.db.order_line_by_uid[pos_order_line].product_id).sh_product_non_returnable)" >
+                        <t t-esc="env.pos.db.get_product_by_id(env.pos.db.order_line_by_uid[pos_order_line].product_id).display_name" />
+                        <span class="no_return_exchange"> (Non-Returnable) (Non-Exchangeable)</span>
+                    </t>
+                    <t t-else="">
+                        <t t-if="env.pos.db.get_product_by_id(env.pos.db.order_line_by_uid[pos_order_line].product_id) and env.pos.db.get_product_by_id(env.pos.db.order_line_by_uid[pos_order_line].product_id).sh_product_non_exchangeable" >
+                            <t t-esc="env.pos.db.get_product_by_id(env.pos.db.order_line_by_uid[pos_order_line].product_id).display_name" />
+                            <span class="no_exchange"> (Non-Exchangeable)</span>
+                        </t>
+                        <t t-if="env.pos.db.get_product_by_id(env.pos.db.order_line_by_uid[pos_order_line].product_id) and env.pos.db.get_product_by_id(env.pos.db.order_line_by_uid[pos_order_line].product_id).sh_product_non_returnable" >
+                            <t t-esc="env.pos.db.get_product_by_id(env.pos.db.order_line_by_uid[pos_order_line].product_id).display_name" />
+                            <span class="no_return"> (Non-Returnable)</span>
+                        </t>
+                    </t>
+                </t>
+            </t> -->
+
+        </xpath>
+    </t>
+
+    <t t-name="PaymentScreen" t-inherit="point_of_sale.PaymentScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('back')]" position="after">
+            <t t-if="env.pos.get_order().return_order">
+                <div class="button cancel" t-on-click="cancel_return_order">
+                    <span class="back_text">Cancel</span>
+                </div>
+            </t>
+        </xpath>
+        <xpath expr="//div[hasclass('back')]" position="attributes">
+            <attribute name="t-attf-style">{{  env.pos.get_order().return_order ? 'display:none' : 'display:block' }}</attribute>
+        </xpath>
+    </t>
+</templates>

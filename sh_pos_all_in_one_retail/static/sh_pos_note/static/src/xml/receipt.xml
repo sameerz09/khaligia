@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <!-- <t t-name="OrderLinesReceipt" t-inherit="point_of_sale.OrderLinesReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-foreach='receipt.orderlines']" position="inside">
+            <t t-if="env.pos.config.display_orderline_note_receipt">
+                <t t-if="line.line_note">
+                    <div class="line_note_div">
+                        <t t-esc="line.line_note" />
+                    </div>
+                </t>
+            </t>
+        </xpath>
+    </t> -->
+    <!-- line note added in replace -->
+    <t t-name="OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('after-footer')]" position="after">
+            <t t-if="env.pos.config.display_order_note_receipt">
+                <t t-if="receipt.order_global_note">
+                    <br />
+                    <div style="text-align: left;">
+                        <span style="font-weight: bold;">Note:</span>
+                        <span>
+                            <p style="font-size: 13px;"><t t-esc="receipt.order_global_note" /></p>
+                        </span>
+                    </div>
+                </t>
+            </t>
+        </xpath>
+    </t>
+</templates>

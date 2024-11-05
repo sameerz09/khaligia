@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="PartnerListScreen" t-inherit="point_of_sale.PartnerListScreen" t-inherit-mode="extension">
+        <xpath expr="//tr" position="inside">
+            <t t-if="env.pos.config.sh_customer_order_history and env.pos.config.sh_enable_order_list">
+                <th></th>
+            </t>
+        </xpath>
+    </t>
+
+    <t t-extend="PartnerLine" t-inherit="point_of_sale.PartnerLine" t-inherit-mode="extension">
+        <xpath expr="//tr" position="inside">
+            <t t-if="env.pos.config.sh_customer_order_history and env.pos.config.sh_enable_order_list">
+                <td><i class="fa fa-history client_history_icon" aria-hidden="true" t-on-click.stop="click_order_history_icon"></i></td>
+            </t>
+        </xpath>
+    </t>
+
+    <t t-name="PartnerDetailsEdit" t-inherit="point_of_sale.PartnerDetailsEdit" t-inherit-mode="extension">
+		<xpath expr="//div[hasclass('partner-details-box')]" position="after">
+            <t t-if='env.pos.config.enable_history_on_client_detail'>
+                <div class='sh_pos_order_detail_table'>
+                    <table style='width:100% !important' class='Order-Tbl'>
+                        <thead class='orderheader' style='font-size:15px'>
+                            <tr>
+                                <th>Name</th>
+                                <th>Order Ref.</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Total</th>
+                                <th>State</th>
+                            </tr>
+                        </thead>
+                        <tbody class="order-details-contents">
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </xpath>
+    </t>
+
+    <t t-name='ClientOrderDetail' >
+        <t t-if='each_order'>
+            <tr t-att-data-id="each_order.id" class="sh_client_order_line" t-on-click="() => this.trigger('click_sh_client_order_line')" >
+                <td>
+                    <t t-esc="each_order.name" />
+                </td>
+                 <td>
+                    <t t-esc="each_order.pos_reference" />
+                </td>
+                 <td>
+                    <t t-if="each_order.partner_id and each_order.partner_id[1]">
+                        <t t-esc="each_order.partner_id[1]" />
+                    </t>
+                </td>
+                <td>
+                    <t t-esc="each_order.date_order" />
+                </td>
+                <td>
+                    <t t-esc="each_order.amount_total.toFixed(2)" />
+                </td>
+                <td>
+                    <t t-if="each_order.state == 'draft'">
+                        New
+                    </t>
+                    <t t-if="each_order.state == 'paid'">
+                        Paid
+                    </t>
+                    <t t-if="each_order.state == 'cancel'">
+                        Cancelled
+                    </t>
+                    <t t-if="each_order.state == 'done'">
+                        Posted
+                    </t>
+                </td> 
+            </tr>
+        </t>
+    </t>
+    <t t-name='OrderLines'>
+        <t t-if='each_order_line'>
+            <tr t-att-data-id="each_order_line.id"  >
+                <td>
+                    <t t-esc="each_order_line.product_id[1]" />
+                </td>
+                <td>
+                    <t t-esc="each_order_line.qty" />
+                </td>
+                <td>
+                    <t t-esc="each_order_line.discount" />
+                </td>
+                <td>
+                    <t t-esc="each_order_line.price_unit" />
+                </td>
+                <td>
+                    <t t-esc="each_order_line.price_subtotal" />
+                </td>
+            </tr>
+        </t>
+    </t>
+</templates>

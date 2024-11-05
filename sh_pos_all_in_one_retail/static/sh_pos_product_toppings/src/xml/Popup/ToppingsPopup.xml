@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="tempalte" xml:space="preserve">
+    
+    <t t-name="ToppingsPopup" owl="1">
+        <div role="dialog" class="modal-dialog sh-pos-topping-products-dialog">
+            <div t-attf-class="popup popup-alert sh-pos-topping-products-popup {{ globalToppings.length > 0 ? '': 'sh-no-global-topping' }}  {{ toppingProducts.length > 0 ? '': 'sh-no-topping' }} {{ globalToppings.length > 5 ? '' : 'sh-lessthan-5-global-toppings'}} {{ toppingProducts.length > 5 || toppingProducts.length == 0  ? '' : 'sh-lessthan-5-toppings'}} ">
+                <header class="title">
+                    <t t-esc="props.title" />
+                </header>
+                <main class="body">
+                    <div class="sh-toppings-products" t-if="toppingProducts and toppingProducts.length > 0">
+                        <t t-foreach="toppingProducts" t-as="product" t-key="product.id">
+                            <t t-if="product">
+                                <article class="product" tabindex="0" t-on-keypress="spaceClickProduct" t-on-click="() => this.trigger('click-topping-product', product)" t-att-data-product-id="product.id" t-attf-aria-labelledby="article_product_{{product.id}}">
+                                    <div class="product-img">
+                                        <img t-att-src="imageUrl " t-att-alt="product.display_name" />
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-name" t-attf-id="article_product_{{product.id}}">
+                                            <t t-esc="product.display_name" />
+                                        </div>
+                                        <span class="price-tag">
+                                            <t t-esc="price" />
+                                        </span>
+                                    </div>
+                                </article>
+                            </t>
+                        </t>
+                    </div>
+                    
+                    <div class="sh-global-toppins" t-if="globalToppings and globalToppings.length > 0">
+                        <t t-foreach="globalToppings" t-as="product" t-key="product.id">
+                            <article class="product" tabindex="0" t-on-keypress="spaceClickProduct" t-on-click="() => this.trigger('click-topping-product', product)" t-att-data-product-id="product.id" t-attf-aria-labelledby="article_product_{{product.id}}">
+                                <div class="product-img">
+                                    <img t-att-src="imageUrl " t-att-alt="product.display_name" />
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-name" t-attf-id="article_product_{{product.id}}">
+                                        <t t-esc="product.display_name" />
+                                    </div>
+                                    <span class="price-tag">
+                                        <t t-esc="price" />
+                                    </span>
+                                </div>
+                            </article>
+                        </t>
+                    </div>
+                </main>
+                <footer class="footer">
+                    <div class="button cancel_btn cancel highlight" t-on-click="ClickOk">
+                        Ok
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </t>
+</templates>

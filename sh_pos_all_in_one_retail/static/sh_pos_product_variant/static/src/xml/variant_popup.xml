@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <t t-extend="ProductItem" t-inherit="point_of_sale.ProductItem" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('product-content')]/div" position="replace">
+            <t t-if="env.pos.config.sh_pos_enable_product_variants">
+                <div t-attf-class="#{props.product.image_128 ? 'product-name' : 'product-name no-image' }" t-attf-id="article_product_{{props.product.id}}">
+                    <t t-esc="props.product.name" />
+                </div>
+            </t>
+            <t t-else="">
+                <div t-attf-class="#{props.product.image_128 ? 'product-name' : 'product-name no-image' }" t-attf-id="article_product_{{props.product.id}}">
+                    <t t-esc="props.product.display_name" />
+                </div>
+            </t>
+        </xpath>
+        <xpath expr="//div[hasclass('product-content')]/div" position="attributes">
+            <attribute name="t-att-title" >props.product.display_name</attribute>
+        </xpath>
+    </t>
+    <t t-name="variantPopup" owl="1">
+        <div role="dialog" class="modal-dialog sh_pos_variant_popup">
+            <t t-if="AlternativeProducts.length > 0">
+                <t t-set="is_alternative_class">sh_less_than_8_with_alter </t>
+            </t>
+            <t t-else="">
+                <t t-set="is_alternative_class"> 0 </t>
+            </t>
+            <div class="popup popup-alert sh_product_variants_popup " t-att-class="props.morevariant_class + ' ' + is_alternative_class" t-attf-class=" {{ env.pos.config.sh_pos_variants_group_by_attribute ? 'sh_product_variants_popup_by_attribute_name' : '' }}">
+                <header class="title">
+                    <div>
+                        <div>
+                            <span>
+                                <t t-esc="props.title"></t>
+                            </span>
+                        </div>
+                        <div class="sh_header_right_searchbox" t-if='!env.pos.config.sh_pos_variants_group_by_attribute and VariantProductToDisplay and VariantProductToDisplay.length > 0'>
+                            <input class="sh_header_search" placeholder="Search variant" t-on-keyup="updateSearch" />
+                        </div>
+                    </div>
+                </header>
+                <main t-attf-class="main body {{ (Attribute_names and Attribute_names.length > 0 ) or (VariantProductToDisplay and VariantProductToDisplay.length > 0) ? '' : 'sh_no_variant' }}">
+                    <t t-if='env.pos.config.sh_pos_enable_product_variants and !env.pos.config.sh_pos_variants_group_by_attribute and VariantProductToDisplay and VariantProductToDisplay.length > 0'>
+                        <div t-if="VariantProductToDisplay.length > 0" t-attf-class="{{ AlternativeProducts.length > 0 ? 'sh_top_variant_with_alternative_bottom' : 'product-list' }}">
+                            <t t-if="AlternativeProducts.length > 0">
+                                <div t-attf-class="{{ AlternativeProducts.length > 0 ? 'sh_have_alternative_product' : '' }}">
+                                    <t t-foreach="VariantProductToDisplay" t-as="product" t-key="product.id">
+                                        <VariantProductItem product="product" />
+                                    </t>
+                                </div>
+                            </t>
+                            <t t-else="">
+                                <t t-foreach="VariantProductToDisplay" t-as="product" t-key="product.id">
+                                    <VariantProductItem product="product" />
+                                </t>
+                            </t>
+                        </div>
+                    </t>
+                    <t t-if='env.pos.config.sh_pos_enable_product_variants and env.pos.config.sh_pos_variants_group_by_attribute and Attribute_names and Attribute_names.length > 0 '>
+                        <div t-attf-class="sh_group_by_attribute {{ AlternativeProducts.length > 0 ? 'sh_attribute_name_with_alternative' : '' }}">
+                            <t t-foreach="Attribute_names" t-as="attribute_name" t-key="attribute_name.id">
+                                 <div class='sh_attribute_name_and_value'>
+                                    <div class='sh_attribute_name_id' t-att-id='attribute_name.id'>
+                                        <t t-esc='attribute_name.display_name'></t>
+                                    </div>
+                                    <div class='sh_attribute_id'>   
+                                        <t t-foreach='attribute_name.product_template_value_ids' t-as='attribute_value' t-key="attribute_value">
+                                            <t t-set="att_values" t-value="env.pos.db.product_temlate_attribute_by_id[attribute_value]"></t>
+                                            <span t-att-class='"sh_attribute_id"+attribute_name.id' id='attribute_value' t-att-data-id='attribute_value' t-on-click='Select_attribute_value' t-if="att_values.ptav_active">
+                                                <t t-esc='att_values.name'></t>
+                                            </span>
+                                        </t>
+                                    </div> 
+                                </div> 
+                            </t>
+                        </div>
+                    </t>
+                    <t t-if='env.pos.config.sh_pos_display_alternative_products'>
+                        <t t-if="AlternativeProducts.length > 0">
+                            <div class="heading_alternative_pro"> Alternative Products</div>
+                            <div class="product_alternative_list" >
+                                <div class='alternative_product_value' style='margin: 15px;'>
+                                    <t t-foreach="AlternativeProducts" t-as="al_product" t-key="al_product.id">
+                                        <VariantProductItem product="al_product" />
+                                    </t>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+
+                </main>
+                <footer class="footer">
+                    <t t-if='env.pos.config.sh_pos_enable_product_variants and env.pos.config.sh_pos_variants_group_by_attribute '>
+                        <div class="button sh_display_stock" t-if="state.sh_display_stock" t-on-click="() => this.on_click_show_qty(state.attribute_product)">
+                           Stock Info.
+                        </div>
+                        <div class="button confirm " t-on-click="Confirm">
+                            Add
+                        </div>
+                        <div class="button cancel" t-on-click="cancel">
+                            Close
+                        </div>
+                    </t>
+                    <t t-else=''>
+                        <div class="button cancel" t-on-click="cancel">
+                            Ok
+                        </div>
+                    </t>
+                </footer>
+            </div>
+        </div>
+    </t>
+    <t t-name="VariantProductItem" owl="1">
+        <article class="product" tabindex="0" t-on-keypress="spaceClickProduct" t-on-click="() => this.trigger('click-variant-product', props.product)" t-att-data-product-id="props.product.id" t-attf-aria-labelledby="article_product_{{props.product.id}}">
+            <div class="product-img">
+                <img t-att-src="imageUrl" t-att-title="props.product.display_name" t-att-alt="props.product.display_name" />
+                <span class="price-tag">
+                    <t t-esc="price" />
+                </span>
+                <span t-if="env.isMobile &amp;&amp; order.product_with_qty &amp;&amp; order.product_with_qty[props.product.id]" class="counter-tag" title="Cart Quantity">
+					<t t-esc="order.product_with_qty[props.product.id]"/>
+				</span>
+            </div>
+            <div class="product-name" t-attf-id="article_product_{{props.product.id}}">
+                <t t-esc="props.product.display_name" />
+            </div>
+             <t t-if="env.pos.config.sh_display_stock and props.product.type == 'product'">
+                    <span
+                        class="product-image-icon" style="font-size: 16px; z-index: 1000; color: #919191; margin: 5px; transition: all .5s;"
+                        t-on-click.stop="() => this.on_click_show_qty(props.product)"
+                    >
+                        <i class="fa fa-building-o" aria-hidden="true"></i>
+                    </span>
+                </t>
+        </article>
+    </t>
+</odoo>

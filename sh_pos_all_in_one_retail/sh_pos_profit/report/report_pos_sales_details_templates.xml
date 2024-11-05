@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_pos_sales_details_inherit" inherit_id="point_of_sale.report_saledetails">
+        <!-- Heading of Table -->
+        <xpath expr="//table[hasclass('table','table-sm')][1]//thead//tr/th[3]" position="after">
+            <th>Subtotal</th>
+            <th>Discount</th>
+            <th>Cost Price</th>
+            <th>Cost Subtotal</th>
+            <th>Profit</th>
+        </xpath>
+        <!-- Fetch Value from the table -->
+        <xpath expr="//table[hasclass('table','table-sm')][1]//tbody//tr/td[3]" position="after">
+            <td>
+                <t t-esc="line['quantity'] * line['price_unit']" />
+            </td>
+            <td>
+                <t t-esc="(line['quantity'] * line['price_unit'] * line['discount']) / 100" />
+            </td>
+            <td>
+                <t t-esc="line['cost_price']" />
+            </td>
+            <td>
+                <t t-esc="line['cost_price'] * line['quantity']" />
+            </td>
+            <td>
+                <t t-esc="(line['quantity'] * line['price_unit']) - line['cost_price'] * line['quantity']" />
+            </td>
+        </xpath>
+        <!-- calculation of all total columns -->
+        <xpath expr="//table[hasclass('table','table-sm')][1]//thead" position="after">
+            <t t-set="subtotal_total" t-value="0.0" />
+            <t t-set="cost_subtotal_total" t-value="0.0" />
+            <t t-set="profit_total" t-value="0.0" />
+            <t t-set="discount_total" t-value="0.0" />
+        </xpath>
+        <xpath expr="//table[hasclass('table','table-sm')][1]//tbody//tr[1]/td[1]" position="before">
+            <t t-set="subtotal_total" t-value="subtotal_total + (line['quantity'] * line['price_unit'])" />
+            <t t-set="discount_total" t-value="discount_total + ((line['quantity'] * line['price_unit'] * line['discount']) / 100)" />
+            <t t-set="cost_subtotal_total" t-value="cost_subtotal_total + (line['cost_price'] * line['quantity'])" />
+            <t t-set="profit_total" t-value="profit_total + (line['quantity'] * line['price_unit']) - (line['cost_price'] * line['quantity'])" />
+        </xpath>
+        <xpath expr="//table[hasclass('table','table-sm')][1]//tbody//tr[1]" position="after">
+            <td colspan="3">
+                <b>Total</b>
+            </td>
+            <td>
+                <t t-esc="subtotal_total" />
+            </td>
+            <td colspan="2">
+                <t t-esc="discount_total" />
+            </td>
+            <td>
+                <t t-esc="cost_subtotal_total" />
+            </td>
+            <td>
+                <t t-esc="profit_total" />
+            </td>
+        </xpath>
+    </template>
+</odoo>

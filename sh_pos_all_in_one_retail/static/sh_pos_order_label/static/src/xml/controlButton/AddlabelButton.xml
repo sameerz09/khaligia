@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name='AddlabelButton' owl='1'>
+        <div class='control-button' t-on-click='onclickLabelBtn'>
+            <div>
+                <span class="fa fa-plus-circle"></span>
+                <span>Add Label</span>
+            </div>
+        </div>
+    </t>
+</templates>

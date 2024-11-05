@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+	
+	<t t-name="MobileOrderWidget" t-inherit="point_of_sale.MobileOrderWidget" t-inherit-mode="extension" owl="1">
+		<xpath expr="//div[hasclass('switchpane')]" position="replace">
+			<div class="switchpane" style="display:none;">
+	            <t t-if="pane === 'right'">
+	                <button class="btn-switchpane" t-on-click="() => this.trigger('click-pay')">
+	                    <h1>Pay</h1>
+	                    <span><t t-esc="total" /></span>
+	                </button>
+	                <button class="btn-switchpane secondary" t-on-click="props.onSwitchPane">
+	                    <h1>Review</h1>
+	                    <span><t t-esc="items_number"/> items</span>
+	                </button>
+	            </t>
+	            <t t-if="pane === 'left'">
+	              <button class="btn-switchpane " t-on-click="props.onSwitchPane"><h1>123</h1></button>
+	            </t>
+	        </div>
+		</xpath>
+	</t>
+</templates>

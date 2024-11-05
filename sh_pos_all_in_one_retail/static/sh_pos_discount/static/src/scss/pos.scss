@@ -1,0 +1,19 @@
+.pos .pos-content .receipt-screen.screen .screen-content .pos-receipt-container .pos-receipt .discount_receipt {margin-left: 33px;color: #797a7c;font-size: 14px;}
+.pos .sh_modal_discount .sh_discount_popup .discount_table th,.pos .sh_modal_discount .sh_discount_popup .discount_table td {padding: 10px !important;}
+
+/* odoo 16 */ 
+.pos .sh_modal_discount .sh_discount_popup .discount_table thead {background: #4A4F59;color: #ffffff;font-size: 16px;text-transform: capitalize;font-weight: 600;}
+.pos .sh_modal_discount .sh_discount_popup .sh_discount_main_table {height: 274px;max-height: 285px !important;overflow: auto !important;}
+.pos .sh_modal_discount .sh_discount_popup .discount_table .discount_row{cursor: pointer;}
+.pos .sh_modal_discount .sh_discount_popup .discount_table .discount_row:nth-child(odd){background: $sh_odd_row_color;}
+.pos .sh_modal_discount .sh_discount_popup .discount_table .discount_row:nth-child(even){background: $sh_even_row_color;}
+.pos .sh_modal_discount .sh_discount_popup .discount_table .discount_row td{font-size: 16px;color: #4A4F59;font-weight: normal;text-transform: capitalize;transition: all .5s;}
+.pos .sh_modal_discount .sh_discount_popup .discount_table .discount_row:hover td,.pos .sh_modal_discount .sh_discount_popup .discount_table .discount_row.highlight td{color: $sh_pos_primary_color;font-weight: bold;}
+.pos .sh_modal_discount .sh_discount_popup .sh_discount_main_table::-webkit-scrollbar{width: 0px;}
+.pos .order .orderlines .orderline .sh_pos_discount_orderline .info{margin-left: 10px; font-weight: bold; color: #919191; font-size: 15px; display: inline-block !important;}
+@media only screen and (max-width: 767.98px){
+    .pos .sh_modal_discount .sh_discount_popup .sh_discount_main_table td,.pos .sh_modal_discount .sh_discount_popup .sh_discount_main_table th{white-space: nowrap;}
+    .pos .popup.popup-text.popup-lg.product-configurator-popup.sh_discount_popup{width: 310px !important;}
+    .popup.popup-text.popup-lg.product-configurator-popup.sh_discount_popup .sh_discount_main_table{max-height: 285px !important;}
+    .pos .sh_modal_discount .sh_discount_popup .sh_discount_main_table::-webkit-scrollbar{height: 0px;}
+}

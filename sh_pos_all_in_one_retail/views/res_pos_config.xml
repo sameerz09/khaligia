@@ -1,0 +1,1161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sh_pos_all_in_one_retail_configuration" model="ir.ui.view">
+        <field name="name">sh.product.suggestion.res.config.settings.view.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <div id="pos_technical_section" position="after">
+                <h2 class="mt16">Retail Configuration</h2>
+                <!-- Product suggesion Configuration -->
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Enable Product Suggestion</div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_enable_product_suggestion" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_enable_product_suggestion" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt16 o_settings_container">
+                    <!-- Product Bundle -->
+                    <div style="font-size: 15px; font-weight: 600;">Enable Product Bundle</div>
+                    <div id="autocomplete_address" class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_enable_product_bundle" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_enable_product_bundle" />
+                        </div>
+                    </div>
+                </div>
+                <!-- POS Auto Lock  -->
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">POS Auto Lock Configuration</div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_enable_auto_lock" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_enable_auto_lock" />
+                            <br />
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane"></div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_lock_timer" attrs="{'invisible':[('pos_sh_enable_auto_lock','=',False)]}" />
+                            <field name="pos_sh_lock_timer" attrs="{'invisible':[('pos_sh_enable_auto_lock','=',False)], 'required':[('pos_sh_enable_auto_lock','=', True)]}" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Bag Charges -->
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Bag Charges</div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_pos_bag_charges" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label class="o_form_label" style="width: 200px !important;" for="pos_sh_pos_bag_charges" />
+                            <div class="mt16">
+                                <label for="pos_sh_carry_bag_category" attrs="{'invisible': [('pos_sh_pos_bag_charges','=', False)]}" />
+                                <field name="pos_sh_carry_bag_category" attrs="{'invisible': [('pos_sh_pos_bag_charges','=', False)],'required': [('pos_sh_pos_bag_charges', '=', True)]}" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Enable POS Counter</div>
+                    <div id="autocomplete_address" class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_enable_pos_item_counter" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_enable_pos_item_counter" />
+                        </div>
+                    </div>
+                    <div id="autocomplete_address" class="col-xs-12 col-md-6 o_setting_box" attrs="{'invisible':[('pos_enable_pos_item_counter','=',False)]}">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_enable_pos_item_report" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_enable_pos_item_report" />
+                        </div>
+                    </div>
+                    <div id="autocomplete_address" class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_enable_pos_qty_counter" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_enable_pos_qty_counter" />
+                        </div>
+                    </div>
+
+                    <div id="autocomplete_address" class="col-xs-12 col-md-6 o_setting_box" attrs="{'invisible':[('pos_enable_pos_qty_counter','=',False)]}">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_enable_pos_qty_report" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_enable_pos_qty_report" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt16 o_settings_container" id='sh_pos_default_customer'>
+                    <div style="font-size: 15px; font-weight: 600;">Customer Selection</div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_enable_default_customer" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_enable_default_customer" />
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div style="width:200px">
+                            <label for="pos_sh_default_customer_id" attrs="{'invisible': [('pos_sh_enable_default_customer', '!=', True)]}" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <field name="pos_sh_default_customer_id" attrs="{'invisible': [('pos_sh_enable_default_customer', '!=', True)], 'required' :[ ('pos_sh_enable_default_customer', '=', True)]}" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Generate Invoice Automatically</div>
+                    <div class="col-12 col-lg-6 o_setting_box" id="iface_invoicing">
+                        <div class="content-group mt16">
+                            <field name="pos_sh_enable_default_invoice" />
+                            <label for="pos_sh_enable_default_invoice" class="o_light_label" />
+                            <div class="text-muted" id="invoice_journal" style="margin-left: 26px; margin-top: -6px;">
+                                Generate Invoice Automatically
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt16 o_settings_container" invisible='1'>
+                    <div class="col-xs-12 col-md-12 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_enable_shortcut" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_enable_shortcut" />
+                        </div>
+                        <div class="content-group" attrs="{'invisible': [('pos_sh_enable_shortcut','=',False)]}">
+                            <div class="mt16">
+                                <field name="pos_sh_shortcut_keys_screen">
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="sh_shortcut_screen" required="1" />
+                                            </group>
+                                            <group>
+                                                <field name="sh_shortcut_screen_type" required="1" />
+                                            </group>
+                                        </group>
+                                        <field name="sh_key_ids">
+                                            <tree editable="bottom">
+                                                <field name="sh_key_ids" options="{'no_create': True, 'no_create_edit':True}" />
+                                            </tree>
+                                        </field>
+                                    </form>
+                                    <tree>
+                                        <field name="sh_shortcut_screen" required="1" />
+                                        <field name="sh_shortcut_screen_type" required="1" />
+                                    </tree>
+                                </field>
+                                <field name="pos_sh_payment_shortcut_keys_screen">
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="payment_method_id" required="1" options="{'no_create': True, 'no_create_edit':True}" />
+                                            </group>
+                                            <group>
+                                                <field name="sh_payment_shortcut_screen_type" required="1" />
+                                            </group>
+                                        </group>
+                                        <field name="sh_key_ids">
+                                            <tree editable="bottom">
+                                                <field name="sh_key_ids" options="{'no_create': True, 'no_create_edit':True}" />
+                                            </tree>
+                                        </field>
+                                    </form>
+                                    <tree>
+                                        <field name="payment_method_id" required="1" options="{'no_create': True, 'no_create_edit':True}" />
+                                        <field name="sh_payment_shortcut_screen_type" required="1" />
+                                    </tree>
+                                </field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">POS Multi Barcode</div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_enable_multi_barcode" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_enable_multi_barcode" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order list Config -->
+                <h2 name="orders_history"></h2>
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Order Screen Configuration</div>
+                    <div id="category_reference" class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_enable_order_list" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_enable_order_list" />
+                        </div>
+                    </div>
+
+                    <div id="category_reference" class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('pos_sh_enable_order_list','!=',True)]}">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_enable_re_order" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_enable_re_order" />
+                            <div class="text-muted">
+                                ReOrder POS Order From Order Screen
+                            </div>
+                        </div>
+                    </div>
+                    <div id="category_reference" class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('pos_sh_enable_order_list','!=',True)],'required': [('pos_sh_enable_order_list','=',True)]}">
+                        <div class="o_setting_left_pane"></div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_load_order_by" />
+                            <field name="pos_sh_load_order_by" />
+                        </div>
+                    </div>
+                    <div id="category_reference" class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('pos_sh_enable_order_list','!=',True)]}">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_enable_order_reprint" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_enable_order_reprint" />
+                            <div class="text-muted">
+                                Print Order Receipt From Order Screen
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': ['|',('pos_sh_load_order_by','!=','session_wise'),('pos_sh_enable_order_list','!=',True)]}">
+                        <div class="o_setting_left_pane"></div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_session_wise_option" />
+                            <div class="text-muted">
+                                Load Order of Current Session or Last No Of Session
+                            </div>
+                            <field name="pos_sh_session_wise_option" widget="radio" />
+                            <div attrs="{'invisible': ['|',('pos_sh_session_wise_option', '!=', 'last_no_session'),('pos_sh_load_order_by' ,'!=', 'session_wise')]}">
+                                <field name="pos_sh_last_no_session" style="width: 36px;" />
+                                <label for="pos_sh_last_no_session" style="font-weight: normal;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': ['|',('pos_sh_load_order_by','!=','day_wise'),('pos_sh_enable_order_list','!=',True)]}">
+                        <div class="o_setting_left_pane"></div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_day_wise_option" />
+                            <div class="text-muted">
+                                Load Order of Current Days or Last No Of Days
+                            </div>
+                            <field name="pos_sh_day_wise_option" widget="radio" />
+                            <div attrs="{'invisible': ['|',('pos_sh_day_wise_option', '!=', 'last_no_day'),('pos_sh_load_order_by' ,'!=', 'day_wise')]}">
+                                <field name="pos_sh_last_no_days" style="width: 36px;" />
+                                <label for="pos_sh_last_no_days" style="font-weight: normal;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div id="category_reference" class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('pos_sh_enable_order_list','!=',True)]}">
+                        <div class="o_setting_left_pane"></div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_how_many_order_per_page" />
+                            <br />
+                            <field name="pos_sh_how_many_order_per_page" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">POS Order Return Exchange</div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="sh_allow_return" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="sh_allow_return" />
+                            <div class="content-group" attrs="{'invisible': [('sh_allow_return','=',False)]}">
+                                <div class="mt16">
+                                    <label for="sh_return_more_qty" class="o_light_label" />
+                                    <field name="sh_return_more_qty" />
+                                    <label for="sh_return_print_receipt" class="o_light_label" />
+                                    <field name="sh_return_print_receipt" />
+                                </div>
+                                <div class="mt16"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="sh_allow_exchange" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="sh_allow_exchange" />
+                            <div class="content-group" attrs="{'invisible': [('sh_allow_exchange','=',False)]}">
+                                <div class="mt16">
+                                    <label for="sh_exchange_print_receipt" class="o_light_label" />
+                                    <field name="sh_exchange_print_receipt" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt16 o_settings_container sh_pos_receipt_extend_config_id">
+                    <div style="font-size: 15px; font-weight: 600;">POS Extended Receipt</div>
+                    <div id="category_reference" class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_pos_receipt_bacode_qr" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_pos_receipt_bacode_qr" />
+                            <div class="text-muted">
+                                Display Barcode / QrCode in Receipt
+                            </div>
+                            <field name="pos_sh_pos_receipt_barcode_qr_selection" widget="radio" attrs="{'invisible' : [('pos_sh_pos_receipt_bacode_qr', '=', False)]}" />
+                        </div>
+                    </div>
+                    <div id="category_reference" class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_pos_receipt_invoice" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_pos_receipt_invoice" />
+                            <div class="text-muted">
+                                Display Invoice Number in Receipt
+                            </div>
+                        </div>
+                    </div>
+                    <div id="category_reference" class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_enable_internal_ref" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_enable_internal_ref" />
+                            <div class="text-muted">
+                                Display Internal Reference in Receipt
+                            </div>
+                        </div>
+                    </div>
+                    <div id="category_reference" class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_pos_order_number" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_pos_order_number" />
+                            <div class="text-muted">
+                                Display Order Number in Receipt
+                            </div>
+                        </div>
+                    </div>
+                    <div id="category_reference" class="col-12 col-lg-12 o_setting_box sh_receipt_customer_config">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_pos_receipt_customer_detail" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_pos_receipt_customer_detail" />
+                            <div class="text-muted">
+                                Display Customer Detail in Receipt
+                            </div>
+
+                            <div class="content-group mt16" attrs="{'invisible': [('pos_sh_pos_receipt_customer_detail', '=', False)]}">
+                                <field name="pos_sh_pos_receipt_customer_name" style="width: 4%;" />
+                                <label for="pos_sh_pos_receipt_customer_name" style="font-weight: normal;" />
+                                <br />
+                                <field name="pos_sh_pos_receipt_customer_address" style="width: 4%;" />
+                                <label for="pos_sh_pos_receipt_customer_address" style="font-weight: normal;" />
+                                <br />
+                                <field name="pos_sh_pos_receipt_customer_mobile" style="width: 4%;" />
+                                <label for="pos_sh_pos_receipt_customer_mobile" style="font-weight: normal;" />
+                                <br />
+                                <field name="pos_sh_pos_receipt_customer_phone" style="width: 4%;" />
+                                <label for="pos_sh_pos_receipt_customer_phone" style="font-weight: normal;" />
+                                <br />
+                                <field name="pos_sh_pos_receipt_customer_email" style="width: 4%;" />
+                                <label for="pos_sh_pos_receipt_customer_email" style="font-weight: normal;" />
+                                <br />
+                                <field name="pos_sh_pos_vat" style="width: 4%;" />
+                                <label for="pos_sh_pos_vat" style="font-weight: normal;" />
+                                <br />
+                                <field name="pos_sh_pos_vat_name" style='width: 20%;' attrs="{'invisible': [('pos_sh_pos_vat', '=', False)]}" placeholder="Vat" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Display Warehouse Stock</div>
+                    <div class="col-xs-6 col-md-6 o_setting_box" id="sh_wh_stock_module">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_display_stock" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_display_stock" />
+                            <div class="text-muted">
+                                Display Warehouse wise Product Quantity
+                            </div>
+                        </div>
+                        <!-- Stock Advance Configuration -->
+                        <div id="category_reference" attrs="{'invisible':['|',('pos_sh_display_stock','=',False),('pos_sh_show_qty_location','=',False)]}">
+                            <div class="o_setting_left_pane">
+                                <field name="pos_sh_update_real_time_qty" />
+                            </div>
+                            <div class="o_setting_right_pane" style="white-space: nowrap;">
+                                <label for="pos_sh_update_real_time_qty" />
+                                <div class="text-muted">
+                                    Update Quantity From Other POS Session
+                                </div>
+                            </div>
+                        </div>
+                        <div id="category_reference" attrs="{'invisible':['|','|',('pos_sh_display_stock','=',False),('pos_sh_show_qty_location','=',False),('pos_sh_update_real_time_qty','=',False)]}">
+                            <div class="o_setting_left_pane">
+                                <field name="pos_sh_update_quantity_cart_change" />
+                            </div>
+                            <div class="o_setting_right_pane" style="white-space: nowrap;">
+                                <label for="pos_sh_update_quantity_cart_change" />
+                                <div class="text-muted">
+                                    Note : This option will give empact on speed performance.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6 o_setting_box" attrs="{'invisible':[('pos_sh_display_stock','=',False)]}">
+                        <div class="o_setting_left_pane"></div>
+                        <div class="o_setting_right_pane ">
+                            <label for="pos_sh_display_by" />
+                            <br />
+                            <field name="pos_sh_display_by" widget="radio" style="display: -webkit-inline-box;" />
+                        </div>
+
+                        <div class="o_setting_left_pane ">
+                            <field name="pos_sh_show_qty_location" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_show_qty_location" />
+                            <br />
+                        </div>
+                        <div class="o_setting_right_pane mt-3" attrs="{'invisible':[('pos_sh_show_qty_location','=',False)]}">
+                            <label for="pos_sh_pos_location" />
+                            <br />
+                            <div class="text-muted">
+                                Must be set when select Only show quantity in POS location
+                            </div>
+                            <field name="pos_sh_pos_location" widget="many2many_tag" attrs="{'required':[('pos_sh_show_qty_location','=',True)]}" />
+                            <div class="mt16">
+                                <label for="pos_sh_min_qty" />
+                                <field name="pos_sh_min_qty" />
+                                <div class="text-muted">
+                                    Deny order when available quantity lower than
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">POS Remove Cart Item</div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_remove_all_item" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_remove_all_item" />
+                            <br />
+                            <div class="text-muted">
+                                Allow to remove all product from cart
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <h2>Point of sale Customer Discount</h2> -->
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Point of sale Discounts</div>
+
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_enable_customer_discount"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_enable_customer_discount" /> 
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_customer_discount" /> : 
+                            <field name="pos_sh_customer_discount" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt16 o_settings_container">
+                    <!-- <div style="font-size: 15px; font-weight: 600;">POS Custom Discount</div> -->
+                    
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="sh_apply_both_discount" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="sh_apply_both_discount" />
+                            <div class="text-muted">
+                                Separate Action Icon.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <h2>POS Order Discount</h2> -->
+                <div class="row mt16 o_settings_container">
+                    <!-- <div style="font-size: 15px; font-weight: 600;">POS Order Discount</div> -->
+
+                    <div id="category_reference" class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_allow_order_line_discount" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_allow_order_line_discount" />
+                        </div>
+                    </div>
+                    <div id="category_reference" class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_allow_global_discount" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_allow_global_discount" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- pos Note -->
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">POS Note</div>
+
+                    <div class="col-xs-6 col-md-6 o_setting_box sh_pos_note_configuration">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_enable_orderline_note" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_enable_orderline_note" />
+                            <div class="content-group" attrs="{'invisible': [('pos_enable_orderline_note','=',False)]}">
+                                <div class="mt16">
+                                    <label for="pos_display_orderline_note_receipt" class="o_light_label" />
+                                    <field name="pos_display_orderline_note_receipt" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_enable_order_note" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_enable_order_note" />
+                            <div class="content-group" attrs="{'invisible': [('pos_enable_order_note','=',False)]}">
+                                <div class="mt16">
+                                    <label for="pos_display_order_note_receipt" class="o_light_label" />
+                                    <field name="pos_display_order_note_receipt" />
+                                    <label for="pos_display_order_note_payment" class="o_light_label" />
+                                    <field name="pos_display_order_note_payment" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt16 o_settings_container">
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_hide_extra_note_checkbox" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_hide_extra_note_checkbox" />
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6 o_setting_box"></div>
+                </div>
+
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Create Product</div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_enable_create_pos_product" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_enable_create_pos_product" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Configure POS Logo</div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_pos_logo" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_pos_logo" />
+                            <div class="text-muted">
+                                Receipt Logo.
+                                <div class="mt16">
+                                    <field name="pos_receipt_logo" style="float: left;" class="oe_avatar" widget="image" attrs="{'invisible':[('pos_sh_pos_logo','=',False)],'required':[('pos_sh_pos_logo','=',True)]}" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="o_setting_left_pane"></div>
+                        <div class="o_setting_right_pane"></div>
+                    </div>
+                </div>
+
+                <!-- POS Order Signature  -->
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">POS Order Signature</div>
+                    <div id="category_reference" class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_enable_order_signature" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_enable_order_signature" />
+                            <div class="text-muted">
+                                Allow Signature in POS Order
+                            </div>
+                            <div class="content-group mt16" attrs="{'invisible': [('pos_sh_enable_order_signature', '=', False)]}">
+                                <field name="pos_sh_enable_name" />
+                                <label for="pos_sh_enable_name" />
+                                <br />
+                                <field name="pos_sh_enable_date" />
+                                <label for="pos_sh_enable_date" />
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                    <div id="category_reference" class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_display_signature_detail" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_display_signature_detail" />
+                            <div class="text-muted">
+                                Allow Display Signature Detail in POS Order Receipt
+                            </div>
+                            <div class="content-group mt16" attrs="{'invisible': [('pos_sh_display_signature_detail', '=', False)]}">
+                                <field name="pos_sh_display_signature" style="width: 4%;" />
+                                <label for="pos_sh_display_signature" style="font-weight: normal;" />
+                                <br />
+                                <field name="pos_sh_display_name" style="width: 4%;" />
+                                <label for="pos_sh_display_name" style="font-weight: normal;" />
+                                <br />
+                                <field name="pos_sh_display_date" style="width: 4%;" />
+                                <label for="pos_sh_display_date" style="font-weight: normal;" />
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Own Customer Setting</div>
+
+                    <div class="col-md-6 col-lg-6 col-xl-6 col-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_enable_own_customer" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_enable_own_customer">Enable Own Customer</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <h2>Own Product Setting</h2> -->
+                <div class="row o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Own Product Setting</div>
+
+                    <div class="col-md-6 col-lg-6 col-xl-6 col-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_enable_own_product" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_enable_own_product">Enable Own Products</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <h2>Order Line Label Configuration</h2> -->
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Order Line Label Configuration</div>
+
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="enable_order_line_label" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="enable_order_line_label" />
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class='o_setting_left_pane'>
+                            <field name="enable_order_line_label_in_receipt" attrs="{'invisible': [('enable_order_line_label', '!=', True)]}" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="enable_order_line_label_in_receipt" attrs="{'invisible': [('enable_order_line_label', '!=', True)]}" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="enabel_delete_label_with_product" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="enabel_delete_label_with_product" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Product Settings</div>
+                    <div class="col-md-6 col-lg-6 col-xl-6 col-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_enable_weight" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_enable_weight"></label>
+                            <div attrs="{'invisible' : [('pos_enable_weight', '=', False)]}">
+                                <field style='width:0px !important;margin-right: 20px;' name="pos_product_weight_receipt" />
+                                <label for="pos_product_weight_receipt"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-6 col-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_enable_volume" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_enable_volume"></label>
+                            <div attrs="{'invisible' : [('pos_enable_volume', '=', False)]}">
+                                <field style='width:0px !important;margin-right: 20px;' name="pos_product_volume_receipt" />
+                                <label for="pos_product_volume_receipt"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <h2>Product Bag Quantity</h2> -->
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Product Bag Quantity</div>
+
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="sh_dispaly_bag_qty" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="sh_dispaly_bag_qty" />
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <h2 class="mt16">Enable Customer Order History</h2> -->
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Enable Customer Order History</div>
+
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_enable_history_on_client_detail" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_enable_history_on_client_detail" />
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                        </div>
+                        <div class="o_setting_right_pane"  attrs="{'invisible': [('pos_enable_history_on_client_detail', '!=', True)]}">
+                            <label for="pos_sh_pos_order_limit" />
+                            <field name="pos_sh_pos_order_limit" />
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_customer_order_history" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_customer_order_history" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Enable Product Template</div>
+
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_enable_product_template" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_enable_product_template" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <h2>UOM Settings</h2> -->
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">UOM Settings</div>
+
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <label for="pos_select_uom_type" />:
+                            <div>
+                                <field name="pos_select_uom_type" widget="radio" style="width: 180px;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_display_uom_in_receipt" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_display_uom_in_receipt" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt16 o_settings_container" attrs="{'invisible': [('pos_select_uom_type', '==', 'primary')]}">
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_enable_price_to_display" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_enable_price_to_display" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <h2>POS Cash Control</h2> -->
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">POS Cash Control</div>
+
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_enable_cash_in_out_statement" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_enable_cash_in_out_statement" />
+                            <br />
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_enable_payment" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_enable_payment" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <h2 class="mt16">Product Search by Tag</h2> -->
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Product Search by Tag</div>
+
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_search_product" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_search_product" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <h2 class="mt16">Whatsapp Configuration</h2> -->
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Whatsapp Configuration</div>
+
+                    <div id="autocomplete_address" class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_enable_whatsapp" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_enable_whatsapp" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <h2>Enable Rounding</h2> -->
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Enable Rounding</div>
+
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_enable_rounding" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_enable_rounding" />
+                            <div class="text-muted">
+                                Rounding pos order total.
+                            </div>
+                            <label for="pos_rounding_type" attrs="{'invisible':[('pos_sh_enable_rounding','=',False)],'required':[('pos_sh_enable_rounding','=',True)]}" />
+                            <field name="pos_rounding_type" widget="radio" attrs="{'invisible':[('pos_sh_enable_rounding','=',False)],'required':[('pos_sh_enable_rounding','=',True)]}" />
+                            <br />
+                            <label for="pos_round_product_id" attrs="{'invisible':[('pos_sh_enable_rounding','=',False)],'required':[('pos_sh_enable_rounding','=',True)]}" />
+                            <field name="pos_round_product_id" attrs="{'invisible':[('pos_sh_enable_rounding','=',False)],'required':[('pos_sh_enable_rounding','=',True)]}" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <h2 class="mt16">Multiple Quantity Setting</h2> -->
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Multiple Quantity Setting</div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_multi_qty_enable" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_multi_qty_enable" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <h2>Product Configuration</h2> -->
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Product Configuration</div>
+
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_pos_enable_min_qty" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_pos_enable_min_qty" />
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- <h2 class="mt16" id='sh_create_so_heading'>Create Sale Order</h2> -->
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Create Sale Order</div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_display_sale_btn" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_display_sale_btn" />
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div style="width:200px">
+                            <label for="pos_select_order_state" attrs="{'invisible': [('pos_sh_display_sale_btn', '!=', True)]}" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <field name="pos_select_order_state" attrs="{'invisible': [('pos_sh_display_sale_btn', '!=', True)]}" widget="radio" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <h2 class="mt16" id='sh_create_po_heading'>Create Purchase Order</h2> -->
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Create Purchase Order</div>
+
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_dispaly_purchase_btn" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_dispaly_purchase_btn" />
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div style="width:200px">
+                            <label for="pos_select_purchase_state" attrs="{'invisible': [('pos_sh_dispaly_purchase_btn', '!=', True)]}" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <field name="pos_select_purchase_state" attrs="{'invisible': [('pos_sh_dispaly_purchase_btn', '!=', True)]}" widget="radio" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <h2 name="enlarge">Enable Product Internal Reference</h2> -->
+                <div class="row mt16 o_settings_container">
+                    <div style="font-size: 15px; font-weight: 600;">Enable Product Internal Reference</div>
+
+                    <div id="autocomplete_address" class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_enable_prduct_code" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_enable_prduct_code" />
+                        </div>
+                    </div>
+                    <div id="autocomplete_address" class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_enable_product_code_in_cart" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_enable_product_code_in_cart" />
+                        </div>
+                    </div>
+                    <div id="autocomplete_address" class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_enable_product_code_in_receipt" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_enable_product_code_in_receipt" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <h2>Product Variant Config</h2> -->
+                <div class="row mt16 o_settings_container product_variants">
+                    <div style="font-size: 15px; font-weight: 600;">Product Variant Config</div>
+
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_pos_enable_product_variants" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <div>
+                                <label for="pos_sh_pos_enable_product_variants" />
+                            </div>
+                            <div style='margin-top: 10px;' attrs="{'invisible': [('pos_sh_pos_enable_product_variants', '=', False)]}">
+                                <field name="pos_sh_pos_variants_group_by_attribute" style='width: 5%' />
+                                <label for="pos_sh_pos_variants_group_by_attribute" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_close_popup_after_single_selection" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_close_popup_after_single_selection" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_pos_display_alternative_products" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_sh_pos_display_alternative_products" />
+                        </div>
+                    </div>
+                </div>
+                
+                 <!-- <h2>Customer Maximum Discount</h2> -->
+                 <div class="row mt16 o_settings_container sh_pos_customer_max_dic_config">
+                    <div style="font-size: 15px; font-weight: 600;">Customer Maximum Discount</div>
+
+                    <div class='col-6 col-lg-6 col-md-6 o_setting_box'>
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_pos_enable_customer_max_discount" />
+                        </div>
+                        <div class=" o_setting_right_pane">
+                            <label for="pos_sh_pos_enable_customer_max_discount" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt16 o_settings_container sh_pos_customer_max_dic_config">
+                    <div style="font-size: 15px; font-weight: 600;">Hide/Show Orderline Options</div>
+
+                    <div class='col-6 col-lg-6 col-md-6 o_setting_box'>
+                        <div class="o_setting_left_pane">
+                            <field name="pos_sh_hide_show_orderline_icon" />
+                        </div>
+                        <div class=" o_setting_right_pane">
+                            <label for="pos_sh_hide_show_orderline_icon" />
+                            <div class="text-muted">
+                                Hide &amp; Show Orderline Icon on MouseOver &amp; MouseLeave
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  Merge Internal Category to POS Category  -->
+                <h2>Merge Internal Category to POS Category</h2>
+                <div class="row mt16 o_settings_container" >
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="sync_with_pos_category" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="sync_with_pos_category" />
+                            <div class="text-muted">
+                                Sync new Internal Category to POS Category
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="auto_sync_product_with_pos_category" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="auto_sync_product_with_pos_category" />
+                            <div class="text-muted">
+                                Auto Sync new product to POS Category
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cancel Configuration -->
+                <h2>POS Order Cancel Configuration</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane"></div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_operation_type" />
+                            <div class="mt8">
+                                <field name="pos_operation_type" widget="radio" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_cancel_delivery" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_cancel_delivery" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_cancel_invoice" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_cancel_invoice" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <xpath expr="//field[@name='pos_iface_start_categ_id']/.." position="before">
+                <div class="text-muted mt16">
+                    <label for="pos_sh_enable_category_slider" />
+                    <field name="pos_sh_enable_category_slider" />
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,49 @@
+
+.sh-alert {
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+.sh-alert-warning {
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    color: #8a6d3b;
+}
+
+.pos .sh_order_type_popup main.body {
+    margin: 0px;
+    padding: 0px;
+    height: 250px;
+    max-height: 250px;
+    overflow: auto;
+}
+
+.pos .sh_order_type_popup .sh_order_type_table {
+    width: 100%;
+}
+
+.pos .sh_order_type_popup .sh_order_type_table tbody tr.sh_order_type_tr td {
+    font-size: 16px;
+    font-weight: normal;
+    padding: 10px;
+    text-transform: capitalize;
+    color: #4A4F59;
+    transition: all .5s;
+    cursor: pointer;
+    word-break: break-word;
+}
+
+.pos .sh_order_type_popup .sh_order_type_table tbody tr.sh_order_type_tr:hover td,
+.pos .sh_order_type_popup .sh_order_type_table tbody tr.sh_order_type_tr.selectedorder td {
+    background: #017E84;
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 767.98px) {
+    .pos .sh_order_type_popup {
+        max-width: 310px !important;
+        width: 310px !important;
+    }
+}

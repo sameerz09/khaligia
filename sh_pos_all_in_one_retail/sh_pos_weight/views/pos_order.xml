@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id='sh_pos_weight_product_view_inherit' model='ir.ui.view'>
+        <field name='name'>sh.pos.weight.order.inherit</field>
+        <field name='model'>pos.order</field>
+        <field name='inherit_id' ref='point_of_sale.view_pos_pos_form'></field>
+        <field name='arch' type='xml'>
+            <xpath expr="//field[@name='discount']" position="after">
+                <field name='product_weight' optional="hide" attrs="{'column_invisible' : [('parent.enable_product_weight', '=', False)]}"></field>
+                <field name='total_product_weight' optional="hide" attrs="{'column_invisible' : [('parent.enable_product_weight', '=', False)]}"></field>
+                <field name='product_volume' optional="hide" attrs="{'column_invisible' : [('parent.enable_product_volume', '=', False)]}"></field>
+                <field name='total_product_volume' optional="hide" attrs="{'column_invisible' : [('parent.enable_product_volume', '=', False)]}"></field>
+            </xpath>
+            <xpath expr="//field[@name='amount_paid']" position="after">
+                <field name='enable_product_weight' invisible='1'></field>
+                <field name='enable_product_volume' invisible='1'></field>
+                <field name='total_product_weight' optional="hide" attrs="{'invisible' : [('enable_product_weight', '=', False)]}"></field>
+                <field name='total_product_volume' optional="hide" attrs="{'invisible' : [('enable_product_volume', '=', False)]}"></field>
+            </xpath>
+        </field>
+    </record>
+</odoo>

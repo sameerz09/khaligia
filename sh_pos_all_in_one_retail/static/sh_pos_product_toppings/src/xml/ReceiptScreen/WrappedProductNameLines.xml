@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="tempalte" xml:space="preserve">
+
+    <t t-name="WrappedProductNameLines" t-inherit="point_of_sale.WrappedProductNameLines" t-inherit-mode="extension" owl="1">
+        <xpath expr="//span" position="replace">
+            <t t-if="props.line.product_name_wrapped and props.line.product_name_wrapped.slice(1) != '' and props.line.is_topping">
+                <span class="sh_is_topping_line">
+                    <t t-foreach="props.line.product_name_wrapped.slice(1)" t-as="wrapped_line" t-key="wrapped_line_index"><t t-esc="wrapped_line"/></t>
+                </span>
+            </t>
+            <t t-else="">
+                <span>
+                    <t t-foreach="props.line.product_name_wrapped.slice(1)" t-as="wrapped_line" t-key="wrapped_line_index"><t t-esc="wrapped_line"/></t>
+                </span>
+            </t>
+        </xpath>
+    </t>
+
+</templates>

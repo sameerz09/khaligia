@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id='template' xml:space="preserve">
+    <t t-name='Orderline' t-inherit='point_of_sale.Orderline' t-inherit-mode='extension' owl='1'>
+        <xpath expr='//ul[hasclass("info-list")]' position='inside'> 
+            <li class="info sh_weight_volume_orderline_li">
+                <t t-if='env.pos.config.enable_weight'>
+                    <t t-if='props.line.product.weight'>
+                        <span class="sh_orderline_weight_main">
+                            <span class="sh_orderline_weight_lbl">Weight : </span>
+                            <span class="sh_orderline_weight_val"><t t-esc='(props.line.product.weight * props.line.quantity)'></t></span>
+                        </span>
+                    </t>
+                    <t t-if='env.pos.config.enable_volume'>
+                        <t t-if='props.line.product.volume'>
+                            <span class="sh_orderline_volume_main">
+                                <span class="sh_orderline_volume_lbl">Volume : </span>
+                                <span class="sh_orderline_volume_val"><t t-esc='props.line.product.volume * props.line.quantity'></t></span>
+                            </span>
+                        </t>
+                    </t>
+                </t>
+            </li>
+        </xpath>
+    </t>
+</templates>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="product.product" id="rounding_product">
+        <field name="name">Rounding</field>
+        <field name="type">service</field>
+        <field name="sale_ok" eval="True" />
+        <field name="available_in_pos" eval="True" />
+        <field name="taxes_id" eval="False"/>
+        <field name="is_rounding_product" eval="True" />
+    </record>
+</odoo>

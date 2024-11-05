@@ -1,0 +1,23 @@
+.pos-content .rightpane .categories .main .owl-carousel.owl-loaded .owl-nav .owl-prev {border-radius: 50rem;background: #fff;border: 1px solid #ccc;padding: 10px 12px !important;position: absolute;top: 40%;left: 0;}
+.pos-content .rightpane .categories .main .owl-carousel.owl-loaded .owl-nav .owl-next {border-radius: 50rem;background: #fff;border: 1px solid #ccc;padding: 10px 12px !important;position: absolute;top: 40%;right: 0;}
+
+.pos-content .rightpane .categories .main .owl-carousel.owl-loaded .owl-nav .owl-prev.disabled .fa.fa-chevron-left,
+.pos-content .rightpane .categories .main .owl-carousel.owl-loaded .owl-nav .owl-next.disabled .fa.fa-chevron-right {opacity: 0.5;}
+.pos-content .rightpane .categories .main .owl-carousel.owl-loaded .sh_pos_items_cate .category-button:not(.sh_no_image) .category-name {-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;font-size: 14px;font-weight: bold;background: linear-gradient(-90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));}
+.pos-content .rightpane .categories .main .owl-carousel.owl-loaded .sh_pos_items_cate .category-button {border: 1px solid #e2e2e2;box-shadow: 0 10px 10px -13px #ffffff, 0 4px 10px 0 rgba(0, 0, 0, 0.12), 0 8px 4px -5px rgba(196, 204, 227, 0.20);}
+.pos-content .rightpane .categories .category-list {background: #ffffff;}
+.pos-content .rightpane .categories .main .owl-carousel.owl-loaded .sh_pos_items_cate .category-button.sh_no_image {align-items: center;}
+
+.pos-content .rightpane .categories .main .owl-carousel.owl-loaded .sh_pos_items_cate .category-button.sh_no_image .category-name {font-size: 14px;color: $sh_pos_primary_color;}
+.pos-content .rightpane .categories .main .owl-carousel.owl-loaded .sh_pos_items_cate .category-button .category-img {height: 90px;}
+
+.pos-content .rightpane .categories .main .owl-carousel.owl-loaded .sh_pos_items_cate .category-button .category-img img {max-height: 90px;max-width: 110px;margin: 0px auto;}
+.pos-content .rightpane .categories .main .owl-carousel.owl-loaded .owl-stage-outer .owl-stage .owl-item {text-align: center;}
+
+.pos-content .rightpane .categories .sh_pos_items_cate .category-button .category-img .sh_no_image_svg {width: 70px;fill: #d3d3d3;margin-top: 10px;}
+.pos-content .rightpane .category-list-scroller {animation-name: slideDown;-webkit-animation-name: slideDown;animation-duration: 0.5s;-webkit-animation-duration: 0.5s;animation-timing-function: ease-in-out;-webkit-animation-timing-function: ease-in-out;visibility: visible !important;}
+
+@keyframes slideDown {
+	0% {transform: translateY(-4%);}
+	100% {transform: translateY(0%);}
+}

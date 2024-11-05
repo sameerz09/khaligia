@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+     <record id='sh_pos_order_label_form' model='ir.ui.view'>
+          <field name='name'>sh.pos.order.label.form.inherit</field>
+          <field name='model'>pos.order</field>
+          <field name='inherit_id' ref='point_of_sale.view_pos_pos_form' />
+          <field name='arch' type='xml'>
+               <xpath expr="//field[@name='full_product_name']" position='replace'>
+                    <field name='add_section' attrs="{'invisible': [('add_section', '=', False)]}"></field>
+                    <field name='full_product_name' attrs="{'invisible': [('add_section', '!=', False)]}"></field>
+               </xpath>
+               <xpath expr="//field[@name='qty']" position='replace'>
+                    <field name='qty' attrs="{'invisible': [('add_section', '!=', False)]}"></field>
+               </xpath>
+               <xpath expr="//field[@name='price_unit']" position='replace'>
+                    <field name='price_unit' attrs="{'invisible': [('add_section', '!=', False)]}"></field>
+               </xpath>
+               <xpath expr="//field[@name='discount']" position='replace'>
+                    <field name='discount' attrs="{'invisible': [('add_section', '!=', False)]}"></field>
+               </xpath>
+               <xpath expr="//field[@name='tax_ids_after_fiscal_position']" position='replace'>
+                    <field name='tax_ids_after_fiscal_position' attrs="{'invisible': [('add_section', '!=', False)]}"></field>
+               </xpath>
+               <xpath expr="//field[@name='price_subtotal']" position='replace'>
+                    <field name='price_subtotal' attrs="{'invisible': [('add_section', '!=', False)]}"></field>
+               </xpath>
+               <xpath expr="//field[@name='price_subtotal_incl']" position='replace'>
+                    <field name='price_subtotal_incl' attrs="{'invisible': [('add_section', '!=', False)]}"></field>
+               </xpath>
+          </field>
+     </record>
+</odoo>

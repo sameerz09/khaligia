@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree -->
+    <record id="sh_product_tags_product_template_tree" model="ir.ui.view">
+        <field name="name">sh.product.tags.product.template.tree</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view" />
+        <field name="arch" type="xml">
+            <field name="standard_price" position="after">
+                <field name="sh_product_tag_ids" widget="many2many_tags" options="{'color_field': 'sh_color', 'no_create_edit': True, 'no_quick_create': True}" />
+            </field>
+        </field>
+    </record>
+
+    <!-- Form -->
+    <record id="sh_product_tags_product_template_form" model="ir.ui.view">
+        <field name="name">sh.product.tags.product.template.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view" />
+        <field name="arch" type="xml">
+            <field name="default_code" position="after">
+                <field name="sh_product_tag_ids" widget="many2many_tags" options="{'color_field': 'sh_color'}" />
+            </field>
+        </field>
+    </record>
+
+    <!-- Kanban -->
+    <record id="sh_product_tags_product_template_kanban" model="ir.ui.view">
+        <field name="name">sh.product.tags.product.template.kanban</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_kanban_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='product_lst_price']" position="after">
+                <div class="mt-1">
+                    <field name="sh_product_tag_ids" widget="many2many_tags" options="{'color_field': 'sh_color'}" />
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Search -->
+    <record id="sh_product_tags_product_template_search" model="ir.ui.view">
+        <field name="name">sh.product.tags.product.template.search</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="sh_product_tag_ids" string="Tag" filter_domain="[('sh_product_tag_ids', 'ilike', self)]" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

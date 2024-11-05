@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="Orderline" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension">
+        <xpath expr="//ul[hasclass('info-list')]" position="inside">
+            <t t-if="props.line.quantity &gt;= props.line.product.sh_qty_in_bag">
+                <t t-if="props.line.sh_bag_qty">
+                    <li class="qty_in_bag sh_qty_in_bag_orderline">
+                        <strong>
+                            <t t-esc="props.line.sh_bag_qty" />
+                        </strong>
+                        <span class="sh_orderline_bag_span">Bags</span>
+                        <i class="fa fa-edit sh_fa_edit" t-on-click="() => this.trigger('edit_bags',props.line.get_product())" style="margin-left: 8px;"></i>
+                    </li>
+                </t>
+            </t>
+        </xpath>
+    </t>
+    <!-- <t t-name="OrderLinesReceipt" t-inherit="point_of_sale.OrderLinesReceipt" t-inherit-mode="extension">
+        <xpath expr="//t[@t-esc='line.unit_name']" position="after">
+            <t t-if="env.pos.config.sh_dispaly_bag_qty">
+                <t t-if="line.bags">
+                    <span class="baglabel">
+                        (
+                        <t t-esc="line.bags" />
+                        <span class="bags">  Bags) </span>
+                    </span>
+                </t>
+            </t>
+        </xpath>
+    </t> -->
+</templates>

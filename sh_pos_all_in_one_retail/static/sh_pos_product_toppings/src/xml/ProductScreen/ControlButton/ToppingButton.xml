@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="tempalte" xml:space="preserve">
+    <t t-name="ToppingButton" owl="1">
+        <div class="control-button">
+            <div>
+                Toppings
+            </div>
+        </div>
+    </t>
+</templates>

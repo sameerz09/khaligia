@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-if='receipt.company.logo']" position="after">
+            <center style="font-size: 16px">
+                <t t-if="env.pos.config.sh_pos_order_number">
+                    Order No :
+                    <t t-if='props.order and props.order.pos_recept_name'>
+                        <t t-esc="props.order.pos_recept_name" />
+                    </t>
+                </t>
+            </center>
+        </xpath>
+        <xpath expr="//div[hasclass('pos-receipt-contact')]" position="inside">
+            <div>
+                <t t-if="env.pos.config.sh_pos_receipt_invoice and props.order.invoice_number">
+                    <br />
+                    <div>--------------------------------</div>
+                    INV number:
+                    <t t-esc="props.order.invoice_number" />
+                    <div>--------------------------------</div>
+                </t>
+            </div>
+            <div class="sh_customer_detail">
+                <t t-if="env.pos.config.sh_pos_receipt_customer_detail">
+                    <t t-if="props.order.get_partner()">
+                        <br />
+                        <t t-if="env.pos.config.sh_pos_receipt_customer_name">
+                            <div class="sh_customer_name">
+                                Customer :
+                                <t t-if="props.order and props.order.get_partner() ">
+                                    <t t-esc="props.order.get_partner().name" />
+                                </t>
+                            </div>
+                        </t>
+                        <t t-if="env.pos.config.sh_pos_receipt_customer_address">
+                            <t t-if="props.order and props.order.get_partner()">
+                                <div class="sh_customer_address">
+                                    Address :
+                                    <t t-esc="props.order.get_partner().address" />
+                                </div>
+                            </t>
+                        </t>
+                        <t t-if="env.pos.config.sh_pos_receipt_customer_mobile">
+                            <t t-if="props.order and props.order.get_partner() and props.order.get_partner().mobile">
+                                <div class="sh_customer_mobile">
+                                    Mobile :
+                                    <t t-esc="props.order.get_partner().mobile" />
+                                </div>
+                            </t>
+                        </t>
+                        <t t-if="env.pos.config.sh_pos_vat">
+                            <t t-if="props.order and props.order.get_partner() and props.order.get_partner().vat">
+                                <div class="sh_pos_vat">
+                                    <t t-if='env.pos.config.sh_pos_vat_name'>
+                                        <t t-esc="env.pos.config.sh_pos_vat_name" />
+                                        :
+                                    </t>
+                                    <t t-else=""> Vat : </t>
+                                    <t t-esc="props.order.get_partner().vat" />
+                                </div>
+                            </t>
+                        </t>
+                        <t t-if="env.pos.config.sh_pos_receipt_customer_phone">
+                            <t t-if="props.order and props.order.get_partner() and props.order.get_partner().phone">
+                                <div class="sh_customer_mobile">
+                                    Phone :
+                                    <t t-esc="props.order.get_partner().phone" />
+                                </div>
+                            </t>
+                        </t>
+
+                        <t t-if="env.pos.config.sh_pos_receipt_customer_email">
+                            <t t-if="props.order and props.order.get_partner() and props.order.get_partner().email">
+                                <div class="sh_customer_mobile">
+                                    Email :
+                                    <t t-esc="props.order.get_partner().email" />
+                                </div>
+                            </t>
+                        </t>
+                    </t>
+                </t>
+            </div>
+        </xpath>
+        <xpath expr="//div[hasclass('after-footer')]" position="after">
+            <div class="">
+                <div class="sh_receipt_footer">
+                    <t t-if="env.pos.config.sh_pos_receipt_bacode_qr and env.pos.config.sh_pos_receipt_barcode_qr_selection == 'barcode'">
+                        <img id="barcode" />
+                    </t>
+                    <t t-if="env.pos.config.sh_pos_receipt_bacode_qr and env.pos.config.sh_pos_receipt_barcode_qr_selection == 'qr'">
+                        <div id="qr_code"></div>
+                    </t>
+
+                </div>
+            </div>
+        </xpath>
+
+    </t>
+    <!-- <t t-name="OrderLinesReceipt" t-inherit="point_of_sale.OrderLinesReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr='//WrappedProductNameLines' position='after'>
+            <t t-if='env.pos.config.sh_enable_internal_ref'>
+                <div t-if='line.product_default_code'>
+                    [
+                    <t t-esc='line.product_default_code' />
+                    ]
+                </div>
+            </t>
+        </xpath>
+        <xpath expr='//t[@t-if="line.display_discount_policy == &apos;without_discount&apos; and line.price != line.price_lst"]' position='before'>
+            <t t-if='env.pos.config.sh_enable_internal_ref'>
+                <div t-if='line.product_default_code'>
+                    [
+                    <t t-esc='line.product_default_code' />
+                    ]
+                </div>
+            </t>
+        </xpath>
+    </t> -->
+</templates>

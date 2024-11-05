@@ -1,0 +1,41 @@
+.pos .payment-screen .paymentlines-container .sh_rounding_div{padding-top: 7px; padding-left: 5px;}
+.pos .payment-screen .paymentlines-container .tgl {
+	display: none;
+	// add default box-sizing for this scope
+	&,
+  &:after,
+  &:before,
+	& *,
+  & *:after,
+  & *:before,
+	& + .tgl-btn {
+		box-sizing: border-box;
+		&::selection {
+			background: none;
+		}
+	}
+	+ .tgl-btn {outline: 0;display: block;width: 4em;height: 2em;position: relative;cursor: pointer;
+    	user-select: none;
+		&:after,
+    &:before {position: relative;display: block;content: "";width: 50%;height: 100%;
+		}
+		&:after {left: 0;}
+    	&:before {display: none;}
+	}
+	&:checked + .tgl-btn:after {left: 50%;}
+}
+.tgl-flat {
+	+ .tgl-btn {padding: 2px;transition: all .2s ease;background: #fff;border: 4px solid #e1e1e1;border-radius: 2em;
+		&:after {transition: all .2s ease;background: #e1e1e1;content: "";border-radius: 1em;}
+	}
+	&:checked + .tgl-btn {
+    border: 4px solid $sh_pos_primary_color;
+    &:after {left: 50%;background: $sh_pos_primary_color;}
+  }
+}
+.pos .payment-screen .paymentlines-container .rounding_label {padding-top: 3px;display: inline-block;}
+@media only screen and (max-width: 767.98px){
+	.pos .payment-screen .paymentlines-container .sh_rounding_div{display: flex;align-items: center;justify-content: center;}
+	.pos .payment-screen .paymentlines-container .tgl + .tgl-btn{float: unset !important;margin-right: 0px !important;}
+	.pos .payment-screen .paymentlines-container .rounding_label{padding-right: 5px;}
+}

@@ -1,0 +1,23 @@
+.popup.popup-textinput.product-info-popup.shortcut_tips_popup .title {margin-bottom: 0px;}
+.pos .main_div_shortcut_tips {font-weight: normal !important;font-size: 15px !important;max-height: 330px;overflow: auto;}
+.shortcut_tips_popup .main_div_shortcut_tips .sh_shortcut_table_header {font-weight: bold;margin-bottom: 10px;margin-top: 15px;}
+.shortcut_tips_popup .main_div_shortcut_tips .sh_shortcut_table {width: 100%;}
+.shortcut_tips_popup .main_div_shortcut_tips .sh_shortcut_table thead tr {line-height: 30px;}
+.shortcut_tips_popup .main_div_shortcut_tips .sh_shortcut_table_header {margin-bottom: 15px;}
+.shortcut_tips_popup .main_div_shortcut_tips .sh_shortcut_table thead tr th {width: 50%;}
+.shortcut_tips_popup .main_div_shortcut_tips .sh_shortcut_table tr td {padding: 10px;font-size: 16px;}
+.shortcut_tips_popup .footer .button.cancel {border: 0;float: unset;margin: 10px auto;}
+@media only screen and (max-width: 576px) {
+    .modal-dialog.sh_shortcut_modal_dialog {padding: 0px !important;}
+    .shortcut_tips_popup .footer .button.cancel {margin-bottom: 6px !important;}
+}
+@media only screen and (min-width: 768px) {
+    .pos .modal-dialog.sh_shortcut_modal_dialog .popup-lg {max-height: 765px;}
+}
+@media only screen and (min-width: 1024) {
+    .pos .modal-dialog.sh_shortcut_modal_dialog .popup-lg {max-height: 955px;}
+}
+.pos .modal-dialog .shortcut_tips_popup {max-width: 50% !important;}
+@media only screen and (max-width: 768px) {
+    .pos .modal-dialog .shortcut_tips_popup {max-width: 87% !important;}
+}

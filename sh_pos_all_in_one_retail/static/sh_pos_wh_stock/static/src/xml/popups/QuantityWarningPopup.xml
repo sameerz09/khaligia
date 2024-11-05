@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="QuantityWarningPopup" owl="1">
+        <div role="dialog" class="modal-dialog">
+            <div class="popup popup-text popup-lg product-configurator-popup sh_qty_popup">
+                <header class="title">
+                    Warning
+                </header>
+                <div class="main-body touch-scrollable scrollable-y product_content body">
+                    <t t-if="props.product">
+                        <div class="sh_product_image">
+                            <img t-att-src="props.product_image" alt="Product image" class="product_image" />
+                        </div>
+                        <div class="sh_product_name">
+                            <div class="sh_product_name_warning_popup"><t t-esc="props.product.display_name" /></div>
+                            <div class="sh_max_qty"><span class="sh_min_qty_warning_popup">Minimum availabe quantity is <span class="sh_bold_qty"><t t-esc="env.pos.config.sh_min_qty" /></span></span></div>
+                        </div>
+                    </t>
+                </div>
+                <footer class="footer sh_warning_footer">
+                    <div class="button confirm order highlight" t-on-click="put_order">
+                        Order
+                    </div>
+                    <div class="button cancel" t-on-click="cancel">
+                        Cancel
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </t>
+</templates>

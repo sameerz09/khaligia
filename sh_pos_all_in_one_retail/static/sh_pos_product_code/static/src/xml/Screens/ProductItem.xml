@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="sh_product_reference_template" xml:space="preserve">
+    <t t-extend="ProductItem" t-inherit="point_of_sale.ProductItem" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('product-content')]/div" position="after">
+            <t t-if="env.pos.config.sh_enable_prduct_code">
+                <t t-if="props.product.default_code">
+                    <span class="sh_ref_cd sh_ref_code" t-att-title="props.product.default_code">
+                        <p class="sh_ref_code_value"> 
+                            [
+                            <t t-esc="props.product.default_code" />
+                            ] </p>
+                    </span>
+                </t>
+            </t>
+        </xpath>
+    </t>
+</templates>

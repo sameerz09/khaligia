@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="OrderSummary" t-inherit="point_of_sale.OrderSummary" t-inherit-mode="extension" owl='1'>
+        <xpath expr="//div[hasclass('total')]" position="after">
+            <t t-if="env.pos.config.sh_enable_rounding">
+                <div class="subentry">
+                    <span class="rounding">Rounding: </span>
+                    <span class="value">
+                        <t t-esc="rounding" />
+                    </span>
+                </div>
+            </t>
+            
+        </xpath>
+    </t>
+
+    <t t-extend="OrderWidget" t-inherit="point_of_sale.OrderWidget" t-inherit-mode="extension">
+        <xpath expr="//OrderSummary" position="replace">
+            <OrderSummary order="order" rounding="rounding" />
+        </xpath>
+    </t>
+
+    <t t-extend="PaymentScreen-Paymentlines">
+        <t t-jquery="div.total" t-operation="replace">
+            <div class="total">
+                <t t-if="widget.pos.config.sh_enable_rounding and order.get_is_payment_round()">
+                    <span class="total_amount"><t t-esc="widget.format_currency(order.get_round_total_with_tax())" /></span>
+                </t>
+                <t t-else="">
+                    <span class="total_amount">
+                        <t t-esc="widget.format_currency(order.get_total_with_tax())" />
+                    </span>
+                </t>
+            </div>
+        </t>
+    </t>
+
+    <t t-extend="PaymentScreenStatus" t-inherit="point_of_sale.PaymentScreenStatus" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('paymentlines-empty')]" position="inside">
+            <t t-if="env.pos.config.sh_enable_rounding and props.order.get_paymentlines().length === 0">
+                <div class="sh_rounding_div">
+                    <span class="rounding_label"><b>Rounding:</b></span>
+                    <input class="tgl tgl-flat" id="cb4" type="checkbox" t-on-click="click"
+                    t-att-checked="env.pos.get_order().is_payment_round ? 'checked' : '' "/>
+                    <label class="tgl-btn cb4_label" for="cb4" style="float: right; margin-right: 70%;"></label>
+                </div>
+            </t>
+        </xpath>
+    </t>
+    <t t-extend="OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension">
+        <xpath expr="//t[@t-foreach='receipt.tax_details']" position="before">
+            <t t-if="env.pos.config.sh_enable_rounding">
+                <div>Rounding<span t-esc="env.pos.format_currency(receipt.rounding_amount)" class="pos-receipt-right-align" /></div>
+            </t>
+        </xpath>
+    </t>
+</templates>

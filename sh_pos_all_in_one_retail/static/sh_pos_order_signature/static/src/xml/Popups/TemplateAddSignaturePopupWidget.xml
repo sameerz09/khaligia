@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="TemplateAddSignaturePopupWidget" owl="1">
+        <div class="popup popup-confirm popup-text popup-lg product-configurator-popup sh_signature_popup">
+            <header class="title">
+                Add Signature
+            </header>
+            <main class="main-body touch-scrollable scrollable-y note_body sh_signature_main_body body">
+                <div class="main_div_signature">
+                    <div class="signature_detail_div">
+                        <div id="signature"></div>
+                        <div class="signature_name_date">
+                            <div class="name_div">
+                                <t t-if="env.pos.config.sh_enable_name"> Name : <input type="text" placeholder="Enter Name" id="sh_name" /> </t>
+                            </div>
+                            <div class="date_div">
+                                <t t-if="env.pos.config.sh_enable_date"> Date : <input type="date" id="sh_date" /> </t>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer sh_signature_footer">
+                <div class="button clear cancel" t-on-click="clear">
+                    Clear
+                </div>
+                <div class="button confirm" t-on-click="confirm">
+                    Save
+                </div>
+                <div class="button cancel" t-on-click="cancel">
+                    Cancel
+                </div>
+            </footer>
+        </div>
+    </t>
+</templates>

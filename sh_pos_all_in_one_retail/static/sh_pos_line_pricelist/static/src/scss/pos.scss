@@ -1,0 +1,24 @@
+.pos .sh_pricelist_popup .main-body.sh_pricelist_main_table {max-height: 283px;overflow: auto}
+.pos .popup.sh_pricelist_popup {width: 530px;max-width: 530px;height: 400px;max-height: 400px}
+.pos .popup.sh_pricelist_popup .pricelist_table {width: 100%;}
+.sh_pricelist_popup .pricelist_table tr:nth-child(even) {background: $sh_even_row_color;}
+.sh_pricelist_popup .pricelist_table tr:nth-child(odd) {background: $sh_odd_row_color;}
+.sh_pricelist_popup .pricelist_table td {padding: 0px 8px;height: 47px;position: relative;}
+.sh_pricelist_popup .title {margin-bottom: 0px !important;}
+.sh_pricelist_popup .pricelist_table tbody {font-weight: normal;font-size: 16px;}
+.sh_pricelist_popup .pricelist_table tr:not(.only_read).lowlight {transition: all 150ms linear;background: #b1d1d3;}
+.sh_pricelist_popup .pricelist_table tr:not(.only_read).highlight {transition: all 150ms linear;color: $sh_pos_primary_color;font-weight: bold;}
+.pos .popup.sh_pricelist_popup .footer.sh_pricelist_footer {position: absolute;bottom: 0;left: 0;width: 100% !important;height: 60px !important;border-top: solid 1px rgba(60, 60, 60, 0.1) !important;}
+@media only screen and (max-width: 767.98px) {
+    .pos .popup.sh_pricelist_popup{width: 300px;max-width: 300px;}
+}
+/* odoo 16 */ 
+.pos .popups .modal-dialog .popup.popup-selection .selection.scrollable-y .selection-item{transition: all .5s;}
+.pos .popups .modal-dialog .popup.popup-selection .selection.scrollable-y .selection-item.selected,.pos .popups .modal-dialog .popup.popup-selection .selection.scrollable-y .selection-item:hover{color: $sh_pos_primary_color;font-weight: bold;cursor: pointer;}
+.pos .popups .modal-dialog .sh_modal_pricelist .sh_pricelist_popup .main-body.sh_pricelist_main_table .pricelist_table .pricelist_row:not(.only_read){cursor: pointer;}
+.pos .popups .modal-dialog .sh_modal_pricelist .sh_pricelist_popup .main-body.sh_pricelist_main_table .pricelist_table .pricelist_row.only_read{cursor: not-allowed;}
+
+.pos .popups .modal-dialog .sh_modal_pricelist .sh_pricelist_popup .main-body.sh_pricelist_main_table .pricelist_table .pricelist_row td{transition: all .5s;}
+.pos .popups .modal-dialog .sh_modal_pricelist .sh_pricelist_popup .main-body.sh_pricelist_main_table .pricelist_table .pricelist_row td:first-child{width: 60%;word-break: break-word;}
+.pos .popups .modal-dialog .sh_modal_pricelist .sh_pricelist_popup .main-body.sh_pricelist_main_table .pricelist_table .pricelist_row td:last-child{width: 40%;word-break: break-word;}
+.pos .popups .modal-dialog .sh_modal_pricelist .sh_pricelist_popup .main-body.sh_pricelist_main_table .pricelist_table .pricelist_row:hover td{color: $sh_pos_primary_color;font-weight: bold;}

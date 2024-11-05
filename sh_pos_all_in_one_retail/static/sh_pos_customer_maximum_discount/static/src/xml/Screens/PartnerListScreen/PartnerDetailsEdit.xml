@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="PartnerDetailsEdit" t-inherit="point_of_sale.PartnerDetailsEdit" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('partner-details-left')]" position="inside">
+            <div class="partner-detail sh_set_max_field_partner_details">
+               
+                <span class="label">Set Maximum Customer Discount</span>
+                <label class="sh_custom sh_custom_control_checkbox">
+                    <input class="detail styled-checkbox sh_set_customer_disc" type="checkbox" name="sh_enable_max_dic" id='Set_customer_discount'  t-on-change="captureChange"  />
+                    <div class="sh_custom_control_indicator"></div>
+                  </label>
+            </div>
+        </xpath>
+    </t>
+</templates>

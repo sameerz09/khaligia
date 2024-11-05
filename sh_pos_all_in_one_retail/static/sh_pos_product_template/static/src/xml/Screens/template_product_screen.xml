@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="TemplateProductsLine" owl="1">
+        <tr t-attf-class="template-line {{highlight}}" t-att-data-id="props.template.id" t-on-click="() => this.trigger('click-template', {template: props.template})">
+            <td>
+                <t t-esc="props.template.name" />
+            </td>
+            <td>
+                <t t-esc="env.pos.format_currency(props.template.amount_total)" />
+            </td>
+        </tr>
+    </t>
+
+    <t t-name="TemplateProductsListScreenWidget" owl="1">
+        <div class="templateproductlist-screen screen">
+            <div class="screen-content">
+                <section class="top-content">
+                    <div class="button back" t-on-click="back">
+                        <t t-if="!env.isMobile">Discard</t>
+                        <t t-else="">
+                            <i class="fa fa-undo"></i>
+                        </t>
+                    </div>
+                    <div class="button highlight" t-on-click="() => this.trigger('click-save')">
+                        <t t-if="!env.isMobile"> <span> Load Product Template</span> <i class="fa fa-angle-double-right" /> </t>
+                        <t t-else="">
+                            <i class="fa fa-angle-double-right" />
+                        </t>
+                    </div>
+                    <div class="searchbox-client top-content-center sh_searchbox_client_top_part">
+                        <input placeholder="Search Template" class="sh_searchbox_temp_screen" size="1" t-on-keyup="updateTemplateList" />
+                        <span class="search-clear-template"></span>
+                    </div>
+                </section>
+                <section class="full-content">
+                    <div class="window">
+                        <section class="subwindow">
+                            <div class="subwindow-container">
+                                <div class="subwindow-container-fix touch-scrollable scrollable-y order-list-scroll sh_template_screen">
+                                    <table class="template-list">
+                                        <thead>
+                                            <tr>
+                                                <th>Product Template Name</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="template-list-contents">
+                                            <t t-foreach="templatelistcontents" t-as="template" t-key="template.id">
+                                                <TemplateProductsLine template="template" selectedTemplate="state.selectedTemplate" t-on-click-template="clickLine" />
+                                            </t>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </t>
+
+</templates>

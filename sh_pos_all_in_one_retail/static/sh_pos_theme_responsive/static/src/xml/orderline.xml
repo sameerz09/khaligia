@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+	<t t-name="Orderline" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension" owl="1">
+        <xpath expr="//span[hasclass('product-name')]" position="before">
+        	<t t-if="env.pos.pos_theme_settings_data and env.pos.pos_theme_settings_data[0] and env.pos.pos_theme_settings_data[0].sh_image_display_in_cart">
+	            <span class="span_product_image">
+	                <img t-att-src="imageUrl(props.line.get_product())" class="cart_product_image" t-att-alt="props.line.get_full_product_name()" />
+	            </span>
+	         </t>
+        </xpath>
+        <!-- <xpath expr="//span[hasclass('price')]" position="after">
+            <span class="span_delete_icon" t-on-click="removelineClick">
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </span>
+        </xpath> -->
+    </t>
+</templates>

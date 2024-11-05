@@ -1,0 +1,28 @@
+/**
+* CSS themes for simplePagination.js
+* Author: Flavius Matis - http://flaviusmatis.github.com/
+* URL: https://github.com/flaviusmatis/simplePagination.js
+*/
+
+.sh_pagination.simple-pagination {display: block;overflow: hidden;padding: 0 5px 5px 0;margin: 0;}
+.sh_pagination.simple-pagination ul {list-style: none;padding: 0;margin: 0;}
+.sh_pagination.simple-pagination li {list-style: none;padding: 0;margin: 0;float: left;}
+span.ellipse.clickable {cursor: pointer;}
+.sh_pagination.light-theme .ellipse input {width: 3em;padding: 3px 2px;border: 1px solid #BBB;outline: none;}
+
+/*------------------------------------*\
+	Light Theme Styles
+\*------------------------------------*/
+.sh_pagination.light-theme span {cursor:pointer;}
+.sh_pagination.light-theme a, .sh_pagination.light-theme span {float: left;color: #666;font-size:14px;line-height:24px;font-weight: normal;text-align: center;border: 1px solid #BBB;min-width: 14px;padding: 0 7px;margin: 0 5px 0 0;border-radius: 0px;box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	background: #efefef; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #efefef 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#efefef 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#efefef 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#efefef 100%); /* IE10+ */
+	background: linear-gradient(top, #ffffff 0%,#efefef 100%); /* W3C */
+}
+.sh_pagination.light-theme a:hover, .sh_pagination.light-theme li:not(.disabled):not(.active) span:hover {text-decoration: none;background: #FCFCFC;}
+.sh_pagination.light-theme .current {background: #adadad;color: #FFF;border-color: #adadad;box-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 2px rgba(0, 0, 0, 0.3) inset;cursor: default;}
+.sh_pagination.light-theme .ellipse {background: none;border: none;border-radius: 0;box-shadow: none;font-weight: bold;cursor: default;outline: none;}

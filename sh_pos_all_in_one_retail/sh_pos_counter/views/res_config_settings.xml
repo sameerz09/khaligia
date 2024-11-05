@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_pos_counter_res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">sh.res.config.settings.view.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <div id="pos_interface_section" position="after">
+                <h2 name="order">Enable POS Counter</h2>
+                
+                <br />
+            </div>
+        </field>
+    </record>
+</odoo>

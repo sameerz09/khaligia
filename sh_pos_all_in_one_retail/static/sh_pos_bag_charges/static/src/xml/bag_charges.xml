@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="bag_qty_button" owl="1">
+        <div class="control-button" t-on-click="() => this.trigger('click-bag_qty-button')">
+            <div>
+                <span class="fa fa-shopping-bag"></span>
+                Carry Bag
+            </div>
+        </div>
+    </t>
+    <t t-name="bag_category_list_popup" owl="1">
+        <div role="dialog" class="modal-dialog bag_category_dialog">
+            <div class="popup popup-alert bag_category_popup">
+                <header class="title">
+                    Carry Bags List
+                </header>
+                <main class="body">
+                    <div class="product-list-container">
+                        <div t-if="BagCategoryProductsToDisplay.length != 0" class="product-list">
+                            <t t-foreach="BagCategoryProductsToDisplay" t-as="product" t-key="product.id">
+                                <ProductItem product="product" />
+                            </t>
+                        </div>
+                        <div t-else="" class="product-list-empty no-results-message">
+                            <p t-if="searchWord">
+                                No product found for <b>"<t t-esc="searchWord"/>"</b> in this category.
+                            </p>
+                            <p t-else="">
+                                There are no products in this category.
+                            </p>
+                        </div>
+                        <div class="portal search-database-button no-results-message" t-att-class="{ oe_hidden:  !shouldShowButton }"></div>
+                    </div>
+                </main>
+                <footer class="footer">
+                    <div class="button cancel" t-on-click="cancel">
+                        Cancel
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </t>
+</templates>

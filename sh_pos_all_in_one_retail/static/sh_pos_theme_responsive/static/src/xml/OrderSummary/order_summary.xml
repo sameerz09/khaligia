@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+	<t t-name="OrderSummary" t-inherit="point_of_sale.OrderSummary" t-inherit-mode="extension" owl="1">
+		<xpath expr="//div[hasclass('summary')]" position="replace">
+			<t t-if="env.pos.pos_theme_settings_data and env.pos.pos_theme_settings_data.length > 0 and env.pos.pos_theme_settings_data[0] and env.pos.pos_theme_settings_data[0].sh_cart_total_sticky and env.pos.pos_theme_settings_data[0].sh_cart_total_sticky">
+				<div class="summary clearfix sticky_total sh_order_summary">
+					<t t-set="_total" t-value="getTotal()" />
+					<t t-set="_tax" t-value="getTax()" />
+					<div class="line sh_order_summary_line">
+						<div class="entry total">
+							<span class="badge" style="font-size: 15px;color: #212121;">Total : </span>
+							<span class="value" style="font-size: 15px;color: #212121;">
+								<t t-esc="_total" />
+							</span>
+							<t t-if="env.pos.config.sh_remove_all_item">
+		                    	<span class="sh_remove_cart_item">
+		                    		<RemoveAllItemButton/>
+		                    	</span>
+			                </t>
+							<div t-if="_tax.hasTax" class="subentry sh_orderline_taxes">
+								<span>Taxes:</span>
+								<span class="value">
+									<t t-esc="_tax.displayAmount" />
+								</span>
+							</div>
+							<t t-if='env.pos.config.enable_volume'>
+								<div class="sh_cart_vol_main">
+									<span class="sh_cart_total_volume_lbl">Total Volume :</span>
+									<t t-set="total_volume" t-value="total_volume()" />
+									<span class="sh_cart_total_volume_val"><t t-esc='total_volume' /></span>
+								</div>
+							</t>
+						</div>
+					</div>
+					<div class="sh_order_summary_left_line">
+						<div class="line global_discount_line">
+							<t t-if="env.pos.config.line_discount == 'line_discount' or env.pos.config.sh_allow_global_discount">
+								<span class="total badge">Global Discount :</span>
+								<t t-set="sh_global_discount" t-value="getglobalDiscount()" />
+								<span class="discount_amount" style="margin-left:10px;">
+									<t t-if="sh_global_discount">
+										<t t-esc="sh_global_discount" />
+									</t>
+									<t t-else="">
+									   0
+								   </t>
+								</span>
+
+							</t>
+							<t t-if="env.pos.config.line_discount == 'line_discount' or env.pos.config.sh_allow_global_discount">
+								<span class="sh_remove_global_discount">
+									<RemoveDiscountButton />
+								</span>
+							</t>
+						</div>
+						<div class="items_counter sh_items_counter_orderline">
+							<t t-if="env.pos.config.enable_pos_item_counter">
+								<b class="sh_total_item_tag">
+									Total Items:
+									<span class="value">
+										<t t-esc="state.total_items" />
+									</span>
+								</b>
+							</t>
+							<t t-if="env.pos.config.enable_pos_item_counter and env.pos.config.enable_pos_qty_counter">
+								<b class="sh_vertical_line"> | </b>
+							</t>
+							<t t-if="env.pos.config.enable_pos_qty_counter">
+								<b class="sh_total_qty_tag">
+									Total Qty:
+									<span class="value">
+										<t t-esc="state.total_qty" />
+									</span>
+								</b>
+							</t>
+						</div>
+						<t t-if='env.pos.config.enable_weight'>
+							<div class="sh_cart_weight_main">
+								<span class="sh_cart_total_weight_lbl">Total Weight :</span>
+								<t t-set="total_weight" t-value="total_weight()" />
+								<span class="sh_cart_total_weight_val"><t t-esc='total_weight' /></span>
+							</div>
+						</t>
+					</div>
+				</div>
+			</t>
+			<t t-else="">
+				<div class="summary clearfix sh_order_summary">
+					<t t-set="_total" t-value="getTotal()" />
+					<t t-set="_tax" t-value="getTax()" />
+					<div class="line sh_order_summary_line">
+						<div class="entry total">
+							<span class="badge" style="font-size: 15px;color: #212121;">Total : </span>
+							<span class="value" style="font-size: 15px;color: #212121;">
+								<t t-esc="_total" />
+							</span>
+							<t t-if="env.pos.config.sh_remove_all_item">
+		                    	<span class="sh_remove_cart_item">
+		                    		<RemoveAllItemButton/>
+		                    	</span>
+			                </t>
+							<div t-if="_tax.hasTax" class="subentry sh_orderline_taxes">
+								<span>Taxes:</span>
+								<span class="value">
+									<t t-esc="_tax.displayAmount" />
+								</span>
+							</div>
+							<t t-if='env.pos.config.enable_volume'>
+								<div class="sh_cart_vol_main">
+									<span class="sh_cart_total_volume_lbl">Total Volume :</span>
+									<t t-set="total_volume" t-value="total_volume()" />
+									<span class="sh_cart_total_volume_val"><t t-esc='total_volume' /></span>
+								</div>
+							</t>
+						</div>
+					</div>
+					<div class="sh_order_summary_left_line">
+						<div class="line global_discount_line">
+							<t t-if="env.pos.config.line_discount == 'line_discount' or env.pos.config.sh_allow_global_discount">
+								<span class="total badge">Global Discount :</span>
+								<t t-set="sh_global_discount" t-value="getglobalDiscount()" />
+								<span class="discount_amount" style="margin-left:10px;">
+									<t t-if="sh_global_discount">
+										<t t-esc="sh_global_discount" />
+									</t>
+									<t t-else="">
+									   0
+								   </t>
+								</span>
+
+							</t>
+							<t t-if="env.pos.config.line_discount == 'line_discount' or env.pos.config.sh_allow_global_discount">
+								<span class="sh_remove_global_discount">
+									<RemoveDiscountButton />
+								</span>
+							</t>
+						</div>
+						<div class="items_counter sh_items_counter_orderline">
+							<t t-if="env.pos.config.enable_pos_item_counter">
+								<b class="sh_total_item_tag">
+									Total Items:
+									<span class="value">
+										<t t-esc="state.total_items" />
+									</span>
+								</b>
+							</t>
+							<t t-if="env.pos.config.enable_pos_item_counter and env.pos.config.enable_pos_qty_counter">
+								<b class="sh_vertical_line"> | </b>
+							</t>
+							<t t-if="env.pos.config.enable_pos_qty_counter">
+								<b class="sh_total_qty_tag">
+									Total Qty:
+									<span class="value">
+										<t t-esc="state.total_qty" />
+									</span>
+								</b>
+							</t>
+						</div>
+						<t t-if='env.pos.config.enable_weight'>
+							<div class="sh_cart_weight_main">
+								<span class="sh_cart_total_weight_lbl">Total Weight :</span>
+								<t t-set="total_weight" t-value="total_weight()" />
+								<span class="sh_cart_total_weight_val"><t t-esc='total_weight' /></span>
+							</div>
+						</t>
+					</div>
+				</div>
+			</t>
+		</xpath>
+	</t>
+</templates>

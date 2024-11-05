@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sh_multiples_product_quantity" model="ir.ui.view">
+        <field name="name">sh.multiples.product.qty.detail</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"></field>
+        <field name="arch" type="xml">
+            <field name="categ_id" position="after">
+                <field name="sh_multiples_of_qty"/>
+            </field>
+        </field>
+    </record>
+</odoo>

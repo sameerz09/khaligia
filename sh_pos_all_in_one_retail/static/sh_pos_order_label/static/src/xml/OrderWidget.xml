@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="template" xml:space="preserve">
+    <t t-name="OrderWidget" t-inherit="point_of_sale.OrderWidget" t-inherit-mode="extension" owl="1">
+        <xpath expr="//ul[hasclass('orderlines')]" position="replace">
+            <ul class="orderlines">
+                <t t-foreach="orderlinesArray" t-as="orderline" t-key="orderline.id">
+                    <t t-if="orderline.product.sh_order_label_demo_product">
+                        <li t-att-data-label_id="orderline.get_orderline_label()" class=" orderline label_item">
+                            <h6 class="line_label">
+                                <t t-if='orderline and orderline.get_orderline_label()'>
+                                    <span>
+                                        <t t-esc="orderline.get_orderline_label()" />
+                                    </span>
+                                </t>
+                                <t t-else=''></t>
+                            </h6>
+                            <span t-on-click='remove_label' class="remove_label">
+                                <i class="fa fa-fw fa-trash-o" />
+                            </span>
+                        </li>
+                    </t>
+                    <t t-else=''>
+                        <Orderline line="orderline" />
+                    </t>
+                </t>
+            </ul>
+        </xpath>
+    </t>
+</templates>

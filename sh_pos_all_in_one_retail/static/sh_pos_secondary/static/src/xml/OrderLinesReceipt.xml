@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="Orderline" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-esc='props.line.get_unit().name'][2]" position="replace">
+            <t t-if="props.line.get_current_uom() and props.line.get_current_uom().name">
+                <span>
+                    <t t-esc="props.line.get_current_uom().name" />
+                    <span> </span>
+                </span>
+            </t>
+            <t t-else="">
+                <span>
+                    <t t-esc="props.line.get_unit().name" />
+                </span>
+            </t>
+        </xpath>
+        <xpath expr="//t[@t-esc='props.line.get_unit().name']" position="replace">
+            <t t-if="props.line.get_current_uom() and props.line.get_current_uom().name">
+                <span>
+                    <t t-esc="props.line.get_current_uom().name"/>
+                    <span> </span>
+                </span>
+            </t>
+            <t t-else="">
+                <span>
+                    <t t-esc="props.line.get_unit().name" />
+                </span>
+            </t>
+        </xpath>
+    </t>
+
+</templates>

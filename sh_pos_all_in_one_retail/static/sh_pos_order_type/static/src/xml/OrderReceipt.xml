@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="template" xml:space="preserve">
+    <t t-name="OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('pos-receipt-contact')]" position="inside">
+            <div >
+                <t t-if="env.pos.config.enable_order_type &amp;&amp; env.pos.current_order_type">
+                    <span>
+                        Order Type:
+                        <t t-esc="env.pos.current_order_type.name"/>
+                    </span>
+                </t>
+            </div>
+        </xpath>
+    </t>
+</templates>

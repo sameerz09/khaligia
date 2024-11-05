@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="LineNoteButton" owl="1">
+        <div class="control-button" t-on-click="() => this.trigger('click-line-note')">
+            <a class="btn btn-primary" >
+                <span class="fa fa-file-text-o"></span>
+                Line Note
+            </a>
+        </div>
+    </t>
+
+    <t t-name="GlobalNoteButton" owl="1">
+        <div class="control-button" t-on-click="() => this.trigger('click-global-note')">
+            <a class="btn btn-primary" >
+                <span class="fa fa-file-text"></span>
+                <span>Global Note</span>
+            </a>
+        </div>
+    </t>
+
+    <t t-name="AllNoteButton" owl="1">
+        <div class="control-button" t-on-click="() => this.trigger('click-all-note-list')">
+            <a class="btn btn-primary" >
+                <span class="fa fa-pencil-square-o" />
+                <span>Note Screen</span>
+            </a>
+        </div>
+    </t>
+</templates>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <!-- <t t-name="OrderLinesReceipt" t-inherit="point_of_sale.OrderLinesReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-foreach='receipt.orderlines']" position="inside">
+            <t t-if="line.line_discount">
+                <div class="discount_receipt">
+                    <t t-foreach="line.line_discount" t-as="each_discount" t-key="each_discount">
+                        <t t-esc="each_discount" />
+                        ,
+                    </t>
+                </div>
+            </t>
+        </xpath>
+    </t> -->
+    <!-- Line Discount Added in replace -->
+</templates>

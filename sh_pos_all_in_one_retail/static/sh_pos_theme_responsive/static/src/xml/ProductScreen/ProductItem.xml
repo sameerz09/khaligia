@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+	<t t-name="ProductItem" t-inherit="point_of_sale.ProductItem" t-inherit-mode="extension" owl="1">
+		<xpath expr="//span[@class='price-tag']" position="attributes">
+			<attribute name="t-att-style"> env.pos.config.sh_pos_enable_product_variants and props.product.product_variant_count > 1 ? 'display: none;' : 'display: block;' </attribute>
+		</xpath>
+
+		<xpath expr="//span[@class='price-tag']" position="after">
+			<t t-if=" env.pos.config.sh_pos_enable_product_variants and 	props.product.product_variant_count > 1">
+				<span class="price-tag sh_has_variant"> <t t-esc="props.product.product_variant_count"></t> variants </span>
+			</t>
+		</xpath>
+		<xpath expr="//span[@class='price-tag']" position="after">
+			<t t-if="env.isMobile &amp;&amp; env.pos.config.sh_pos_enable_product_variants &amp;&amp; env.pos.db.has_variant(props.product.product_tmpl_id)">
+				<t t-set="all_tmpl_qty" t-value="get_all_tmpl_qty()"/>
+				<span t-if="all_tmpl_qty" class="counter-tag" title="Cart Quantity">
+					<t t-esc="all_tmpl_qty"/>
+				</span>
+			</t>
+			<t t-else="">
+				<span t-if="env.isMobile &amp;&amp; order.product_with_qty &amp;&amp; order.product_with_qty[props.product.id]" class="counter-tag" title="Cart Quantity">
+					<t t-esc="order.product_with_qty[props.product.id]"/>
+				</span>
+			</t>
+		</xpath>
+	</t>
+</templates>

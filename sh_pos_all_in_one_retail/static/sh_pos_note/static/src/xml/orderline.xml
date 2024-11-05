@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <!-- <t t-name="Orderline" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension" owl="1">
+        <xpath expr="//ul[hasclass('info-list')]" position="after">
+            <t t-if="props.line.get_line_note()">
+                <span class="info">
+                <li class="info sh_note_info">
+                    <span class="sh_note_lbl">NOTE : </span>
+                    <span class="note">
+                        <t t-esc="props.line.get_line_note()" />
+                    </span>
+                </span>
+            </t>
+        </xpath>
+    </t> -->
+
+<!-- <t t-name="OrderSummary" t-inherit="point_of_sale.OrderSummary" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('line')]" position="after">
+            <t t-if="env.pos.get_order().get_global_note()">
+                <div class="order_note_div">
+                    <hr class="hr_line" />
+                    <div class="order_note_cart_div">Note :</div>
+                    <div class="note_cart_div"><t t-esc="env.pos.get_order().get_global_note()" /></div>
+                </div>
+            </t>
+        </xpath>
+    </t> -->
+</templates>

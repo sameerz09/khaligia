@@ -1,0 +1,18 @@
+.pos .orderlines .span_delete_icon {margin-left: 12px !important;cursor: pointer;}
+.pos .orderlines .span_delete_icon:hover{color: $sh_pos_primary_color;}
+.pos .order .orderline.sh_pos_orderline .sh_price_with_icon .price {float: unset !important;}
+.pos .sh_price_with_icon {display: inline-flex;width: 35%;text-align: right;justify-content: flex-end;}
+.pos .order .orderline.sh_pos_orderline .product-name {width: 65% !important;}
+@media only screen and (max-width: 576px) and (min-width: 361px) {
+    .pos .sh_price_with_icon {width: 40% !important;}
+    .pos .order .orderline.sh_pos_orderline .product-name {width: 60% !important;}
+}
+@media only screen and (max-width: 360px) {
+    .pos .sh_price_with_icon {width: 50% !important;}
+    .pos .order .orderline.sh_pos_orderline .product-name {width: 50% !important;}
+}
+@media only screen and (max-width: 767.98px){
+    .pos .order .orderline.sh_pos_orderline{font-size: 15px;}
+}
+.pos .order .orderline.sh_pos_orderline .info-list{margin-left: 0px;}
+

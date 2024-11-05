@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="DiscountPopupWidget" owl="1">
+        <div role="dialog" class="modal-dialog sh_modal_discount">
+            <div class="popup popup-text popup-lg product-configurator-popup sh_discount_popup">
+                <header class="title">
+                    Discounts
+                </header>
+                <div class="main-body touch-scrollable scrollable-y note_body sh_discount_main_table">
+                    <table width="100%" class="discount_table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Code</th>
+                                <th>Value (%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="env.pos.db.all_discount" t-as="each_discount" t-key="each_discount.id">
+                                <t
+                                    t-if="env.pos.get_order().get_selected_orderline() and env.pos.get_order().get_selected_orderline().get_line_discount_code() and env.pos.get_order().get_selected_orderline().get_line_discount_code().length > 0"
+                                >
+                                    <t t-if="env.pos.get_order().get_selected_orderline().get_line_discount_code().includes(each_discount.sh_discount_code)">
+                                        <tr t-att-data-id="each_discount.id" t-att-data-code="each_discount.sh_discount_code" t-att-data-value="each_discount.sh_discount_value" class="discount_row highlight" t-on-click="onClickDiscountRow">
+                                            <td>
+                                                <t t-esc="each_discount.sh_discount_name" />
+                                            </td>
+                                            <td>
+                                                <t t-esc="each_discount.sh_discount_code" />
+                                            </td>
+                                            <td>
+                                                <t t-esc="each_discount.sh_discount_value" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                    <t t-else="">
+                                        <tr t-att-data-id="each_discount.id" t-att-data-code="each_discount.sh_discount_code" t-att-data-value="each_discount.sh_discount_value" class="discount_row" t-on-click="onClickDiscountRow">
+                                            <td>
+                                                <t t-esc="each_discount.sh_discount_name" />
+                                            </td>
+                                            <td>
+                                                <t t-esc="each_discount.sh_discount_code" />
+                                            </td>
+                                            <td>
+                                                <t t-esc="each_discount.sh_discount_value" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </t>
+                                <t t-else="">
+                                    <tr t-att-data-id="each_discount.id" t-att-data-code="each_discount.sh_discount_code" t-att-data-value="each_discount.sh_discount_value" class="discount_row" t-on-click="onClickDiscountRow">
+                                        <td>
+                                            <t t-esc="each_discount.sh_discount_name" />
+                                        </td>
+                                        <td>
+                                            <t t-esc="each_discount.sh_discount_code" />
+                                        </td>
+                                        <td>
+                                            <t t-esc="each_discount.sh_discount_value" />
+                                        </td>
+                                    </tr>
+                                </t>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+                <footer class="footer sh_discount_footer">
+                    <div class="button confirm highlight" t-on-click="confirm">
+                        Confirm
+                    </div>
+                    <div class="button cancel" t-on-click="cancel">
+                        Cancel
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </t>
+</templates>

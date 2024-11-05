@@ -1,0 +1,34 @@
+.hide_cart_screen_show {display: none !important;}
+.hide_product_screen_show {display: none !important;}
+.pos .leftpane .pads .subpads {display: block !important;}
+.actionpad {display: flex !important;}
+.numpad {width: 100%;}
+@media only screen and (min-width: 768px){
+	.pos .actionpad .button.pay {height: 54px !important;}
+}
+.pos .actionpad .button .fa.fa-chevron-right {position: absolute !important;left: 13px !important;top: 13px !important;margin-right: 8px;font-size: 18px;background: rgb(86, 86, 86);line-height: 30px;width: 30px;border-radius: 100%;}	
+.pay-circle {background: none !important;}
+.toggle .slide_toggle_button .fa.fa-arrow-circle-o-down {font-size: 18px;background: rgba(255, 255, 255, 0.5);line-height: 30px;width: 30px;border-radius: 100%;}
+.pos .payment-numpad .numpad {width: 371px !important;margin: 0px auto;}
+.hide_send_mail {display: none !important;}
+.sh_receipt_actions {background: #e6e6e6;}
+.actions.sh_receipt_actions {margin: 73px 1.5rem !important;}
+.sh_receipt_top_content {border-bottom: unset !important;}
+.sh_payment_customer_button, .sh_payment_controls {width: 147px;height: 56px;float: left;font-weight: bold;color: #555555;border-radius: 0;border-right: 1px solid;border-bottom: 1px solid;border-color: #bfbfbf;transition: all 150ms linear;background: #e2e2e2;font-size: 17px;}
+.sh_payment_customer_click_button, .sh_payment_invoice_click_button {width: 147px;height: 56px;}
+.sh_product_numpad {width: 100% !important;display: inline-block;}
+.sh_product_numpad button {width: 62.5px;}
+.sh_left_control_buttons {width: 115px;}
+.sh_client_pos_content {top: 0px !important;}
+.clientlist-screen.screen .top-content {justify-content: flex-end;}
+.cart_icon {float: right;padding: 14px;color: #5eb937;font-size: 20px;}
+
+.pos .rightpane .rightpane-header {
+	flex-direction: row !important;
+	padding: 10px 0px 10px 10px !important;
+}
+.pos .rightpane .search-bar-container.sb-product {
+	padding: 0px 10px !important;
+	background-color: #fff !important;
+	order: 2 !important;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ProductIconButton" owl="1">
+        <div class="oe_status sh_cart_management hide_product_screen_show" t-on-click="onClick">
+            <div class="oe_icon oe_green">
+                <i class="fa fa-cube product_screen_show" aria-hidden="true"></i>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="CartIconButton" owl="1">
+        <div class="oe_status sh_product_management hide_cart_screen_show" t-on-click="onClick">
+            <div t-att-badge="cart_item_count" class="oe_icon oe_green with-badge sh_cart_badge">
+                <i class="fa fa-shopping-cart cart_screen_show" aria-hidden="true"></i>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="Chrome" t-inherit="point_of_sale.Chrome" t-inherit-mode="extension" owl="1">
+        <xpath expr="//img[hasclass('pos-logo')]" position="replace">
+            <t t-if="env and env.pos">
+                <t t-if="env.pos.pos_theme_settings_data and env.pos.pos_theme_settings_data[0] and env.pos.pos_theme_settings_data[0].theme_logo">
+                    <img t-if="!env.isMobile" t-att-src="'/web/image?model=sh.pos.theme.settings&amp;field=theme_logo&amp;id='+ env.pos.pos_theme_settings_data[0].id" alt="Logo" class="pos-logo" t-on-click="() => this.trigger('toggle-debug-widget')" />
+                </t>
+                <t t-else="">
+                    <img t-if="!env.isMobile" class="pos-logo" t-on-click="() => this.trigger('toggle-debug-widget')" src="/point_of_sale/static/src/img/logo.png" alt="Logo" />
+                </t>
+            </t>
+            <t t-else="">
+                <img t-if="!env.isMobile" class="pos-logo" t-on-click="() => this.trigger('toggle-debug-widget')" src="/point_of_sale/static/src/img/logo.png" alt="Logo" />
+            </t>
+        </xpath>
+        <xpath expr="//div[hasclass('pos-rightheader')]" position="inside">
+            <CartIconButton t-if="env.isMobile" />
+            <ProductIconButton t-if="env.isMobile" />
+        </xpath>
+    </t>
+</templates>

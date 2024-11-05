@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id='sh_pos_z_report_res_users_views' model='ir.ui.view'>
+        <field name='name'>sh.pos.z.report.res.users</field>
+        <field name='model'>res.users</field>
+        <field name='inherit_id' ref='base.view_users_form' />
+        <field type='xml' name='arch'>
+            <xpath expr="//field[@name='sh_is_direct_logout']" position="after">
+                <field name="sh_is_allow_z_report"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

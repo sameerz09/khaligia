@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_pos_linr_pricelist_res_config_settings_" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.sh_pos_create_so</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <div id="pos_pricing_section" position="inside">
+                <div  id="sh_default_pricelist_setting"  class="col-12 col-lg-6 o_setting_box price_control" groups="base.group_multi_currency,product.group_product_pricelist">
+                    <div class="o_setting_left_pane"></div>
+                    <div class="o_setting_right_pane">
+                        <div>
+                            <label for="pos_sh_pricelist_for_code"/>
+                            <field name="pos_sh_pricelist_for_code" widget="many2many_tag" />
+                        </div>
+                        <div>
+                            <label for="pos_sh_min_pricelist_value" />
+                            <field name="pos_sh_min_pricelist_value" widget="many2many_tag" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+</odoo>

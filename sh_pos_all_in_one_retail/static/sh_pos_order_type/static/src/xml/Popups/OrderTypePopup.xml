@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<template id="template" xml:space="preserve">
+    <t t-name="OrderTypePopup" owl="1">
+        <div class="popup popup-textarea sh_order_type_popup">
+            <header class="title drag-handle">
+                Order Type
+            </header>
+            <main class="popup-textarea-wrap body">
+                <t t-if="env.pos.order_types">
+                    <div class="sh_order_type_div">
+                        <table class="sh_order_type_table">
+                            <tbody>
+                                <t t-foreach="env.pos.order_types" t-as="type" t-key="type.id">
+                                    <t t-if="env.pos.current_order_type &amp;&amp; type.id == env.pos.current_order_type.id">
+                                        <tr class="sh_order_type_tr selectedorder" t-att-data-id="type.id" t-on-click="() => this.onClickOrderType(type.id)">
+                                            <td width="33%">
+                                                <img t-att-src="getImg(type.id)" alt="" class=""/>
+                                            </td>
+                                            <td>
+                                                <span>
+                                                    <t t-esc="type.name"/>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr t-if='displayWarning'>
+                                            <td colspan="3">
+                                                <div class="sh-alert sh-alert-warning">On click of Apply button we will redirect to Customer screen for selection of delivery address as you have selected Home Delivery Option !</div>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                    <t t-else="">
+                                        <tr class="sh_order_type_tr" t-att-data-id="type.id" t-on-click="() => this.onClickOrderType(type.id)">
+                                            <td width="33%">
+                                                <img t-att-src="getImg(type.id)" alt="" class=""/>
+                                            </td>
+                                            <td>
+                                                <span>
+                                                    <t t-esc="type.name"/>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+
+            </main>
+            <footer class="footer">
+                <div class="button confirm highlight" t-on-click="applyChanges">
+                Apply
+                </div>
+                <div class="button cancel" t-on-click="close">
+                Cancel
+                </div>
+            </footer>
+        </div>
+    </t>
+</template>

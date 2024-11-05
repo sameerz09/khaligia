@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="CashInOutStatementButton" owl="1">
+        <div class="control-button">
+            <a class="btn btn-primary sh_cash_in_out_control_btn">
+                <i class="fa fa-print" aria-hidden="true"></i>
+                Cash In / Out Statement
+            </a>
+        </div>
+    </t>
+</templates>

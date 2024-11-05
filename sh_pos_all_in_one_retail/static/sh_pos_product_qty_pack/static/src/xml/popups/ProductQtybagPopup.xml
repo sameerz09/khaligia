@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="ProductQtybagPopup" owl="1">
+        <div class="popup popup-alert product_custom_qty sh_product_custom_qty_popup">
+            <header class="title">
+                <t t-esc="props.title" />
+            </header>
+            <div class="main-body body">
+                <t t-if="props.qty_val">
+                    <input type="text" name="add_qty" class="add_qty" t-att-value="props.qty_val" />
+                </t>
+                <t t-else="">
+                    <input type="text" name="add_qty" class="add_qty" placeholder="Enter Bag" />
+                </t>
+            </div>
+            <footer class="footer">
+                <div class="button confirm highlight" t-on-click="confirm">
+                    Confirm
+                </div>
+                <div class="button cancel" t-on-click="cancel">
+                    Cancel
+                </div>
+            </footer>
+        </div>
+    </t>
+</templates>

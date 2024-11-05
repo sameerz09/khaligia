@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_pos_order_inherit_form_view" model="ir.ui.view">
+        <field name="name">pos.order.inherit.form.view</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="sh_cancel" string="Cancel" type="object" groups="sh_pos_all_in_one_retail.group_sh_pos_cancel" attrs="{'invisible':[('state','=','cancel')]}"></button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

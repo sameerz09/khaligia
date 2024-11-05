@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="ReceiptScreen" t-inherit="point_of_sale.ReceiptScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('next')]" position="replace">
+            <t t-if="env.pos.cash_in_out_receipt or env.pos.cash_in_out_statement_receipt">
+                <div class="button next validation" t-att-class="{ highlight: !locked }" t-on-click="receiptDone">
+                    <div class="pay-circle">
+                        <!-- <i class="fa fa-chevron-right" role="img" aria-label="Pay" title="Pay" /> -->
+                        <i class="fa fa-times" role="img" aria-label="close" title="Close" ></i>
+                    </div>
+                    Close
+                </div>
+            </t>
+            <t t-elif="env.pos.is_z_report_receipt">
+                <div class="button next validation" t-att-class="{ highlight: !locked }"
+                    t-on-click="orderDone">
+                    <div class="pay-circle">
+                        <i class="fa fa-chevron-right" role="img" aria-label="Pay" title="Pay" />
+                    </div>
+                    Close
+                </div>
+            </t>
+            <t t-else="">
+                <div class="button next validation" t-att-class="{ highlight: !locked }" t-on-click="orderDone">
+                    <div class="pay-circle">
+                        <i class="fa fa-chevron-right" role="img" aria-label="Pay" title="Pay" />
+                    </div>
+                    New Order
+                </div>
+            </t>
+        </xpath>
+        <xpath expr="//div[hasclass('pos-receipt-container')]" position="replace">
+            <div class="pos-receipt-container"  t-ref="order-receipt">
+                <t t-if="env.pos.cash_in_out_statement_receipt">
+                    <CashInOutStatementReceipt order="currentOrder" />
+                </t>
+                <t t-elif="env.pos.is_z_report_receipt">
+                    <PosZReceipt order="currentOrder" />
+                </t>
+                <t t-else="">
+                    <OrderReceipt order="currentOrder"/>
+                </t>
+            </div>
+        </xpath>
+        <xpath expr="//div[hasclass('top-content-center')]" position="replace">
+            <div class="top-content-center">
+                <t t-if="!env.pos.cash_in_out_receipt and !env.pos.cash_in_out_statement_receipt">
+                    <h1 t-if="!env.isMobile">
+                        <t t-esc="orderAmountPlusTip" />
+                    </h1>
+                </t>
+            </div>
+        </xpath>
+    </t>
+    
+</templates>

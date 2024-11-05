@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <!-- <t t-name="OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('orderlines')]//t" position="before">
+            <t t-if="env.pos.config.sh_return_print_receipt">
+                <t t-if="env.pos.get_order().get_is_return_order()">
+                    <div class="sh_receipt_return">
+                        Return Order
+                    </div>
+                </t>
+            </t>
+            <t t-if="env.pos.config.sh_exchange_print_receipt">
+                <t t-if="env.pos.get_order().get_is_exchange_order()">
+                    <div class="sh_receipt_return">
+                        Exchange Order
+                    </div>
+                </t>
+            </t>
+        </xpath>
+    </t> -->
+</templates>

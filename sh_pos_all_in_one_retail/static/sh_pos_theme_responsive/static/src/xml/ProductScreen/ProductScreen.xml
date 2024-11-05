@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+	<t t-name="ProductScreen" t-inherit="point_of_sale.ProductScreen" t-inherit-mode="extension" owl="1">
+		<xpath expr="//div[hasclass('screen-full-width')]" position="replace">
+			<!-- <div class="product-screen screen" t-att-class="{ oe_hidden: !props.isShown }"> -->
+				<div class="screen-full-width">
+					<t t-if="controlButtons and controlButtons.length != 0">
+						<t t-if="!env.isMobile and env.pos.pos_theme_settings_data and env.pos.pos_theme_settings_data.length > 0 and env.pos.pos_theme_settings_data[0] and env.pos.pos_theme_settings_data[0].sh_action_button_position and env.pos.pos_theme_settings_data[0].sh_action_button_position == 'left_side'">
+							<div class="control-buttons sh_left_control_buttons">
+								<t t-foreach="controlButtons" t-as="cb" t-key="cb.name">
+									<t t-if="cb.name and (cb.name != 'RemoveDiscountButton' and cb.name != 'RemoveAllItemButton')">
+										<t t-component="cb.component" t-key="cb.name" />
+									</t>
+								</t>
+							</div>
+						</t>
+					</t>
+					<t t-if="env.pos.pos_theme_settings_data and env.pos.pos_theme_settings_data.length > 0 and env.pos.pos_theme_settings_data[0] and env.pos.pos_theme_settings_data[0].sh_cart_position and env.pos.pos_theme_settings_data[0].sh_cart_position == 'left_side'">
+						<div class="leftpane">
+							<t t-if="state.cashControl">
+								<CashBoxOpening cashControl="state"/>
+							</t>
+							<t t-else="">
+								<OrderWidget/>
+								<div class="pads">
+									<t t-if="env.isMobile">
+										<div class="control-buttons">
+											<t t-foreach="controlButtons" t-as="cb" t-key="cb.name">
+												<t t-if="cb.name and (cb.name != 'RemoveDiscountButton' and cb.name != 'RemoveAllItemButton')">
+													<t t-component="cb.component" t-key="cb.name" />
+												</t>
+											</t>
+										</div>
+									</t>
+									<div class="subpads">
+
+										<NumpadWidget activeMode="env.pos.numpadMode" />
+										<ActionpadWidget partner="partner" actionName="constructor.numpadActionName" onSwitchPane.bind="switchPane"/>
+									</div>
+								</div>
+								<t t-if="env.isMobile">
+									<MobileOrderWidget t-if="env.isMobile" pane="state.mobile_pane" onSwitchPane.bind="switchPane"/>
+								</t>
+							</t>
+						</div>
+						<div class="rightpane">
+							<ProductsWidget mobileSearchBarIsShown="props.mobileSearchBarIsShown"/>
+							<t t-if="env.isMobile">
+								<MobileOrderWidget t-if="env.isMobile" pane="state.mobile_pane" onSwitchPane.bind="switchPane"/>
+							</t>
+						</div>
+
+						<!-- 12-02-2021 -->
+						<t t-if="controlButtons and controlButtons.length != 0">
+							<t t-if="!env.isMobile and env.pos.pos_theme_settings_data and env.pos.pos_theme_settings_data.length > 0 and env.pos.pos_theme_settings_data[0] and env.pos.pos_theme_settings_data[0].sh_action_button_position and env.pos.pos_theme_settings_data[0].sh_action_button_position == 'right_side'">
+								<div class="control-buttons sh_left_control_buttons">
+									<t t-foreach="controlButtons" t-as="cb" t-key="cb.name">
+										<t t-if="cb.name and (cb.name != 'RemoveDiscountButton' and cb.name != 'RemoveAllItemButton')">
+											<t t-component="cb.component" t-key="cb.name" />
+										</t>
+									</t>
+								</div>
+							</t>
+						</t>
+						<!-- 12-02-2021 finish-->
+						<div t-if="env.isMobile and mobile_pane === 'both'">
+
+							<div class="leftpane">
+								<t t-if="state.cashControl">
+									<CashBoxOpening cashControl="state"/>
+								</t>
+								<t t-else="">
+									<OrderWidget/>
+									<div class="pads">
+										<t t-if="env.isMobile">
+											<div class="control-buttons">
+												<t t-foreach="controlButtons" t-as="cb" t-key="cb.name">
+													<t t-if="cb.name and (cb.name != 'RemoveDiscountButton' and cb.name != 'RemoveAllItemButton')">
+														<t t-component="cb.component" t-key="cb.name" />
+													</t>
+												</t>
+											</div>
+										</t>
+										<div class="subpads">
+
+											<NumpadWidget activeMode="env.pos.numpadMode" />
+											<ActionpadWidget partner="partner" actionName="constructor.numpadActionName" onSwitchPane.bind="switchPane"/>
+										</div>
+									</div>
+									<t t-if="env.isMobile">
+										<MobileOrderWidget t-if="env.isMobile" pane="state.mobile_pane" onSwitchPane.bind="switchPane"/>
+									</t>
+								</t>
+							</div>
+							<div class="rightpane">
+								<ProductsWidget mobileSearchBarIsShown="props.mobileSearchBarIsShown"/>
+								<t t-if="env.isMobile">
+									<MobileOrderWidget t-if="env.isMobile" pane="state.mobile_pane" onSwitchPane.bind="switchPane"/>
+								</t>
+							</div>
+						</div>
+					</t>
+
+					<t t-if="env.pos.pos_theme_settings_data and env.pos.pos_theme_settings_data.length > 0 and env.pos.pos_theme_settings_data[0] and env.pos.pos_theme_settings_data[0].sh_cart_position and env.pos.pos_theme_settings_data[0].sh_cart_position == 'right_side'">
+						<t t-if="!env.isMobile">
+							<div class="rightpane">
+								<ProductsWidget mobileSearchBarIsShown="props.mobileSearchBarIsShown"/>
+								<t t-if="env.isMobile">
+									<MobileOrderWidget t-if="env.isMobile" pane="state.mobile_pane" onSwitchPane.bind="switchPane"/>
+								</t>
+							</div>
+						</t>
+
+						<div class="leftpane">
+							<t t-if="state.cashControl">
+								<CashBoxOpening cashControl="state"/>
+							</t>
+							<t t-else="">
+								<OrderWidget/>
+								<div class="pads">
+
+									<t t-if="env.isMobile">
+										<div class="control-buttons">
+											<t t-foreach="controlButtons" t-as="cb" t-key="cb.name">
+												<t t-if="cb.name and (cb.name != 'RemoveDiscountButton' and cb.name != 'RemoveAllItemButton')">
+													<t t-component="cb.component" t-key="cb.name" />
+												</t>
+											</t>
+										</div>
+									</t>
+
+
+									<div class="subpads">
+
+										<NumpadWidget activeMode="env.pos.numpadMode" />
+										<ActionpadWidget partner="partner" actionName="constructor.numpadActionName" onSwitchPane.bind="switchPane"/>
+									</div>
+								</div>
+								<t t-if="env.isMobile">
+									<MobileOrderWidget t-if="env.isMobile" pane="state.mobile_pane" onSwitchPane.bind="switchPane"/>
+								</t>
+							</t>
+						</div>
+						<!-- 12-02-2021 -->
+						<t t-if="controlButtons and controlButtons.length != 0">
+							<t t-if="!env.isMobile and env.pos.pos_theme_settings_data and env.pos.pos_theme_settings_data.length > 0 and env.pos.pos_theme_settings_data[0] and env.pos.pos_theme_settings_data[0].sh_action_button_position and env.pos.pos_theme_settings_data[0].sh_action_button_position == 'right_side'">
+								<div class="control-buttons sh_left_control_buttons">
+									<t t-foreach="controlButtons" t-as="cb" t-key="cb.name">
+										<t t-if="cb.name and (cb.name != 'RemoveDiscountButton' and cb.name != 'RemoveAllItemButton')">
+											<t t-component="cb.component" t-key="cb.name" />
+										</t>
+									</t>
+								</div>
+							</t>
+						</t>
+						<!-- 12-02-2021 finish-->
+						<t t-if="env.isMobile">
+							<div class="rightpane">
+								<ProductsWidget mobileSearchBarIsShown="props.mobileSearchBarIsShown"/>
+								<t t-if="env.isMobile">
+									<MobileOrderWidget t-if="env.isMobile" pane="state.mobile_pane" onSwitchPane.bind="switchPane"/>
+								</t>
+							</div>
+						</t>
+					</t>
+				</div>
+				<t t-if="controlButtons and controlButtons.length != 0">
+					<t t-if="!env.isMobile and env.pos.pos_theme_settings_data and env.pos.pos_theme_settings_data.length > 0 and env.pos.pos_theme_settings_data[0] and env.pos.pos_theme_settings_data[0].sh_action_button_position and env.pos.pos_theme_settings_data[0].sh_action_button_position == 'bottom'">
+
+						<div id="owl-demo" class="owl-carousel owl-theme">
+							<t t-foreach="controlButtons" t-as="cb" t-key="cb.name">
+								<t t-if="cb.name and (cb.name != 'RemoveDiscountButton' and cb.name != 'RemoveAllItemButton')">
+									<div class="item">
+										<t t-component="cb.component" t-key="cb.name" />
+									</div>
+								</t>
+							</t>
+						</div>
+					</t>
+				</t>
+			<!-- </div> -->
+		</xpath>
+		<!-- <xpath expr="//div[hasclass('product-screen')]" position="inside">
+            <t t-portal="'.pos .back-to-floor-portal'" position="before">
+                <BackToFloorButton mobileSearchBarIsShown="props.mobileSearchBarIsShown"/>
+            </t>
+        </xpath> -->
+	</t>
+</templates>

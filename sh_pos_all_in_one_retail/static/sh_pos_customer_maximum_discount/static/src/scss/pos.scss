@@ -1,0 +1,22 @@
+
+/* odoo 16 */ 
+/* partner screen custom checkbox design */ 
+.pos .pos-content .partnerlist-screen.screen .partner-details .sh_custom {position: relative;padding-left: 30px;margin-bottom: 15px;cursor: pointer;font-size: 18px;}
+.pos .pos-content .partnerlist-screen.screen .partner-details .sh_custom input {position: absolute;z-index: -1;opacity: 0;margin: 0px !important;padding: 0px !important;width: 0px !important;}
+.pos .pos-content .partnerlist-screen.screen .partner-details .sh_custom .sh_custom_control_indicator {position: absolute;top: 0px;left: 0;height: 20px;width: 20px;background: #FFFFFF;border: 1px solid #cecbcb;}
+.pos .pos-content .partnerlist-screen.screen .partner-details .sh_custom input:checked ~ .sh_custom_control_indicator {background: $sh_pos_primary_color;border: 1px solid $sh_pos_primary_color;}
+.pos .pos-content .partnerlist-screen.screen .partner-details .sh_custom .sh_custom_control_indicator:after {content: '';position: absolute;display: none;}
+.pos .pos-content .partnerlist-screen.screen .partner-details .sh_custom_control_checkbox .sh_custom_control_indicator:after {left: 7px;top: 2px;width: 4px;height: 10px;border: solid #fff;border-width: 0 2px 2px 0;transform: rotate(45deg);}
+.pos .pos-content .partnerlist-screen.screen .partner-details .sh_custom input:checked ~ .sh_custom_control_indicator:after {display: block;}
+
+
+@media only screen and (max-width: 768px){
+    .pos .pos-content .partnerlist-screen.screen .partner-details .sh_custom{margin-bottom: 25px;}
+    .pos .pos-content .partnerlist-screen.screen .partner-details .sh_set_max_field_partner_details{flex-direction: row;align-items: center;}
+    .pos .pos-content .partnerlist-screen.screen .partner-details .sh_set_max_field_partner_details span.label{width: 100%;}
+    .pos .pos-content .partnerlist-screen.screen .partner-details .sh_set_max_field_partner_details .sh_custom.sh_custom_control_checkbox{width: 5%;}
+    .pos .pos-content .partnerlist-screen.screen .partner-details .sh_custom .sh_custom_control_indicator{top: 4px;}
+}
+@media only screen and (max-width: 767.98px){
+    .pos .pos-content .partnerlist-screen.screen .partner-details .sh_set_max_field_partner_details{margin-bottom: 12px;}
+}
