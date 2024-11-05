@@ -66,7 +66,7 @@ class ImportWizard(models.TransientModel):
             (file_name, ext) = os.path.splitext(doc_name)
 
             if self.select == 'product':
-                record = self.env['product.product'].search([('image_reference', '=', file_name)])
+                record = self.env['product.product'].search([('default_code', '=', file_name)])
                 try:
                     with open(ext_file, "rb") as image_file:
                         f = base64.b64encode(image_file.read())
