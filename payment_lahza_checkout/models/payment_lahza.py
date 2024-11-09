@@ -80,18 +80,52 @@ class PaymentTransaction(models.Model):
         return tx
 
 
+    # def _process_notification_data(self, data):
+    #     super()._process_notification_data(data)
+    #     if self.provider_code != 'lahza':
+    #         return
+    #     tx = self.env['payment.transaction'].sudo().search([('reference', '=', data.pop('txn_ref'))])
+    #     response = self.getVerifyPayment(data)
+    #     if response.get("data").get("status") == "success":
+    #         hash = response.get("data").get('authorization').get('last4')+"/"+response.get("data").get('authorization').get('authorization_code')
+    #         data["callback_hash"] = hash
+    #         tx.write(data)
+    #         tx._set_done()
+    #     else:
+    #         tx._set_canceled()
+
     def _process_notification_data(self, data):
+        # Call the super method to ensure any parent class logic is executed
         super()._process_notification_data(data)
+
+        # Check if provider is 'lahza', if not, return immediately
         if self.provider_code != 'lahza':
             return
+
+        # Search for the transaction based on the reference
         tx = self.env['payment.transaction'].sudo().search([('reference', '=', data.pop('txn_ref'))])
+
+        # Call the verification method and store the response
         response = self.getVerifyPayment(data)
-        if response.get("data").get("status") == "success":
-            hash = response.get("data").get('authorization').get('last4')+"/"+response.get("data").get('authorization').get('authorization_code')
-            data["callback_hash"] = hash
+
+        # Check if response is valid and contains the expected structure
+        if response and response.get("data") and response["data"].get("status") == "success":
+            # Extract hash and authorization code safely
+            authorization = response["data"].get("authorization")
+            if authorization:
+                last4 = authorization.get('last4', 'N/A')
+                auth_code = authorization.get('authorization_code', 'N/A')
+                hash = f"{last4}/{auth_code}"
+                data["callback_hash"] = hash
+            else:
+                _logger.warning("Authorization data missing in response: %s", response)
+
+            # Write the callback hash and set the transaction to done
             tx.write(data)
             tx._set_done()
         else:
+            # If the response indicates failure or data is missing, set transaction as canceled
+            _logger.warning("Failed or incomplete response from Lahza: %s", response)
             tx._set_canceled()
 
 
