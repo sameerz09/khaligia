@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2016-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- "License URL : <https://store.webkul.com/license.html/>" -->
+<odoo>
+    <data>
+        <record id="provider_form_lahza" model="ir.ui.view">
+            <field name="name">provider.form.lahza</field>
+            <field name="model">payment.provider</field>
+            <field name="inherit_id" ref="payment.payment_provider_form"/>
+            <field name="arch" type="xml">
+                <group name='provider_credentials' position='inside'>
+                    <group attrs="{'invisible': [('code', '!=', 'lahza')]}">
+                        <field name="lahza_secret_key"/>
+                    </group>
+                </group>
+            </field>
+        </record>
+    </data>
+</odoo>

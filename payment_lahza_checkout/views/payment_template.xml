@@ -1,0 +1,9 @@
+
+<odoo>
+    <template id="lahza_redirect_form">
+        <form t-att-action="tx_url">
+            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+            <input type="hidden" name="data_set" t-att-data-action-url="tx_url" data-remove-me=""/>
+        </form>
+    </template>
+</odoo>

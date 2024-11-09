@@ -1,0 +1,20 @@
+<odoo>
+    <data noupdate="1">
+        <record id="lahza_payment_provider_form_id" model="payment.provider">
+            <field name="name">Lahza</field>
+            <field name="code">lahza</field>
+            <field name="allow_tokenization" >True</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="redirect_form_view_id" ref="lahza_redirect_form"/>
+            <field name="module_id" ref="base.module_payment_lahza_checkout"/>
+            <field name="state">disabled</field>
+            <field name="lahza_secret_key">sk_test_UkqerSTELjYhf6GNe6lB</field>
+        </record>
+        
+        <record id="lahza_checkout_method" model="account.payment.method">
+            <field name="name">Lahza</field>
+            <field name="code">lahza</field>
+            <field name="payment_type">inbound</field>
+        </record>
+    </data>
+</odoo>
