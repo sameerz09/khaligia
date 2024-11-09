@@ -5,6 +5,7 @@ from odoo.http import request
 from urllib.parse import urljoin
 import requests
 import json
+import time
 import werkzeug.utils
 from odoo.addons.payment.models.payment_provider import ValidationError
 
