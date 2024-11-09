@@ -95,42 +95,39 @@ class PaymentTransaction(models.Model):
     #         tx._set_canceled()
 
     def _process_notification_data(self, data):
-        # Call the parent process to keep base logic intact
         super()._process_notification_data(data)
 
         if self.provider_code != 'lahza':
             return
 
-        # Find the transaction by reference
         tx = self.env['payment.transaction'].sudo().search([('reference', '=', data.pop('txn_ref'))])
 
-        # Call the verification method and store the response
-        response = self.getVerifyPayment(data)
+        # Retry mechanism for verification
+        max_retries = 3
+        for attempt in range(max_retries):
+            response = self.getVerifyPayment(data)
+            _logger.info("Attempt %d - Verification response from Lahza: %s", attempt + 1, response)
 
-        # Log the response to confirm details for debugging
-        _logger.info("Received response from Lahza: %s", response)
+            # Check if the response is successful
+            if response and response.get("data") and response["data"].get("status") == "success":
+                authorization = response["data"].get("authorization")
+                if authorization:
+                    last4 = authorization.get('last4', 'N/A')
+                    auth_code = authorization.get('authorization_code', 'N/A')
+                    hash = f"{last4}/{auth_code}"
+                    data["callback_hash"] = hash
 
-        # Validate the response structure
-        if response and response.get("data") and response["data"].get("status") == "success":
-            authorization = response["data"].get("authorization")
-            if authorization:
-                last4 = authorization.get('last4', 'N/A')
-                auth_code = authorization.get('authorization_code', 'N/A')
-                hash = f"{last4}/{auth_code}"
-                data["callback_hash"] = hash
-
-                # Write to the transaction and set to done
                 tx.write(data)
                 tx._set_done()
                 _logger.info("Transaction %s marked as done in Odoo", tx.reference)
-            else:
-                # Log a warning if authorization data is missing
-                _logger.warning("Authorization data missing in response from Lahza: %s", response)
-                tx._set_canceled()
-        else:
-            # If status is not success, cancel the transaction
-            _logger.warning("Payment failed or response incomplete for transaction %s: %s", tx.reference, response)
-            tx._set_canceled()
+                return  # Exit after successful processing
+
+            # Wait before retrying if not successful
+            time.sleep(2)  # Adjust delay as necessary
+
+        # If all attempts fail, log and cancel transaction
+        _logger.warning("Failed to verify transaction %s after %d attempts: %s", tx.reference, max_retries, response)
+        tx._set_canceled()
 
 
     def getVerifyPayment(self,data):
