@@ -95,37 +95,41 @@ class PaymentTransaction(models.Model):
     #         tx._set_canceled()
 
     def _process_notification_data(self, data):
-        # Call the super method to ensure any parent class logic is executed
+        # Call the parent process to keep base logic intact
         super()._process_notification_data(data)
 
-        # Check if provider is 'lahza', if not, return immediately
         if self.provider_code != 'lahza':
             return
 
-        # Search for the transaction based on the reference
+        # Find the transaction by reference
         tx = self.env['payment.transaction'].sudo().search([('reference', '=', data.pop('txn_ref'))])
 
         # Call the verification method and store the response
         response = self.getVerifyPayment(data)
 
-        # Check if response is valid and contains the expected structure
+        # Log the response to confirm details for debugging
+        _logger.info("Received response from Lahza: %s", response)
+
+        # Validate the response structure
         if response and response.get("data") and response["data"].get("status") == "success":
-            # Extract hash and authorization code safely
             authorization = response["data"].get("authorization")
             if authorization:
                 last4 = authorization.get('last4', 'N/A')
                 auth_code = authorization.get('authorization_code', 'N/A')
                 hash = f"{last4}/{auth_code}"
                 data["callback_hash"] = hash
-            else:
-                _logger.warning("Authorization data missing in response: %s", response)
 
-            # Write the callback hash and set the transaction to done
-            tx.write(data)
-            tx._set_done()
+                # Write to the transaction and set to done
+                tx.write(data)
+                tx._set_done()
+                _logger.info("Transaction %s marked as done in Odoo", tx.reference)
+            else:
+                # Log a warning if authorization data is missing
+                _logger.warning("Authorization data missing in response from Lahza: %s", response)
+                tx._set_canceled()
         else:
-            # If the response indicates failure or data is missing, set transaction as canceled
-            _logger.warning("Failed or incomplete response from Lahza: %s", response)
+            # If status is not success, cancel the transaction
+            _logger.warning("Payment failed or response incomplete for transaction %s: %s", tx.reference, response)
             tx._set_canceled()
 
 
