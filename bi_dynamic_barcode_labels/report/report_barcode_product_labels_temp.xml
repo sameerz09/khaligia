@@ -13,7 +13,7 @@
 								<tr>
 									<td style="text-align: center; padding: 0;">
 										<img t-att-src="'/web/image/res.company/%s/logo' % request.env.user.company_id.id"
-										     style="width: 2.0cm; height: auto; margin: 0;"
+										     style="width: 2.5cm; height: auto; margin: 0;"
 										     alt="Company Logo" />
 									</td>
 								</tr>
