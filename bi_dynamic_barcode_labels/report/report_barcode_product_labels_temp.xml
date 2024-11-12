@@ -13,9 +13,11 @@
 								<!-- Company Logo Row -->
 								<tr>
 									<td style="text-align: right; padding: 0;">
-										<img t-att-src="'/web/image/res.company/%s/logo' % request.env.user.company_id.id"
-										     style="width: 1.5cm; height: auto; margin-top: 5px; margin-bottom: 0;"
-										     alt="Company Logo" />
+										<div style="float: right;">
+											<img t-att-src="'/web/image/res.company/%s/logo' % request.env.user.company_id.id"
+											     style="width: 1.5cm; height: auto; margin-top: 5px; margin-bottom: 0;"
+											     alt="Company Logo" />
+										</div>
 									</td>
 								</tr>
 
