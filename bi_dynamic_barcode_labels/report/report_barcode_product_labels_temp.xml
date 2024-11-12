@@ -1,67 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-	<template id="product_barcode_labels">
-		<t t-call="web.basic_layout">
-			<t t-foreach="docs" t-as="doc">
-				<t t-foreach="range(doc.qty)" t-as='l'>
-					<div class="page">
-						<div class="col-4" style="padding:0;">
-							<t t-set="barcode_info" t-value="get_barcode_details_info"/>
-							<table class="table table-sm table-borderless"
-								t-attf-style="width: #{barcode_info['label_width']}px; height: #{barcode_info['label_height']}px; padding: 0;">
+    <template id="product_barcode_labels">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="doc">
+                <div class="page">
+                    <div class="col-4" style="padding:0;">
+                        <t t-set="barcode_info" t-value="get_barcode_details_info"/>
+                        <table class="table table-sm table-borderless"
+                               t-attf-style="width: #{barcode_info['label_width']}px; height: #{barcode_info['label_height']}px; padding: 0;">
 
-								<!-- Company Logo Row -->
-								<tr>
-									<td style="text-align: right; padding: 0;">
-										<div style="float: right;">
-											<img t-att-src="'/web/image/res.company/%s/logo' % request.env.user.company_id.id"
-											     style="width: 1.5cm; height: auto; margin-top: 5px; margin-bottom: 0;"
-											     alt="Company Logo" />
-										</div>
-									</td>
-								</tr>
+                            <!-- Row for Price (left) and Logo (right) -->
+                            <tr>
+                                <!-- Left-aligned Price -->
+                                <td style="text-align: left; font-size: 30px; font-weight: bold; padding: 0;">
+                                    <span t-field="doc.product_id.list_price"/>
+                                    <span t-esc="barcode_info['barcode_currency_id'].symbol" />
+                                </td>
 
-								<!-- Row for Price (left) and Product Label (right) -->
-								<tr>
-									<td style="text-align: left; font-size: 15px; font-weight: bold; padding: 0;">
-										<span t-field="doc.product_id.list_price"/>
-										<span t-esc="barcode_info['barcode_currency_id'].symbol" />
-									</td>
-									<td style="text-align: left; padding: 0;">
-										<strong t-field="doc.product_id.name"/>
-									</td>
-								</tr>
+                                <!-- Right-aligned Logo -->
+                                <td style="padding: 0;">
+                                    <div style="text-align: right; width: 100%; padding-right: 0;">
+                                        <img t-att-src="'/web/image/res.company/%s/logo' % request.env.user.company_id.id"
+                                             style="width: 4cm; height: auto; margin: 0; float: right;"
+                                             alt="Company Logo" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+   <tr>
+    <!-- Left-aligned cell for attributes -->
+    <td style="padding: 0; text-align: left; font-size: 20px; font-weight: bold;">
+        <t t-if="doc.product_id.attribute_line_ids">
+            <span t-foreach="doc.product_id.product_template_attribute_value_ids" t-as="attribute_value1">
+                <span t-esc="attribute_value1.name + ','" />
+            </span>
+        </t>
+    </td>
+
+    <!-- Spacer cell to push content to the far ends -->
+<!--    <td style="padding: 0; width: 100%;"></td>-->
+
+    <!-- Right-aligned cell for product name -->
+    <td style="text-align: right; font-size: 20px; font-weight: bold; padding: 0;">
+        <strong t-field="doc.product_id.name" />
+    </td>
+</tr>
+</tr>
 
 								<!-- Product Attributes Row (if any) -->
-								<t t-if="doc.product_id.attribute_line_ids">
-									<tr>
-										<td colspan="2" style="text-align: center; padding: 0;">
-											<span t-foreach="doc.product_id.product_template_attribute_value_ids" t-as="attribute_value1">
-												<span t-esc="attribute_value1.name+','"/>
-											</span>
-										</td>
-									</tr>
-								</t>
+<!--								<t t-if="doc.product_id.attribute_line_ids">-->
+<!--									<tr>-->
+<!--										<td colspan="2" style="text-align: center; padding: 0;">-->
+<!--											<span t-foreach="doc.product_id.product_template_attribute_value_ids" t-as="attribute_value1">-->
+<!--												<span t-esc="attribute_value1.name+','"/>-->
+<!--											</span>-->
+<!--										</td>-->
+<!--									</tr>-->
+<!--								</t>-->
 
-								<!-- Barcode Row -->
-								<t t-if="doc.product_id.barcode">
-									<tr>
-										<td colspan="2" style="text-align: center; vertical-align: middle; padding: 0;">
-											<img alt="Barcode"
-											     t-att-src="'/report/barcode/?barcode_type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % (barcode_info['barcode_type'], doc.product_id.barcode, 500, 250)"
-											     style="width: 10cm; height: 1.0cm; margin: 0;" />
-											<br />
-											<span t-field="doc.product_id.barcode"/>
-										</td>
-									</tr>
-								</t>
-							</table>
-						</div>
-					</div>
-					<div style="page-break-before:always;"/>
-				</t>
-				<div style="page-break-before:always;"/>
-			</t>
-		</t>
-	</template>
+                            <!-- Row for Barcode -->
+                            <tr>
+    <td colspan="2" style="padding: 0; text-align: center;">
+        <img alt="Barcode"
+     t-att-src="'/report/barcode/?barcode_type=Code128&amp;value=%s&amp;width=%s&amp;height=%s' % (doc.product_id.barcode, 500, 250)"
+     style="width: 10cm; height: 2.0cm; margin-top: 20px; display: block; margin-left: auto; margin-right: auto;" />
+        <br />
+        <span t-field="doc.product_id.barcode" style="display: inline-block; text-align: center;" />
+    </td>
+</tr>
+
+
+                        </table>
+                    </div>
+                </div>
+                <div style="page-break-before:always;"/>
+            </t>
+        </t>
+    </template>
 </odoo>
