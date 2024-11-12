@@ -25,7 +25,7 @@
 										<span t-field="doc.product_id.list_price"/>
 										<span t-esc="barcode_info['barcode_currency_id'].symbol" />
 									</td>
-									<td style="text-align: right; padding: 0;">
+									<td style="text-align: left; padding: 0;">
 										<strong t-field="doc.product_id.name"/>
 									</td>
 								</tr>
