@@ -28,14 +28,15 @@
                                 <td style="text-align: right; font-size: 15px; font-weight: bold; padding: 0;">
         <strong t-field="doc.product_id.name" />
     </td>
+                                <td style="padding: 0; text-align: left; font-size: 15px; font-weight: bold;">
+        <t t-if="doc.product_id.attribute_line_ids">
+            <span t-foreach="doc.product_id.product_template_attribute_value_ids" t-as="attribute_value1">
+                <span t-esc="attribute_value1.name + ','" />
+            </span>
+        </t>
+    </td>
                             </tr>
-<!--                            <td style="padding: 0; text-align: left; font-size: 15px; font-weight: bold;">-->
-<!--        <t t-if="doc.product_id.attribute_line_ids">-->
-<!--            <span t-foreach="doc.product_id.product_template_attribute_value_ids" t-as="attribute_value1">-->
-<!--                <span t-esc="attribute_value1.name + ','" />-->
-<!--            </span>-->
-<!--        </t>-->
-<!--    </td>-->
+
 
     <!-- Left-aligned cell for attributes -->
 <!--    <td style="padding: 0; text-align: left; font-size: 18px; font-weight: bold;">-->
@@ -79,13 +80,6 @@
 
                             <!-- Row for Barcode -->
                             <tr>
-                                <td style="padding: 0; text-align: left; font-size: 15px; font-weight: bold;">
-        <t t-if="doc.product_id.attribute_line_ids">
-            <span t-foreach="doc.product_id.product_template_attribute_value_ids" t-as="attribute_value1">
-                <span t-esc="attribute_value1.name + ','" />
-            </span>
-        </t>
-    </td>
   <td colspan="2" style="padding: 0; text-align: center;">
     <img alt="Barcode"
          t-att-src="'/report/barcode/?barcode_type=Code128&amp;value=%s&amp;width=1800&amp;height=100' % (doc.product_id.barcode)"
