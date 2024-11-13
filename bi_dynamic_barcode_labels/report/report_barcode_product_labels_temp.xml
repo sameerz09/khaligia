@@ -12,7 +12,7 @@
                             <!-- Row for Price (left) and Logo (right) -->
                             <tr>
                                 <!-- Left-aligned Price -->
-                                <td style="text-align: left; font-size: 20px; font-weight: bold; padding: 0;">
+                                <td style="text-align: left; font-size: 25px; font-weight: bold; padding: 0;">
                                     <span t-field="doc.product_id.list_price"/>
                                     <span t-esc="barcode_info['barcode_currency_id'].symbol" />
                                 </td>
@@ -21,7 +21,7 @@
                                 <td style="padding: 0;">
                                     <div style="text-align: right; width: 100%; padding-right: 0;">
                                         <img t-att-src="'/web/image/res.company/%s/logo' % request.env.user.company_id.id"
-                                             style="width: 2cm; height: auto; margin: 0; float: right;"
+                                             style="width: 2.5cm; height: auto; margin: 0; float: right;"
                                              alt="Company Logo" />
                                     </div>
                                 </td>
@@ -63,7 +63,7 @@
     <td colspan="2" style="padding: 0; text-align: center;">
         <img alt="Barcode"
              t-att-src="'/report/barcode/?barcode_type=Code128&amp;value=%s&amp;width=%s&amp;height=%s' % (doc.product_id.barcode, 500, 250)"
-             style="width: 10cm; height: 2cm; margin-top: 20px; display: block; margin-left: auto; margin-right: auto;" />
+             style="width: 10cm; height: 1.5cm; margin-top: 20px; display: block; margin-left: auto; margin-right: auto;" />
         <br />
         <span t-field="doc.product_id.barcode" style="display: inline-block; text-align: center;" />
         <br />
