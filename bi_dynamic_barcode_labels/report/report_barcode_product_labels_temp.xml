@@ -82,7 +82,7 @@
     <td colspan="2" style="padding: 0; text-align: center;">
         <img alt="Barcode"
              t-att-src="'/report/barcode/?barcode_type=Code128&amp;value=%s&amp;width=%s&amp;height=%s' % (doc.product_id.barcode, 500, 250)"
-             style="width: 10cm; height: 1.5cm; margin-top: 20px; display: block; margin-left: auto; margin-right: auto;" />
+             style="width: 11cm; height: 1.5cm; margin-top: 20px; display: block; margin-left: auto; margin-right: auto;" />
         <br />
         <span t-field="doc.product_id.barcode" style="display: inline-block; text-align: center;" />
         <br />
