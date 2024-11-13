@@ -29,7 +29,7 @@
                             <tr>
    <tr>
     <!-- Left-aligned cell for attributes -->
-    <td style="padding: 0; text-align: left; font-size: 20px; font-weight: bold;">
+    <td style="padding: 0; text-align: left; font-size: 18px; font-weight: bold;">
         <t t-if="doc.product_id.attribute_line_ids">
             <span t-foreach="doc.product_id.product_template_attribute_value_ids" t-as="attribute_value1">
                 <span t-esc="attribute_value1.name + ','" />
