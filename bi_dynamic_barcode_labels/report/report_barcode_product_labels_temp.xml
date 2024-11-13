@@ -12,7 +12,7 @@
                             <!-- Row for Price (left) and Logo (right) -->
                             <tr>
                                 <!-- Left-aligned Price -->
-                                <td style="text-align: left; font-size: 25px; font-weight: bold; padding: 0;">
+                                <td style="text-align: left; font-size: 20px; font-weight: bold; padding: 0;">
                                     <span t-field="doc.product_id.list_price"/>
                                     <span t-esc="barcode_info['barcode_currency_id'].symbol" />
                                 </td>
