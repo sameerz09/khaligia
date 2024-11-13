@@ -29,6 +29,13 @@
         <strong t-field="doc.product_id.name" />
     </td>
                             </tr>
+                            <td style="padding: 0; text-align: left; font-size: 18px; font-weight: bold;">
+        <t t-if="doc.product_id.attribute_line_ids">
+            <span t-foreach="doc.product_id.product_template_attribute_value_ids" t-as="attribute_value1">
+                <span t-esc="attribute_value1.name + ','" />
+            </span>
+        </t>
+    </td>
 
    <tr>
     <!-- Left-aligned cell for attributes -->
@@ -54,9 +61,9 @@
 <!--    <td style="text-align: right; font-size: 20px; font-weight: bold; padding: 0;">-->
 <!--        <strong t-field="doc.product_id.name" />-->
 <!--    </td>-->
-<!--       <td style="text-align: right; font-size: 20px; font-weight: bold; padding: 0;">-->
-<!--        <strong t-field="doc.product_id.name" />-->
-<!--    </td>-->
+       <td style="text-align: right; font-size: 20px; font-weight: bold; padding: 0;">
+        <strong t-field="doc.product_id.name" />
+    </td>
 </tr>
 
 
