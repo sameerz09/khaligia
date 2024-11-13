@@ -37,7 +37,6 @@
         </t>
     </td>
 
-   <tr>
     <!-- Left-aligned cell for attributes -->
 <!--    <td style="padding: 0; text-align: left; font-size: 18px; font-weight: bold;">-->
 <!--        <t t-if="doc.product_id.attribute_line_ids">-->
