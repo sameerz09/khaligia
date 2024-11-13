@@ -18,15 +18,18 @@
                                 </td>
 
                                 <!-- Right-aligned Logo -->
-                                <td style="padding: 0;">
-                                    <div style="text-align: right; width: 100%; padding-right: 0;">
-                                        <img t-att-src="'/web/image/res.company/%s/logo' % request.env.user.company_id.id"
-                                             style="width: 2cm; height: auto; margin: 0; float: right;"
-                                             alt="Company Logo" />
-                                    </div>
-                                </td>
+<!--                                <td style="padding: 0;">-->
+<!--                                    <div style="text-align: right; width: 100%; padding-right: 0;">-->
+<!--                                        <img t-att-src="'/web/image/res.company/%s/logo' % request.env.user.company_id.id"-->
+<!--                                             style="width: 2cm; height: auto; margin: 0; float: right;"-->
+<!--                                             alt="Company Logo" />-->
+<!--                                    </div>-->
+<!--                                </td>-->
+                                <td style="text-align: right; font-size: 20px; font-weight: bold; padding: 0;">
+        <strong t-field="doc.product_id.name" />
+    </td>
                             </tr>
-                            <tr>
+
    <tr>
     <!-- Left-aligned cell for attributes -->
 <!--    <td style="padding: 0; text-align: left; font-size: 18px; font-weight: bold;">-->
@@ -36,15 +39,13 @@
 <!--            </span>-->
 <!--        </t>-->
 <!--    </td>-->
-       <td style="padding: 0; text-align: left; font-size: 13px; font-weight: bold;">
-    <t t-if="doc.product_id.attribute_line_ids">
-        <span t-foreach="doc.product_id.product_template_attribute_value_ids" t-as="attribute_value1">
-            <span style="border: 1px solid #000; padding: 2px 5px; margin: 2px; display: inline-block; border-radius: 4px;">
-                <span t-esc="attribute_value1.name"/>
-            </span>
-        </span>
-    </t>
-</td>
+<!--       <td style="padding: 0; text-align: left; font-size: 18px; font-weight: bold;">-->
+<!--        <t t-if="doc.product_id.attribute_line_ids">-->
+<!--            <span t-foreach="doc.product_id.product_template_attribute_value_ids" t-as="attribute_value1">-->
+<!--                <span t-esc="attribute_value1.name + ','" />-->
+<!--            </span>-->
+<!--        </t>-->
+<!--    </td>-->
 
     <!-- Spacer cell to push content to the far ends -->
 <!--    <td style="padding: 0; width: 100%;"></td>-->
@@ -53,13 +54,11 @@
 <!--    <td style="text-align: right; font-size: 20px; font-weight: bold; padding: 0;">-->
 <!--        <strong t-field="doc.product_id.name" />-->
 <!--    </td>-->
-       <td style="text-align: right; font-size: 15px; font-weight: bold; padding: 0;">
-    <div style="border: 1px solid #000; padding: 5px 10px; display: inline-block; border-radius: 4px;">
+       <td style="text-align: right; font-size: 20px; font-weight: bold; padding: 0;">
         <strong t-field="doc.product_id.name" />
-    </div>
-</td>
+    </td>
 </tr>
-</tr>
+
 
 								<!-- Product Attributes Row (if any) -->
 <!--								<t t-if="doc.product_id.attribute_line_ids">-->
