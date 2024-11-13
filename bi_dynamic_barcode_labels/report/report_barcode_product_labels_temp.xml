@@ -25,7 +25,7 @@
 <!--                                             alt="Company Logo" />-->
 <!--                                    </div>-->
 <!--                                </td>-->
-                                <td style="text-align: right; font-size: 20px; font-weight: bold; padding: 0;">
+                                <td style="text-align: right; font-size: 15px; font-weight: bold; padding: 0;">
         <strong t-field="doc.product_id.name" />
     </td>
                             </tr>
@@ -54,9 +54,9 @@
 <!--    <td style="text-align: right; font-size: 20px; font-weight: bold; padding: 0;">-->
 <!--        <strong t-field="doc.product_id.name" />-->
 <!--    </td>-->
-       <td style="text-align: right; font-size: 20px; font-weight: bold; padding: 0;">
-        <strong t-field="doc.product_id.name" />
-    </td>
+<!--       <td style="text-align: right; font-size: 20px; font-weight: bold; padding: 0;">-->
+<!--        <strong t-field="doc.product_id.name" />-->
+<!--    </td>-->
 </tr>
 
 
