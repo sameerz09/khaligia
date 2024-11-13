@@ -29,10 +29,7 @@
                             <tr>
                                 <td style="padding: 0; font-size: 18px; font-weight: bold;">
                                     <t t-if="doc.product_id.attribute_line_ids">
-                                        <span t-foreach="doc.product_id.product_template_attribute_value_ids" t-as="attribute_value1">
-                                            <span t-esc="attribute_value1.name" />
-                                            <t t-if="not loop.last">,</t>
-                                        </span>
+                                        <span t-foreach="doc.product_id.product_template_attribute_value_ids" t-as="attribute_value1" t-esc="attribute_value1.name" />
                                     </t>
                                 </td>
                                 <!-- Product Name (right-aligned) -->
