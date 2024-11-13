@@ -12,7 +12,7 @@
                             <!-- Row for Price (left) and Logo (right) -->
                             <tr>
                                 <!-- Left-aligned Price -->
-                                <td style="text-align: left; font-size: 25px; font-weight: bold; padding: 0;">
+                                <td style="text-align: left; font-size: 20px; font-weight: bold; padding: 0;">
                                     <span t-field="doc.product_id.list_price"/>
                                     <span t-esc="barcode_info['barcode_currency_id'].symbol" />
                                 </td>
@@ -21,7 +21,7 @@
                                 <td style="padding: 0;">
                                     <div style="text-align: right; width: 100%; padding-right: 0;">
                                         <img t-att-src="'/web/image/res.company/%s/logo' % request.env.user.company_id.id"
-                                             style="width: 3cm; height: auto; margin: 0; float: right;"
+                                             style="width: 2cm; height: auto; margin: 0; float: right;"
                                              alt="Company Logo" />
                                     </div>
                                 </td>
