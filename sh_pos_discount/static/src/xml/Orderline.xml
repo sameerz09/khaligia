@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="Orderline" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension" owl="1">
+        <xpath expr="//ul[hasclass('info-list')]" position="inside">
+            <t t-if="props.line.get_line_discount()">
+                <li class="info sh_discount_code_orderline">
+                    <t t-foreach="props.line.get_line_discount()" t-as="each_discount" t-key="each_discount">
+                        <t t-if="props.line.get_line_discount().length ==1">
+                            <span class="info">
+                                <t t-esc="each_discount" />
+                            </span>
+                        </t>
+                        <t t-else="">
+                            <span class="info">
+                                <t t-if="props.line.get_line_discount().indexOf(each_discount) == (props.line.get_line_discount().length - 1)">
+                                    <t t-esc="each_discount" />
+                                </t>
+                                <t t-else="">
+                                    <t t-esc="each_discount" />
+                                    ,
+                                </t>
+                            </span>
+                        </t>
+                    </t>
+                </li>
+            </t>
+        </xpath>
+    </t>
+</templates>
