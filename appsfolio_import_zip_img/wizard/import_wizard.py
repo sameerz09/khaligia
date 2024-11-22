@@ -52,7 +52,9 @@ class ImportWizard(models.TransientModel):
             bus = BytesIO()
             bus.write(base64.decodebytes(self.select_file))
             zip_file = zipfile.ZipFile(bus, 'r')
-        except Exception:
+            _logger.info("ZIP file successfully opened.")
+        except Exception as e:
+            _logger.error("Error opening ZIP file: %s", e)
             raise UserError(_("Please select a valid ZIP file!"))
 
         result = []
@@ -60,47 +62,59 @@ class ImportWizard(models.TransientModel):
         Note = ''  # Initialize Note as an empty string
 
         for sample in zip_file.namelist():
+            _logger.info("Processing file: %s", sample)
+
+            # Skip directories
+            if sample.endswith('/'):
+                _logger.warning("Skipping directory: %s", sample)
+                continue
+
             path = "/tmp/"
-            ext_file = zip_file.extract(sample, path)
+            try:
+                ext_file = zip_file.extract(sample, path)
+                _logger.info("File extracted to: %s", ext_file)
+            except Exception as e:
+                _logger.error("Error extracting file: %s", e)
+                continue
+
             doc_name = os.path.basename(sample)
-            (file_name, ext) = os.path.splitext(doc_name)
+            file_name, ext = os.path.splitext(doc_name)
 
-            if self.select == 'product':
-                record = self.env['product.product'].search([('default_code', '=', file_name)])
-                try:
-                    with open(ext_file, "rb") as image_file:
-                        f = base64.b64encode(image_file.read())
-                except:
-                    f = False
-                record.write({'image_1920': f})
+            # Skip files with empty names
+            if not file_name:
+                _logger.warning("Skipping file with empty name in path: %s", sample)
+                continue
 
-            elif self.select == 'partner':
-                record = self.env['res.partner'].search([('name', '=', file_name)])
-                try:
-                    with open(ext_file, "rb") as image_file:
-                        f = base64.b64encode(image_file.read())
-                except:
-                    f = False
-                record.write({'image_1920': f})
+            _logger.info("File name: %s, Extension: %s", file_name, ext)
 
-            elif self.select == 'employee':
-                record = self.env['hr.employee'].search([('name', '=', file_name)])
-                try:
-                    with open(ext_file, "rb") as image_file:
-                        f = base64.b64encode(image_file.read())
-                except:
-                    f = False
-                record.write({'image_1920': f})
+            # Record search for products and product variants
+            record = self.env['product.template'].search([('default_code', '=', file_name)])
+            if not record:
+                record = self.env['product.template'].search([('default_code', '=', file_name)])
+
+            _logger.info("Record found: %s", record)
 
             if record:
+                try:
+                    with open(ext_file, "rb") as image_file:
+                        f = base64.b64encode(image_file.read())
+                        _logger.info("Image file read and encoded successfully.")
+                except Exception as e:
+                    f = False
+                    _logger.error("Error reading or encoding image file: %s", e)
+                record.write({'image_1920': f})
+                _logger.info("Image written to record.")
                 result.append(file_name)
             else:
                 file_list.append(file_name)
+                _logger.warning("No matching record found for file: %s", file_name)
 
         if file_list:
             Note = '\n'.join(['Image Name "%s" : No record found for these images.' % i for i in file_list])
+            _logger.info("Files with no matching records: %s", file_list)
 
         context = {'default_name': "%s Images have been imported successfully." % len(result) + '\n' + Note}
+        _logger.info("Import result: %s", context)
 
         return {
             'name': 'Success',
