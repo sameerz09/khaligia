@@ -118,7 +118,12 @@ class PaymentTransaction(models.Model):
                     hash = f"{last4}/{auth_code}"
                     data["callback_hash"] = hash
 
-                tx.write(data)
+                provider_payment_details = {
+                    "provider_reference": data.get("reference") or data.get("provider_reference"),
+                    "provider_trxref": data.get("trxref"),
+                    "callback_hash": data.get("callback_hash"),
+                }
+                tx.write(provider_payment_details)
                 tx._set_done()
                 _logger.info("Transaction %s marked as done in Odoo", tx.reference)
                 return  # Exit after successful processing
@@ -136,6 +141,6 @@ class PaymentTransaction(models.Model):
             "content-Type": "application/json",
             "authorization": "Bearer " + self.provider_id.lahza_secret_key
             }
-        response = requests.get("https://api.lahza.io/transaction/verify/%s"%data.get('provider_reference'), headers=headers)
+        response = requests.get("https://api.lahza.io/transaction/verify/%s"%data.get("reference") or data.get('provider_reference'), headers=headers)
         status = json.loads(response.text).get('status')
         return json.loads(response.text)
