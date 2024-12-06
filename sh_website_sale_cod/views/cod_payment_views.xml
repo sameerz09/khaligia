@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree view -->
+    <record id="sh_website_sale_cod_collection_tree" model="ir.ui.view">
+        <field name="name">sh.website.sale.cod.collection.tree</field>
+        <field name="model">sh.cod.payment.collection</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sale_order_id"/>
+                <field name="partner_id"/>
+                
+                <field name="state" widget="badge"
+                           decoration-muted="state in ('draft')"
+                           decoration-info="state in ('confirm')"
+                           decoration-success="state in ('done')"
+                           decoration-danger="state in ('cancel')"/>
+                <field name="order_amt"/>
+                <field name='collection_amt'/>
+            </tree>
+        </field>
+    </record>
+    
+    <!-- Form view -->
+    <record id="sh_website_sale_cod_collection_form" model="ir.ui.view">
+        <field name="name">sh.website.sale.cod.collection.form</field>
+        <field name="model">sh.cod.payment.collection</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="transfer_payment" class='btn btn-primary' string='Transfer Payment' type='object' attrs="{'invisible':[('state', '!=', 'confirm')]}"></button>
+                    <button name="sh_confirm" string="Confirm" type='object' attrs="{'invisible':[('state', '!=', 'draft'),('state', 'in', ['done','cancel','confirm'])]}"/>
+                    <button name="%(sh_website_sale_cod.sh_website_sale_cod_cancel_wizard_action)d" string="Cancel" type='action' attrs="{'invisible':[('state', 'in', ['done','cancel'])]}"/>
+                    <field name="state" widget='statusbar'/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="sale_order_id"/>
+                            <field name="partner_id"/>
+                            <field name='partner_shipping_id'/>
+                        </group>
+                        <group>
+                            <field name='delivery_otp'/>
+                            <field name="order_amt"/>
+                            <field name='collection_amt'/>
+                            <field name="company_id" invisible='1'/>
+                            <field name="transaction_ids" widget='many2many_tags'/>
+                        </group>
+                    </group>
+					<label for='description' class='mb-2'>Description</label>
+						<field name='description' placeholder='Start Writing from here...'/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <!-- search view -->
+    <record id="sh_website_sale_cod_collection_search" model="ir.ui.view">
+        <field name="name">sh.website.sale.cod.collection.search</field>
+        <field name="model">sh.cod.payment.collection</field>
+        <field name="arch" type="xml">
+            <search string="COD Collection">
+                <field name='sale_order_id'/>
+                <field name="partner_id"/>
+                <field name="delivery_otp"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_state" string="State" domain="[]" context="{'group_by':'state'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="sh_website_sale_cod_collection_action" model="ir.actions.act_window">
+        <field name="name">COD Payment Collections</field>
+        <field name="res_model">sh.cod.payment.collection</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    <menuitem parent="sale.menu_sale_config" action="sh_website_sale_cod_collection_action" name="COD Payment Collections" id="sh_website_sale_cod__collection_menu"/>
+</odoo>

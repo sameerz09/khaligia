@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Collection report tempalte-->
+	<template id="cod_collection_report_doc">
+	    <t t-call="web.external_layout">
+			<h3 class='text-center mb-5'>COD Collection Report</h3>
+			<div>
+				<table class='table table-bordered'>
+					<tbody>
+						<tr>
+							<td><b>Sale Order</b></td>
+							<td><span t-if='doc.sale_order_id.name' t-field='doc.sale_order_id.name'></span></td>
+						</tr>
+						<tr>
+							<td><b>Customer</b></td>
+							<td><span t-if='doc.sale_order_id' t-field='doc.sale_order_id.partner_id'></span></td>
+						</tr>
+						<tr>
+							<td><b>Delivery Address</b></td>
+							<td><span t-if='doc.sale_order_id' t-field='doc.sale_order_id.partner_shipping_id'></span></td>
+						</tr>
+						<tr>
+							<td><b>Order Amount</b></td>
+							<td><span t-if='doc.order_amt' t-field='doc.order_amt'></span>
+								<span t-if='not doc.order_amt'>0.00</span></td>
+						</tr>
+						<tr>
+							<td><b>Collection Amount</b></td>
+							<td><span t-if='doc.collection_amt' t-field='doc.collection_amt'></span>
+								<span t-if='not doc.collection_amt'>0.00</span></td>
+						</tr>
+						<tr>
+							<td><b>Payment Transction</b></td>
+							<td>
+								<t t-set='last' t-value='len(doc.transaction_ids)'></t>
+								<t t-set='count' t-value='0'/>
+								<t t-if='doc.transaction_ids' t-foreach='doc.transaction_ids' t-as='transction'>
+									<span t-field='transction.reference'></span>
+									<t t-set='count' t-value='count + 1'/>
+									<t t-if='not last == count'>
+										<span>, </span>
+									</t>
+								</t>
+							
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class='mt-2'>
+					<b t-if='doc.description'>Description : </b><span t-if='doc.description' t-field='doc.description'></span>
+				</p>
+			</div>
+	    </t>
+    </template>
+
+    <template id="cod_collection_report">
+	    <t t-call="web.html_container">
+	        <t t-foreach="docs" t-as="doc">
+	            <t t-call="sh_website_sale_cod.cod_collection_report_doc" t-lang="doc.partner_id.lang"/>
+	        </t>
+	    </t>
+	</template>
+</odoo>

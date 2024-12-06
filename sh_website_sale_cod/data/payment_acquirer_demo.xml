@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- Cash on delivery payment provider-->
+    <record id="sh_website_sale_cod.sh_cash_on_delivery_provider_transfer" model="payment.provider">
+        <field name="name">Cash on Delivery</field>
+        <field name="code">cod</field>
+        <field name="redirect_form_view_id" ref="sh_website_sale_cod_redirect_form"/>
+        <field name="pending_msg" eval="False"/>
+        <field name='state'>disabled</field>
+        <field name='is_published' eval='True'/>
+        <field name="cod_database">unitedexp</field>
+        <field name="cod_login">olivery_bs</field>
+        <field name="cod_password">12345678</field>
+        <field name="image_128"
+               type="base64"
+               file="sh_website_sale_cod/static/src/img/cash_on_delivery_icon.png"/>
+        <field name='pending_msg'><![CDATA[
+			<div>
+                <p style='margin-bottom:0px;'>
+                    Your order has been placed successfully.
+                </p>
+            </div>
+            ]]></field>
+    </record>
+
+</odoo>

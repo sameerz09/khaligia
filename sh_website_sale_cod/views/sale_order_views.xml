@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- sale order inherit for delivery otp -->
+    <record id="sh_website_sale_cod_sale_order_form_inherit" model="ir.ui.view">
+        <field name="name">sh.website.sale.cod.sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <field name='partner_id' position='before'>
+                <field name='delivery_otp' invisible="1"/>
+            </field>
+        </field>
+    </record>
+
+    <!-- sale order inherit for collection records -->
+    <record id="sh_website_sale_cod_sale_order_form_header_inherit" model="ir.ui.view">
+        <field name="name">sh.website.sale.cod.sale.order.form.header.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button type="object" name="action_view_sh_collection" class="oe_stat_button" icon="fa-money">
+                    <field name="sh_collection_count" widget="statinfo" string="Collections" />
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

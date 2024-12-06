@@ -1,0 +1,27 @@
+<odoo>
+
+    <record id="sh_website_sale_cod_cancel_wizard" model="ir.ui.view">
+		<field name="name">sh.website.sale.cod.cancel.wizard</field>
+		<field name="model">sh.wsale.cod.cancel.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Reason">
+				<group>
+					<field name="cancel_reason"/>
+				</group>
+				<footer>
+					<button name="reason_submit" string="Submit" type="object" class="btn-primary"/>
+					<button string="Cancel" class="btn-secondary" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+
+    <record id="sh_website_sale_cod_cancel_wizard_action" model="ir.actions.act_window">
+		<field name="name">Cancel Reason</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">sh.wsale.cod.cancel.wizard</field>
+		<field name="view_mode">form</field>
+		<field name="view_id" ref="sh_website_sale_cod_cancel_wizard"/>
+		<field name="target">new</field>
+	</record>
+</odoo>
