@@ -11,7 +11,7 @@
     "summary": "Website COD Store COD shop Cash On Delivery Payment Method Cash On Delivery Payment Acquire COD Payment Acquire Shop COD Store COD eCommerce COD eCommerce Cash On Delivery e-Commerce COD e-Commerce Cash On Delivery e Commerce COD e Commerce Cash On Delivery Payment Method In Website Cash On Delivery Payment Method On Website Cash On Delivery Payment Acquire On Website Shop Cash On Delivery Payment Acquire In Website Shop COD Payment Acquire In Shop COD Payment Acquire On Shop COD Payment Method On Shop COD Payment Method In Shop Cash on Delivery Option On Website Cash on Delivery Option On Website Odoo Shop Cash on Delivery Option In Website COD Option In Website COD Option On Website Odoo Cash On Delivery ecommerce COD Ecommerce COD Website Cash on delivery Website Odoo Payment Methods",
     "description": "Are you selling your products online? Do you want to provide a Cash on Delivery (COD) payment method to your customers? Currently, odoo does not provide a COD option for payment. This module will allow you to manage the cash-on-delivery feature on your website that provides convenience and flexibility to your customers, where traditional payment methods like credit cards or online banking are not widely used or preferred.",
     "version": "16.0.1",
-    'depends': ['website_sale','sale_management'],
+    'depends': ['website_sale','sale_management', 'portal_ps_address'],
     'application': True,
     'data': [
         "security/ir.model.access.csv",

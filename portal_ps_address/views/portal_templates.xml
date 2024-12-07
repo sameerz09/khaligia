@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="portal_my_details_fields_customization" inherit_id="portal.portal_my_details_fields">
+        <xpath expr="//div[input[@name='vat']]" position="replace">
+        </xpath>
+        <xpath expr="//div[input[@name='zipcode']]" position="replace">
+        </xpath>
+    </template>
+</odoo>
