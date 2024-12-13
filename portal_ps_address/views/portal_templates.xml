@@ -5,5 +5,45 @@
         </xpath>
         <xpath expr="//div[input[@name='zipcode']]" position="replace">
         </xpath>
+        <xpath expr="//div[input[@name='company_name']]" position="replace">
+        </xpath>
+        <xpath expr="//div[select[@name='state_id']]" position="replace">
+        </xpath>
+        <xpath expr="//div[input[@name='city']]" position="replace">
+            <div t-attf-class="mb-3 #{error.get('street') and 'o_has_error' or ''} col-xl-6">
+                <label class="col-form-label" for="street">Address</label>
+                <select name="street" t-attf-class="form-select #{error.get('street') and 'is-invalid' or ''}">
+                    <t t-foreach="addresses or []" t-as="address">
+                        <option t-att-value="address.sub_area">
+                            <t t-esc="address.sub_area" t-att-selected="address.sub_area == street if street else address.sub_area == partner.street"/>
+                        </option>
+                    </t>
+                </select>
+            </div>
+        </xpath>
+        <xpath expr="//div[input[@name='street']]" position="replace">
+            <div t-attf-class="mb-3 #{error.get('country_id') and 'o_has_error' or ''} col-xl-6">
+                <label class="col-form-label" for="city">City</label>
+                <select name="city" t-attf-class="form-select #{error.get('city') and 'is-invalid' or ''}">
+                    <t t-foreach="addresses or []" t-as="address">
+                        <option t-att-value="address.area" t-att-selected="address.area == city if city else address.area == partner.city">
+                            <t t-esc="address.area" />
+                        </option>
+                    </t>
+                </select>
+            </div>
+        </xpath>
+        <xpath expr="//div[select[@name='country_id']]" position="replace">
+            <div t-attf-class="mb-3 #{error.get('country_id') and 'o_has_error' or ''} col-xl-6">
+                <label class="col-form-label" for="country_id">Country</label>
+                <select name="country_id" t-attf-class="form-select #{error.get('country_id') and 'is-invalid' or ''}" data-toggle="select2">
+                    <t t-foreach="countries or []" t-as="country">
+                        <option t-att-value="country.id" t-att-selected="country.code == default_country_code">
+                            <t t-esc="country.name" />
+                        </option>
+                    </t>
+                </select>
+            </div>
+        </xpath>
     </template>
 </odoo>

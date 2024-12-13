@@ -2,4 +2,4 @@
 # Part of . Technologies.
 
 
-from . import res_partner
+from . import res_address
