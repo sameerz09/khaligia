@@ -18,7 +18,11 @@
         "data/res_address.xml",
         "data/res_country.xml"
     ],
-    'assets': {},
+    'assets': {
+        'web.assets_frontend': [
+            'portal_ps_address/static/src/js/area_address_filter.js',
+        ],
+    },
     "images": [],
     'auto_install': False,
     'installable': True,

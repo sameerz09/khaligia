@@ -9,28 +9,30 @@
         </xpath>
         <xpath expr="//div[select[@name='state_id']]" position="replace">
         </xpath>
-        <xpath expr="//div[input[@name='city']]" position="replace">
-            <div t-attf-class="mb-3 #{error.get('street') and 'o_has_error' or ''} col-xl-6">
-                <label class="col-form-label" for="street">Address</label>
-                <select name="street" t-attf-class="form-select #{error.get('street') and 'is-invalid' or ''}">
-                    <t t-foreach="sub_areas or []" t-as="sub_area">
-                        <option t-att-value="sub_area">
-                            <t t-esc="sub_area" t-att-selected="sub_area == street if street else sub_area == partner.street"/>
-                        </option>
-                    </t>
-                </select>
-            </div>
-        </xpath>
         <xpath expr="//div[input[@name='street']]" position="replace">
-            <div t-attf-class="mb-3 #{error.get('city') and 'o_has_error' or ''} col-xl-6">
-                <label class="col-form-label" for="city">City</label>
-                <select name="city" t-attf-class="form-select #{error.get('city') and 'is-invalid' or ''}">
-                    <t t-foreach="areas or []" t-as="area">
-                        <option t-att-value="area" t-att-selected="area == city if city else area == partner.city">
-                            <t t-esc="area" />
-                        </option>
-                    </t>
-                </select>
+        </xpath>
+        <xpath expr="//div[input[@name='city']]" position="replace">
+            <div class="o_area_filter_wrapper">
+                <div t-attf-class="mb-3 #{error.get('city') and 'o_has_error' or ''} col-xl-6">
+                    <label class="col-form-label" for="city">City</label>
+                    <select name="city" t-attf-class="form-select #{error.get('city') and 'is-invalid' or ''}">
+                        <t t-foreach="areas or []" t-as="area">
+                            <option t-att-value="area" t-att-selected="area == city if city else area == partner.city">
+                                <t t-esc="area" />
+                            </option>
+                        </t>
+                    </select>
+                </div>
+                 <div t-attf-class="mb-3 #{error.get('street') and 'o_has_error' or ''} col-xl-6">
+                    <label class="col-form-label" for="street">Address</label>
+                    <select name="street" t-attf-class="form-select #{error.get('street') and 'is-invalid' or ''}" t-att-disabled="not partner.city">
+                        <t t-foreach="addresses or []" t-as="address">
+                            <option t-att-value="address.sub_area" t-att-data-area="address.area">
+                                <t t-esc="address.sub_area" t-att-selected="address.sub_area == street if street else address.sub_area == partner.street"/>
+                            </option>
+                        </t>
+                    </select>
+                </div>
             </div>
         </xpath>
         <xpath expr="//div[select[@name='country_id']]" position="replace">
