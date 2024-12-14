@@ -58,6 +58,8 @@ class CustomCustomerPortal(CustomerPortal):
         countries = request.env['res.country'].sudo().search([('code', 'in', allowed_country_codes)])
         states = request.env['res.country.state'].sudo().search([])
         addresses = request.env['res.address'].sudo().search([])
+        areas = set(addresses.mapped('area'))
+        sub_areas = set(addresses.mapped('sub_area'))
 
         values.update({
             'partner': partner,
@@ -69,6 +71,8 @@ class CustomCustomerPortal(CustomerPortal):
             'page_name': 'my_details',
             'default_country_code': default_country_code,
             "addresses": addresses,
+            "areas": areas,
+            "sub_areas": sub_areas,
         })
 
         response = request.render("portal.portal_my_details", values)

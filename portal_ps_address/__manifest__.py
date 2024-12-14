@@ -14,6 +14,7 @@
     'application': True,
     'data': [
         "views/portal_templates.xml",
+        "views/website_sale_templates.xml",
         "data/res_address.xml",
         "data/res_country.xml"
     ],

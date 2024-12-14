@@ -3,6 +3,7 @@
     <data noupdate="1">
          <record id="base.ps" model="res.country">
             <field name='zip_required'>0</field>
+             <field name='name'>فلسطين</field>
         </record>
     </data>
 </odoo>
