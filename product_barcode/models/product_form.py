@@ -27,20 +27,20 @@ from odoo import api, models
 class ProductAutoBarcode(models.Model):
     _inherit = 'product.product'
 
-    # @api.model
-    # def create(self, vals):
-    #     """generate barcode when create new product"""
-    #     res = super(ProductAutoBarcode, self).create(vals)
-    #     ean = generate_ean(str(res.id))
-    #     res.barcode = '21' + ean
-    #     return res
     @api.model
     def create(self, vals):
         """generate barcode when create new product"""
         res = super(ProductAutoBarcode, self).create(vals)
         ean = generate_ean(str(res.id))
-        res.barcode = ean
+        res.barcode = '21' + ean
         return res
+    # @api.model
+    # def create(self, vals):
+    #     """generate barcode when create new product"""
+    #     res = super(ProductAutoBarcode, self).create(vals)
+    #     ean = generate_ean(str(res.id))
+    #     res.barcode = ean
+    #     return res
 
 
 def ean_checksum(eancode):
@@ -91,17 +91,17 @@ def generate_ean(ean):
 class ProductTemplateAutoBarcode(models.Model):
     _inherit = 'product.template'
 
-    # @api.model
-    # def create(self, vals_list):
-    #     """generate barcode number when create new product"""
-    #     templates = super(ProductTemplateAutoBarcode, self).create(vals_list)
-    #     ean = generate_ean(str(templates.id))
-    #     templates.barcode = '22' + ean
-    #     return templates
     @api.model
     def create(self, vals_list):
         """generate barcode number when create new product"""
         templates = super(ProductTemplateAutoBarcode, self).create(vals_list)
         ean = generate_ean(str(templates.id))
-        templates.barcode = ean
+        templates.barcode = '22' + ean
         return templates
+    # @api.model
+    # def create(self, vals_list):
+    #     """generate barcode number when create new product"""
+    #     templates = super(ProductTemplateAutoBarcode, self).create(vals_list)
+    #     ean = generate_ean(str(templates.id))
+    #     templates.barcode = ean
+    #     return templates
