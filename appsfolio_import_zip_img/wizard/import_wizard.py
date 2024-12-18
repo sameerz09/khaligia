@@ -17,10 +17,6 @@ from odoo import models, fields, _
 _logger = logging.getLogger(__name__)
 
 try:
-    import cStringIO
-except ImportError:
-    _logger.debug('Cannot `import cStringIO`.')
-try:
     import base64
 except ImportError:
     _logger.debug('Cannot `import base64`.')
@@ -59,12 +55,11 @@ class ImportWizard(models.TransientModel):
 
         result = []
         file_list = []
-        Note = ''  # Initialize Note as an empty string
+        Note = ''
 
         for sample in zip_file.namelist():
             _logger.info("Processing file: %s", sample)
 
-            # Skip directories
             if sample.endswith('/'):
                 _logger.warning("Skipping directory: %s", sample)
                 continue
@@ -80,16 +75,23 @@ class ImportWizard(models.TransientModel):
             doc_name = os.path.basename(sample)
             file_name, ext = os.path.splitext(doc_name)
 
-            # Skip files with empty names
             if not file_name:
                 _logger.warning("Skipping file with empty name in path: %s", sample)
                 continue
 
             _logger.info("File name: %s, Extension: %s", file_name, ext)
 
-            # Record search for products and product variants
+            # Search for product.template by default_code
             record = self.env['product.template'].search([('default_code', '=', file_name)])
+
             if not record:
+                # If no product.template is found, search for product.product by default_code
+                product_variant = self.env['product.product'].search([('default_code', '=', file_name)])
+                if product_variant:
+                    record = product_variant
+
+            if not record:
+                # If no product variant is found, fall back to product.template
                 record = self.env['product.template'].search([('default_code', '=', file_name)])
 
             _logger.info("Record found: %s", record)
@@ -102,6 +104,8 @@ class ImportWizard(models.TransientModel):
                 except Exception as e:
                     f = False
                     _logger.error("Error reading or encoding image file: %s", e)
+
+                # Write image to the record (either template or variant)
                 record.write({'image_1920': f})
                 _logger.info("Image written to record.")
                 result.append(file_name)
