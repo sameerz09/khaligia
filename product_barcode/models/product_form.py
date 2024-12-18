@@ -84,10 +84,17 @@ def generate_ean(ean):
 class ProductTemplateAutoBarcode(models.Model):
     _inherit = 'product.template'
 
+    # @api.model
+    # def create(self, vals_list):
+    #     """generate barcode number when create new product"""
+    #     templates = super(ProductTemplateAutoBarcode, self).create(vals_list)
+    #     ean = generate_ean(str(templates.id))
+    #     templates.barcode = '22' + ean
+    #     return templates
     @api.model
     def create(self, vals_list):
         """generate barcode number when create new product"""
         templates = super(ProductTemplateAutoBarcode, self).create(vals_list)
         ean = generate_ean(str(templates.id))
-        templates.barcode = '22' + ean
+        templates.barcode = ean
         return templates
