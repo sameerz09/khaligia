@@ -27,12 +27,19 @@ from odoo import api, models
 class ProductAutoBarcode(models.Model):
     _inherit = 'product.product'
 
+    # @api.model
+    # def create(self, vals):
+    #     """generate barcode when create new product"""
+    #     res = super(ProductAutoBarcode, self).create(vals)
+    #     ean = generate_ean(str(res.id))
+    #     res.barcode = '21' + ean
+    #     return res
     @api.model
     def create(self, vals):
         """generate barcode when create new product"""
         res = super(ProductAutoBarcode, self).create(vals)
         ean = generate_ean(str(res.id))
-        res.barcode = '21' + ean
+        res.barcode = ean
         return res
 
 
